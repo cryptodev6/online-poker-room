@@ -371,6 +371,31 @@ summary:focus-visible,
     url("../assets/wall-background.png") 56% center / cover no-repeat;
 }
 
+#acceso {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  min-height: 100svh;
+  align-items: center;
+  overflow: hidden;
+  padding: 132px 0 68px;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 7, 7, 0.98) 0%,
+      rgba(7, 7, 7, 0.90) 34%,
+      rgba(7, 7, 7, 0.56) 60%,
+      rgba(7, 7, 7, 0.26) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 7, 7, 0.18) 0%,
+      rgba(7, 7, 7, 0.08) 58%,
+      #070707 100%
+    ),
+    url("../assets/corridor-background.png") 56% center / cover no-repeat;
+}
 .hero {
   position: relative;
   isolation: isolate;
