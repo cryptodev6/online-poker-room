@@ -1,246 +1,554 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BluffBroker | Private Poker Access</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070707">
+  <meta name="description" content="Acceso privado a Voss Room en ClubGG. Solicita tu lugar, consulta los métodos de pago y juega con Alexander Voss.">
+  <meta name="author" content="Voss Room">
+  <meta property="og:title" content="Voss Room — Private ClubGG Access">
+  <meta property="og:description" content="Una mesa privada. Un estándar distinto. Solicita acceso a Voss Room.">
+  <meta property="og:type" content="website">
+  <title>Voss Room — Private ClubGG Access</title>
 
-  <!-- Meta SEO -->
-  <meta name="description" content="BluffBroker connects you to the softest private poker games across PPPoker, PokerBros, ClubGG, X-Poker, and more." />
-  <meta name="keywords" content="poker, private poker clubs, pppoker, pokerbros, clubgg, rakeback, online poker, soft games, bluffbroker" />
-  <meta name="author" content="BluffBroker" />
-
-  <!-- Open Graph / Social Media -->
-  <meta property="og:title" content="BluffBroker — Private Poker Access" />
-  <meta property="og:description" content="Access 100+ private poker clubs on every major app. Built for grinders, by grinders." />
-  <meta property="og:image" content="https://bluffbroker.com/assets/facebook.png" />
-  <meta property="og:url" content="https://yourdomain.com/index.html" />
-  <meta property="og:type" content="website" />
-
-  <!-- Favicons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
-  <link rel="manifest" href="assets/favicon/site.webmanifest">
-
-
-  <!-- Bootstrap 5 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-
-  <!-- Optional Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <!-- Your Custom Styles -->
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
+  <header class="site-header" id="siteHeader">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Voss Room, volver al inicio">
+        <span class="brand-mark" aria-hidden="true">V</span>
+        <span class="brand-text">
+          <span class="brand-name">VOSS ROOM</span>
+          <span class="brand-subtitle">Private ClubGG Access</span>
+        </span>
+      </a>
 
-<nav class="navbar navbar-expand-lg custom-navbar">
-  <div class="container-fluid align-items-center justify-content-between d-flex">
+      <nav class="nav-menu" id="navMenu" aria-label="Navegación principal">
+        <a class="nav-link" href="#club">El club</a>
+        <a class="nav-link" href="#acceso">Cómo entrar</a>
+        <a class="nav-link" href="#pagos">Pagos</a>
+        <a class="nav-link" href="#alexander">Alexander Voss</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+      </nav>
 
-    <!-- LEFT: Hamburger Button (only visible on mobile) -->
-    <button class="navbar-toggler d-lg-none order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+      <div class="nav-actions">
+        <button class="btn btn-secondary" type="button" data-open-payments>Ver pagos</button>
+        <a class="btn btn-primary" data-whatsapp="access" href="#">Solicitar acceso</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="navMenu" aria-label="Abrir menú">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20M4 12H20M4 17H20" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
 
-    <!-- CENTER ON MOBILE, LEFT ON DESKTOP: Logo -->
-    <a class="navbar-brand mx-lg-0 mx-auto order-2 order-lg-1" href="index.html">
-      <img src="assets/logo-bb.png" alt="BluffBroker Logo" class="bb-logo">
-    </a>
+  <main id="contenido">
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Club privado online · ClubGG</p>
+          <h1>Entra a la mesa privada de <em>Alexander Voss.</em></h1>
+          <p class="hero-copy">
+            Acceso reservado a <strong>Voss Room</strong>: sesiones privadas, atención directa y una operación diseñada para jugadores que valoran el orden, la discreción y el nivel de la mesa.
+          </p>
 
-    <!-- RIGHT ON MOBILE: Telegram button -->
-    <div class="d-lg-none order-3">
-      <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-whatsapp="access" href="#">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.44L3.5 20.5l1.37-4.28A8.5 8.5 0 1 1 20.5 11.7Z" stroke="currentColor" stroke-width="1.65" stroke-linejoin="round"/>
+                <path d="M8.25 7.8c.2-.45.42-.46.72-.47h.48c.15 0 .4.06.6.5.2.47.7 1.64.76 1.76.06.12.1.27.02.43-.08.16-.12.26-.24.4-.12.13-.25.3-.36.4-.12.12-.24.24-.1.47.13.24.58.96 1.26 1.56.86.77 1.6 1 1.83 1.12.23.12.37.1.5-.06.15-.16.62-.72.78-.97.16-.24.32-.2.54-.12.22.08 1.38.65 1.62.77.24.12.4.18.46.28.06.1.06.58-.14 1.14-.2.55-1.17 1.06-1.62 1.12-.42.06-.96.09-1.55-.1-.36-.12-.82-.27-1.42-.53-.25-.1-2.48-.9-4.22-3.1-.49-.6-.82-1.28-.92-1.5-.1-.23-1.04-2.48.8-4.48Z" fill="currentColor"/>
+              </svg>
+              Unirme a Voss Room
+            </a>
+            <button class="btn btn-secondary" type="button" data-open-payments>Ver métodos de pago</button>
+          </div>
+
+          <p class="hero-note">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3 4.5 6v5.4c0 4.75 3.2 8.12 7.5 9.6 4.3-1.48 7.5-4.85 7.5-9.6V6L12 3Z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="m9.2 12 1.75 1.75L15 9.7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            25% de bono en tu primer depósito · hasta US$500. Aplican términos y condiciones.
+          </p>
+        </div>
+
+        <div class="hero-card-wrap reveal" aria-label="Tarjeta de acceso Voss Room">
+          <div class="hero-card">
+            <div class="card-status">
+              <span class="status-label"><span class="status-dot"></span> Acceso por solicitud</span>
+              <span class="card-number">No. 01</span>
+            </div>
+            <div class="monogram" aria-hidden="true">V</div>
+            <div class="hero-card-bottom">
+              <div class="room-label">
+                <small>Private online club</small>
+                <strong>Voss Room</strong>
+              </div>
+              <span class="id-chip">Club ID · 598956</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-bar" aria-label="Datos principales del club">
+      <div class="container trust-grid">
+        <div class="trust-item"><strong>598956</strong><span>ClubGG ID</span></div>
+        <div class="trust-item"><strong>Acceso privado</strong><span>Por solicitud</span></div>
+        <div class="trust-item"><strong>Atención directa</strong><span>Por WhatsApp</span></div>
+        <div class="trust-item"><strong>Banco + USDT</strong><span>Métodos de pago</span></div>
+      </div>
     </div>
 
-    <!-- FULL MENU: appears collapsed in mobile -->
-    <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#description">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#poker-clubs">Poker Clubs</a></li>
-        <li class="nav-item"><a class="nav-link" href="index.html#faq">FAQ</a></li>
-        <!-- DESKTOP ONLY TELEGRAM -->
-        <li class="nav-item d-none d-lg-block">
-          <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+    <section class="section" id="club">
+      <div class="container">
+        <div class="club-intro reveal">
+          <div>
+            <p class="eyebrow">El estándar Voss</p>
+            <h2 class="section-title">Una sala.<br><span class="gold">Un estándar distinto.</span></h2>
+          </div>
+          <p class="section-lead">
+            Voss Room no es un catálogo de clubes. Es un solo punto de acceso, con comunicación clara y una identidad construida alrededor de la privacidad.
+          </p>
+        </div>
 
+        <div class="principles">
+          <article class="principle reveal">
+            <span class="principle-index">I</span>
+            <h3>Acceso seleccionado</h3>
+            <p>La entrada se solicita de forma directa. Sin ruido, sin listas públicas y sin pasos innecesarios.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-index">II</span>
+            <h3>Operación clara</h3>
+            <p>Club ID visible, proceso guiado y soporte por WhatsApp desde el registro hasta la activación.</p>
+          </article>
+          <article class="principle reveal">
+            <span class="principle-index">III</span>
+            <h3>Entorno privado</h3>
+            <p>Una experiencia online sobria para jugadores adultos que valoran control, discreción y atención real.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
+    <section class="section access-section" id="acceso">
+      <div class="container access-layout">
+        <div class="access-sticky reveal">
+          <p class="eyebrow">Acceso simple</p>
+          <h2 class="section-title">Tu asiento en <span class="gold">cuatro pasos.</span></h2>
+          <p class="section-lead">Si ya tienes ClubGG, el proceso toma solo unos minutos.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" data-whatsapp="access" href="#">Solicitar acceso ahora</a>
+          </div>
+        </div>
 
-  <!-- Intro Section -->
-  <section id="intro" class="intro-section">
-    <div class="overlay"></div>
-    <div class="intro-text">
-      <h1>
-        Hello, I am the <span class="highlight glow glow-pulse">Bluff Broker</span>,<br>
-        and I come to bring you <span class="highlight">exclusive access</span>
-        to the best <span class="green-underline">private poker clubs</span> in the World.
-      </h1>
-      <a class="nav-link" href="#poker-clubs"><button class="intro-btn">List of Poker Clubs</button></a>
-    </div>
-    <div class="intro-image">
-      <img src="assets/bluffbroker.png" alt="The Bluff Broker">
-    </div>
-  </section>
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step-number">01</span>
+            <div>
+              <h3>Escríbenos por WhatsApp</h3>
+              <p>Solicita acceso privado. Recibirás una respuesta directa con los datos necesarios.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">02</span>
+            <div>
+              <h3>Instala ClubGG</h3>
+              <p>Descarga la aplicación oficial y crea tu perfil si todavía no tienes una cuenta.</p>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">03</span>
+            <div>
+              <h3>Busca Voss Room</h3>
+              <p>Ingresa el Club ID <code>598956</code> y envía tu solicitud.</p>
+              <button class="copy-inline" type="button" data-copy="598956">
+                Copiar Club ID
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <rect x="8" y="8" width="11" height="11" rx="2" stroke="currentColor" stroke-width="1.6"/>
+                  <path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2" stroke="currentColor" stroke-width="1.6"/>
+                </svg>
+              </button>
+            </div>
+          </article>
+          <article class="step reveal">
+            <span class="step-number">04</span>
+            <div>
+              <h3>Confirma y activa</h3>
+              <p>Elige tu método de pago, confirma la operación con soporte y recibe la activación de tu saldo.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-  <section id="description" class="description-section">
-    <div class="description-title">
-      <h2 class="section-title glow glow-pulse">I Am Not Just Another Poker Agent</h2>
-    </div>
-    <div class="description-text">
-      <p>
-        I've been deep in the poker world for over <span class="highlight">14 years</span> — forging
-        <span class="highlight">private, underground connections</span> with players and club owners globally.
+    <section class="section payment-section" id="pagos">
+      <div class="container payment-layout">
+        <div class="payment-copy reveal">
+          <p class="eyebrow">Métodos de pago</p>
+          <h2 class="section-title">Deposita de forma <span class="gold">directa.</span></h2>
+          <p class="section-lead">
+            Consulta banco, titular, cuenta o dirección USDT desde un solo lugar. Antes de transferir, confirma siempre los datos vigentes con soporte.
+          </p>
+          <button class="btn btn-primary" type="button" data-open-payments>Ver y copiar datos</button>
+        </div>
+
+        <div class="payment-panel reveal">
+          <div class="payment-panel-header">
+            <strong>Opciones disponibles</strong>
+            <span class="secure-label">Confirmación directa</span>
+          </div>
+          <div class="payment-options">
+            <article class="payment-option">
+              <div class="payment-option-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="m3 9 9-5 9 5M5 10v7m4-7v7m6-7v7m4-7v7M3 20h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3>Transferencia bancaria</h3>
+                <p>Banco · titular · cuenta · CCI</p>
+              </div>
+            </article>
+            <article class="payment-option">
+              <div class="payment-option-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                  <path d="M7.5 7.5h9M12 7.5V18M8.5 4h7M5 7.5h14M8.2 12h7.6" stroke="currentColor" stroke-width="1.55" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h3>USDT</h3>
+                <p>Red y dirección confirmadas</p>
+              </div>
+            </article>
+          </div>
+          <p class="payment-disclaimer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M12 10.5V16M12 7.5v.1" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+            No envíes fondos a datos recibidos fuera de los canales oficiales de Voss Room.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--compact bonus" aria-labelledby="bonus-title">
+      <div class="container bonus-grid reveal">
+        <div class="bonus-number">25%</div>
+        <div class="bonus-content">
+          <p class="eyebrow">Cortesía de bienvenida</p>
+          <h2 id="bonus-title">Bono en tu primer depósito, hasta US$500.</h2>
+          <p>*Sujeto a elegibilidad. Aplican términos, condiciones de liberación y vigencia.</p>
+        </div>
+        <a class="btn btn-primary" data-whatsapp="bonus" href="#">Consultar bono</a>
+      </div>
+    </section>
+
+    <section class="section" id="alexander">
+      <div class="container founder-layout">
+        <div class="founder-visual reveal" role="img" aria-label="Espacio reservado para fotografía editorial de Alexander Voss">
+          <div class="founder-caption">
+            <strong>Alexander Voss</strong>
+            <span>Poker · Lifestyle · Private Access</span>
+          </div>
+        </div>
+
+        <div class="founder-copy reveal">
+          <p class="eyebrow">Detrás del acceso</p>
+          <h2 class="section-title">Juega dentro del <span class="gold">mundo Voss.</span></h2>
+          <p>
+            Alexander Voss conecta una marca personal construida alrededor del poker, el control y el acceso privado con una experiencia concreta: jugar juntos dentro de Voss Room en ClubGG.
+          </p>
+          <div class="founder-stats">
+            <div class="founder-stat"><strong>7.8K+</strong><span>Instagram</span></div>
+            <div class="founder-stat"><strong>598956</strong><span>ClubGG ID</span></div>
+            <div class="founder-stat"><strong>Directo</strong><span>Soporte</span></div>
+          </div>
+          <div class="hero-actions">
+            <a class="btn btn-secondary" href="https://instagram.com/voss.code" target="_blank" rel="noopener">Ver @voss.code</a>
+            <a class="btn btn-primary" data-whatsapp="access" href="#">Jugar conmigo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-section" id="faq">
+      <div class="container faq-layout">
+        <div class="reveal">
+          <p class="eyebrow">Preguntas frecuentes</p>
+          <h2 class="section-title">Antes de <span class="gold">entrar.</span></h2>
+          <p class="section-lead">Lo esencial, sin letra innecesaria.</p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details>
+            <summary>¿Qué es Voss Room?</summary>
+            <p>Es un club privado online dentro de ClubGG, identificado con el ID 598956. El acceso se solicita directamente por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿Cómo solicito acceso?</summary>
+            <p>Presiona “Unirme a Voss Room”. El botón abre WhatsApp con un mensaje listo. Soporte te guía con el registro, la solicitud al club y la activación.</p>
+          </details>
+          <details>
+            <summary>¿Qué métodos de pago están disponibles?</summary>
+            <p>Transferencia bancaria y USDT. Abre “Ver métodos de pago” para consultar los datos vigentes y confirma con soporte antes de enviar fondos.</p>
+          </details>
+          <details>
+            <summary>¿Cómo funciona el bono del 25%?</summary>
+            <p>Es una cortesía aplicable al primer depósito, hasta US$500, sujeta a elegibilidad, vigencia y condiciones de liberación. Solicita los términos exactos antes de depositar.</p>
+          </details>
+          <details>
+            <summary>¿Necesito tener ClubGG instalado?</summary>
+            <p>Sí. Puedes crear tu perfil en la aplicación y buscar el club con el ID 598956. Si ya tienes cuenta, solo debes enviar la solicitud de ingreso.</p>
+          </details>
+          <details>
+            <summary>¿A quién contacto si necesito ayuda?</summary>
+            <p>Todo el soporte de acceso y pagos se realiza por el WhatsApp oficial enlazado en esta página.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section closing">
+      <div class="container">
+        <div class="closing-inner reveal">
+          <p class="eyebrow">Private ClubGG access</p>
+          <h2 class="section-title">Tu asiento se solicita <span class="gold">por privado.</span></h2>
+          <p class="section-lead">ClubGG ID 598956 · Acceso directo con Voss Room.</p>
+          <div class="closing-actions">
+            <a class="btn btn-primary" data-whatsapp="access" href="#">Unirme a Voss Room</a>
+            <button class="btn btn-secondary" type="button" data-open-payments>Consultar pagos</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <p class="footer-copy">
+        © <span id="year"></span> Voss Room. Solo para mayores de 18 años y donde sea legal. Juega de forma responsable. El poker implica riesgo y no garantiza resultados. ClubGG es una marca de su respectivo propietario.
       </p>
-      <p>
-        That’s why I can offer <span class="highlight">higher rakeback</span> than any ordinary agent.
-      </p>
-      <p>
-        You’re not <span class="highlight">joining a club</span>. You’re entering
-        <span class="highlight">the backdoor of the poker underworld</span>, where the most
-        <span class="highlight">exclusive and profitable games</span> take place.
-      </p>
-    </div>
-  </section>
-
-<section id="poker-clubs" class="clubs-section">
-
-  <div class="club">
-    <img src="assets/clubs/clubgg.webp" alt="ClubGG" class="logo">
-    <ul>
-      <li>Dominant <span class="green">US player pools</span></li>
-      <li>Sleek interface powered by <span class="green">GGNetwork</span></li>
-      <li><span class="green">Rapid payouts</span> with dedicated agent support</li>
-      <li>Rakeback on select verified rooms</li>
-      <li>Entry to <span class="green">40+ active private clubs</span></li>
-    </ul>
-    <a href="clubs/clubgg.html"><button class="cta-button">Browse ClubGG Rooms</button></a>
-  </div>
-
-  <div class="club">
-    <img src="assets/clubs/pppoker.webp" alt="PPPoker" class="logo">
-    <ul>
-      <li>Unions spanning <span class="green">all continents</span></li>
-      <li><span class="green">24/7 PLO5 &amp; Hold’em action</span></li>
-      <li>Long-established clubs with heavy traffic</li>
-      <li><span class="green">Low to mid stakes</span> featuring soft fields</li>
-      <li>MTTs, mix-game rotations &amp; PLO5 specials</li>
-    </ul>
-    <a href="clubs/pppoker.html"><button class="cta-button">Browse PPPoker Rooms</button></a>
-  </div>
-
-  <div class="club">
-    <img src="assets/clubs/pokerbros.webp" alt="PokerBros" class="logo">
-    <ul>
-      <li>Strong <span class="green">US &amp; EU traffic</span></li>
-      <li>Gentle <span class="green">PLO4 &amp; NLH</span> tables daily</li>
-      <li><span class="green">30+ private unions</span> available</li>
-      <li>Up to <span class="green">50% rakeback</span></li>
-      <li>Nonstop action, every format, every hour</li>
-    </ul>
-    <a href="clubs/pokerbros.html"><button class="cta-button">Browse PokerBros Rooms</button></a>
-  </div>
-
-  <div class="club">
-    <img src="assets/clubs/xpoker.webp" alt="X-Poker" class="logo">
-    <ul>
-      <li>Gateway to <span class="green">Asian private tables</span></li>
-      <li><span class="green">PLO6 &amp; OFC</span> with steady traffic</li>
-      <li>Clubs offering solid daily liquidity</li>
-      <li><span class="green">Trusted chip transfers</span> via agents</li>
-      <li>Frequent tournament overlays</li>
-    </ul>
-    <a href="clubs/xpoker.html"><button class="cta-button">Browse X-Poker Rooms</button></a>
-  </div>
-
-  <div class="club">
-    <img src="assets/clubs/pokerrrr2.webp" alt="Pokerrrr 2" class="logo">
-    <ul>
-      <li>Predominantly <span class="green">US recreational players</span> at micro stakes</li>
-      <li>No HUDs—soft, unpredictable tables</li>
-      <li>Access via <span class="green">Discord invite links</span></li>
-      <li>Cash games &amp; MTTs around the clock</li>
-      <li>Evening tables up to $2/$4</li>
-    </ul>
-    <a href="clubs/pokerrrr2.html"><button class="cta-button">Browse Pokerrrr 2 Rooms</button></a>
-  </div>
-
-  <div class="club">
-    <img src="assets/clubs/supremapoker.webp" alt="Suprema Poker" class="logo">
-    <ul>
-      <li><span class="green">Latin whale traffic</span> daily</li>
-      <li>Loose Hold’em and high-action PLO</li>
-      <li>Club invites through Brazil-based agents</li>
-      <li>Consistent volume on weekdays and weekends</li>
-      <li>Ideal for <span class="green">volume grinders</span></li>
-    </ul>
-    <a href="clubs/suprema.html"><button class="cta-button">Browse Suprema Rooms</button></a>
-  </div>
-
-</section>
-
-
-<section id="faq" class="faq-section">
-  <div class="container">
-    <h2 class="section-title glow glow-pulse">Frequently Asked Questions</h2>
-    <div class="row">
-      <div class="col-6 col-xs-12">
-        <h4>Why choose apps like PPPoker, PokerBros, or Pokerrrr 2 over major poker sites?</h4>
-        <p>
-          <span class="green">Here’s why:</span> mainstream platforms are jam-packed with pros, grinders, and bots—and often restrict regions while handing out <span class="green">underwhelming bonuses</span>.<br><br>
-          In contrast, private club apps focus on <span class="green">looser tables and genuine profits</span>. Most folks at these tables are casual players seeking action, not sharks hunting prey. Even at higher limits, the pots stay juicy.
-        </p>
-      </div>
-      <div class="col-6 col-xs-12 pl" data-aos-delay="200">
-        <h4>Who is the <b>Bluff Broker</b>?</h4>
-        <p>
-          <span class="green">Bluff Broker</span> is your direct connection to invite-only poker clubs worldwide.<br><br>
-          Our purpose? <span class="green">Spot soft games, lock down top rooms</span>, and deliver you right into the action—no fluff. We arrange exclusive perks, weekly rakeback, and entry to high-value private clubs, all tailored for players chasing real excitement.
-        </p>
+      <div class="footer-links">
+        <a href="#faq">Términos del bono</a>
+        <a data-whatsapp="support" href="#">Soporte</a>
+        <a href="#inicio">Volver arriba</a>
       </div>
     </div>
-    <div class="row">
-      <div class="col-6 col-xs-12">
-        <h4>Is playing in these private clubs secure?</h4>
-        <p>
-          Definitely—as long as you go through a trusted channel. Random clubs can be unreliable, so <span class="green">we vet every access point</span>. Our partnerships with reputable unions span over ten years. If we endorse it, you’re covered.
-        </p>
+  </footer>
+
+  <div class="mobile-dock" aria-label="Acción principal móvil">
+    <a class="btn btn-primary" data-whatsapp="access" href="#">Unirme a Voss Room</a>
+  </div>
+
+  <div class="modal" id="paymentModal" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle" aria-hidden="true">
+    <div class="modal-card" role="document">
+      <div class="modal-header">
+        <div>
+          <h2 id="paymentModalTitle">Métodos de pago</h2>
+          <p>Selecciona un método y copia los datos vigentes.</p>
+        </div>
+        <button class="icon-button" type="button" data-close-payments aria-label="Cerrar métodos de pago">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+          </svg>
+        </button>
       </div>
-      <div class="col-6 col-xs-12 pl" data-aos-delay="200">
-        <h4>What are online poker clubs exactly?</h4>
-        <p>
-          These are exclusive tables inside apps like PPPoker, Upoker, and PokerBros. You sign up free, enter the club’s ID, and join private games run by hosts or collectives. Each room sets its own chip values.<br><br>
-          You can connect from anywhere—USA, Brazil, Germany, Mexico, India. Leading clubs often form <span class="green">unions</span> to pool traffic and boost game quality.
-        </p>
+
+      <div class="payment-tabs" role="tablist" aria-label="Seleccionar método">
+        <button class="payment-tab" id="bankTab" type="button" role="tab" aria-selected="true" aria-controls="bankPanel" data-tab="bank">Transferencia</button>
+        <button class="payment-tab" id="usdtTab" type="button" role="tab" aria-selected="false" aria-controls="usdtPanel" data-tab="usdt">USDT</button>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-6 col-xs-12">
-        <h4>What exactly are Poker Unions?</h4>
-        <p>
-          Think of them as mega-clubs—multiple private rooms banded together to generate huge traffic and share tables.<br><br>
-          Top unions gather thousands of players for nonstop action. Bluff Broker opens the door to the most profitable unions, including hidden hotspots packed with whales and amateurs alike.
-        </p>
+
+      <div class="payment-tabpanel" id="bankPanel" role="tabpanel" aria-labelledby="bankTab" data-panel="bank"></div>
+      <div class="payment-tabpanel" id="usdtPanel" role="tabpanel" aria-labelledby="usdtTab" data-panel="usdt" hidden></div>
+
+      <div class="modal-cta">
+        <a class="btn btn-primary" data-whatsapp="payment" href="#">Confirmar datos por WhatsApp</a>
       </div>
-      <div class="col-6 col-xs-12 pl">
-        <h4>How can I get started?</h4>
-        <p>
-          It’s straightforward: install the app, create an account, then reach out for your club ID. We’ll guide you through each step.<br><br>
-          You’ll be in a game within minutes—no ID verification, no KYC, zero hassle. We handle the chips, support, and access; you just play.
-        </p>
-      </div>
+      <p class="modal-footnote">Confirma destinatario, monto y red antes de transferir. No envíes fondos basándote en capturas antiguas.</p>
     </div>
   </div>
-</section>
 
+  <div class="toast" id="toast" role="status" aria-live="polite">Copiado</div>
 
+  <script>
+    /*
+      CONFIGURACIÓN RÁPIDA
+      1) Reemplaza los datos dentro de PAYMENT_DETAILS.
+      2) Cambia ready: false por ready: true en cada método.
+      3) No necesitas tocar el HTML ni el resto del JavaScript.
+    */
+    const SITE_CONFIG = {
+      whatsapp: "513007068986",
+      clubId: "598956"
+    };
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    const PAYMENT_DETAILS = {
+      bank: {
+        ready: false,
+        notice: "Los datos bancarios exactos todavía no están cargados en esta versión. Solicítalos por el WhatsApp oficial.",
+        fields: [
+          { label: "Banco", value: "REEMPLAZAR CON BANCO" },
+          { label: "Titular", value: "REEMPLAZAR CON TITULAR" },
+          { label: "Cuenta", value: "REEMPLAZAR CON NÚMERO DE CUENTA" },
+          { label: "CCI / Interbancaria", value: "REEMPLAZAR CON CCI" }
+        ]
+      },
+      usdt: {
+        ready: false,
+        notice: "La red y dirección USDT todavía no están cargadas en esta versión. Solicítalas por el WhatsApp oficial.",
+        fields: [
+          { label: "Activo", value: "USDT" },
+          { label: "Red", value: "REEMPLAZAR CON RED" },
+          { label: "Dirección", value: "REEMPLAZAR CON DIRECCIÓN USDT" }
+        ]
+      }
+    };
+
+    const whatsappMessages = {
+      access: "Hola, quiero solicitar acceso a Voss Room en ClubGG. Mi nombre es:",
+      bonus: "Hola, quiero solicitar acceso a Voss Room y consultar las condiciones del bono de bienvenida del 25%.",
+      payment: "Hola, quiero confirmar los datos vigentes para realizar un depósito en Voss Room.",
+      support: "Hola, necesito soporte con mi acceso a Voss Room."
+    };
+
+    document.querySelectorAll("[data-whatsapp]").forEach((link) => {
+      const type = link.dataset.whatsapp;
+      const message = whatsappMessages[type] || whatsappMessages.access;
+      link.href = `https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent(message)}`;
+      link.target = "_blank";
+      link.rel = "noopener";
+    });
+
+    const header = document.getElementById("siteHeader");
+    const menuToggle = document.getElementById("menuToggle");
+    const navMenu = document.getElementById("navMenu");
+
+    const updateHeader = () => header.classList.toggle("scrolled", window.scrollY > 12);
+    updateHeader();
+    window.addEventListener("scroll", updateHeader, { passive: true });
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navMenu.classList.toggle("is-open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+    });
+
+    navMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navMenu.classList.remove("is-open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Abrir menú");
+      });
+    });
+
+    const modal = document.getElementById("paymentModal");
+    const closePaymentButton = modal.querySelector("[data-close-payments]");
+    let lastFocusedElement = null;
+
+    function openPayments() {
+      lastFocusedElement = document.activeElement;
+      modal.classList.add("is-open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+      closePaymentButton.focus();
+    }
+
+    function closePayments() {
+      modal.classList.remove("is-open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }
+
+    document.querySelectorAll("[data-open-payments]").forEach((button) => button.addEventListener("click", openPayments));
+    closePaymentButton.addEventListener("click", closePayments);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) closePayments();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("is-open")) closePayments();
+    });
+
+    function renderPaymentPanel(method) {
+      const panel = document.querySelector(`[data-panel="${method}"]`);
+      const config = PAYMENT_DETAILS[method];
+      panel.innerHTML = `
+        ${config.ready ? "" : `<div class="config-notice">${config.notice}</div>`}
+        <div class="copy-list">
+          ${config.fields.map((field) => `
+            <div class="copy-row">
+              <div>
+                <small>${field.label}</small>
+                <span class="copy-value" title="${field.value}">${field.value}</span>
+              </div>
+              <button type="button" data-copy="${field.value}" ${config.ready ? "" : "disabled"}>Copiar</button>
+            </div>
+          `).join("")}
+        </div>`;
+    }
+
+    renderPaymentPanel("bank");
+    renderPaymentPanel("usdt");
+
+    document.querySelectorAll("[data-tab]").forEach((tab) => {
+      tab.addEventListener("click", () => {
+        const selected = tab.dataset.tab;
+        document.querySelectorAll("[data-tab]").forEach((item) => item.setAttribute("aria-selected", String(item === tab)));
+        document.querySelectorAll("[data-panel]").forEach((panel) => {
+          panel.hidden = panel.dataset.panel !== selected;
+        });
+      });
+    });
+
+    const toast = document.getElementById("toast");
+    let toastTimer;
+
+    async function copyText(value) {
+      try {
+        await navigator.clipboard.writeText(value);
+      } catch (error) {
+        const helper = document.createElement("textarea");
+        helper.value = value;
+        helper.style.position = "fixed";
+        helper.style.opacity = "0";
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand("copy");
+        helper.remove();
+      }
+
+      toast.textContent = value === SITE_CONFIG.clubId ? "Club ID copiado" : "Dato copiado";
+      toast.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toast.classList.remove("show"), 1900);
+    }
+
+    document.addEventListener("click", (event) => {
+      const copyButton = event.target.closest("[data-copy]");
+      if (copyButton && !copyButton.disabled) copyText(copyButton.dataset.copy);
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach((element) => revealObserver.observe(element));
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
