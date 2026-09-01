@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agente — ClubGG | BluffBroker</title>
+  <meta name="description" content="Únete al club privado del agente en ClubGG. Guía paso a paso para descargar, registrarte y entrar al club. Soporte 24/7 en español." />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap (como en index) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Estilos del sitio principal (mismo verde neón) -->
+  <link rel="stylesheet" href="../assets/style.css" />
+
+  <!-- Estilos de esta landing -->
+  <link rel="stylesheet" href="../assets/agent.css" />
+</head>
+<body>
+
+  <!-- NAVBAR idéntico al de index.html -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid align-items-center justify-content-between d-flex">
+      <button class="navbar-toggler d-lg-none order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand mx-lg-0 mx-auto order-2 order-lg-1" href="../index.html">
+        <img src="../assets/logo-bb.png" alt="BluffBroker Logo" class="bb-logo">
+      </a>
+      <div class="d-lg-none order-3">
+        <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=Estoy%20interesado%20en%20acceder%20a%20los%20clubs%20privados%20de%20BluffBroker" target="_blank" rel="noopener">Telegram</a>
+      </div>
+      <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#description">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#poker-clubs">Poker Clubs</a></li>
+          <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+          <li class="nav-item d-none d-lg-block">
+            <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=Estoy%20interesado%20en%20acceder%20a%20los%20clubs%20privados%20de%20BluffBroker" target="_blank" rel="noopener">Telegram</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="bg bg-1" aria-hidden="true"></div>
+    <div class="overlay"></div>
+
+    <div class="wrap hero-grid">
+      <div class="agent-card">
+        <div class="agent-avatar">
+          <img src="../assets/bluffbroker.png" alt="Agente BluffBroker" />
+        </div>
+        <div class="agent-meta">
+          <h1>El Híbrido</h1>
+          <p>Acceso <strong>exclusivo</strong> a mis mesas privadas en <span class="neon">ClubGG</span>. Acción real, soporte 24/7 y cashouts rápidos.</p>
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <h2>Entra a mi <span class="neon">club privado</span> en ClubGG</h2>
+        <p>Si nunca usaste la app, no pasa nada. Sigue los pasos: descargar, unirte con el <span class="neon">ID del Club</span> y escribirnos por <span class="neon">Telegram</span> para tu bono de bienvenida.</p>
+        <div class="cta-row">
+          <a class="btn-primary" href="#pasos">Unirme ahora</a>
+          <button class="btn-ghost" id="copyClubID" data-clubid="846162">Copiar ID del Club: 846162</button>
+        </div>
+        <small class="hint">¿Problemas? <a href="https://t.me/creatorclubsupport2" target="_blank" rel="noopener">Escríbenos por Telegram</a>.</small>
+      </div>
+    </div>
+  </section>
+
+  <!-- PASOS -->
+  <section class="steps" id="pasos">
+    <div class="bg bg-2" aria-hidden="true"></div>
+    <div class="wrap">
+      <h3 class="section-title">Cómo unirte a <span class="neon">ClubGG</span> y a mi club</h3>
+
+      <div class="cards">
+        <article class="card">
+          <header><div class="step">1</div><h4>Descarga la app <span class="neon">ClubGG</span></h4></header>
+          <p>Instala la app en tu teléfono. Si estás en <strong>PC/Mac</strong>, puedes usar un emulador (BlueStacks) y bajar la app desde Google Play.</p>
+          <div class="store-row">
+            <a class="store" href="https://apps.apple.com/us/app/clubgg-poker/id1529839330" target="_blank" rel="noopener" aria-label="App Store">
+              <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M17.6 13.6c-.1 2.5 2.2 3.4 2.2 3.4s-1.5 4.4-3.6 4.3c-1.4 0-2.5-1-3.3-1s-1.9 1-3.1 1c-2.2 0-5.6-4.1-5.6-8.5 0-3.7 2.4-5.7 4.6-5.7 1.4 0 2.4.9 3.2.9.8 0 2.1-1 3.7-.9.6 0 2.8.2 4.2 2.1-3.7 2.3-3.3 6.8-.3 8.4zM14.9 3.2c.8-1 1.3-2.2 1.2-3.2-1.2.1-2.4.8-3.1 1.8-.7.8-1.3 2.1-1.1 3.3 1.2.1 2.2-.6 3-1.9z"/></svg>
+              <span>App Store</span>
+            </a>
+            <a class="store" href="https://play.google.com/store/apps/details?id=com.nsus.clubgg" target="_blank" rel="noopener" aria-label="Google Play">
+              <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M3.6 1.8c-.2.3-.3.7-.3 1.1v18.2c0 .4.1.8.3 1.1l10-10-10-10zm12.1 2.5l-2.7 2.7 3.7 3.7 3.3-1.8c.9-.5.9-1.9 0-2.4l-4.3-2.2zm-2.7 13.7l2.7 2.7 4.3-2.2c.9-.5.9-1.9 0-2.4l-3.3-1.8-3.7 3.7zM12 12L3.6 20.4c.2.3.6.5 1 .5.2 0 .4 0 .6-.1l13.9-7.6-4-2L12 12z"/></svg>
+              <span>Google Play</span>
+            </a>
+          </div>
+          <ul class="bullets">
+            <li>Abre la app y permite las notificaciones.</li>
+            <li>Si pide región, elige <strong>Internacional/Global</strong>.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <header><div class="step">2</div><h4>Únete a mi club con el <span class="neon">ID 846162</span></h4></header>
+          <ol class="ordered">
+            <li>Dentro de la app, toca <strong>Club</strong> → <strong>Buscar Club</strong>.</li>
+            <li>Escribe <strong>846162</strong> y presiona <strong>Buscar</strong>.</li>
+            <li>Toca <strong>Unirse</strong> y espera la confirmación (normalmente minutos).</li>
+          </ol>
+          <div class="cta-row"><button class="btn-primary" id="copyClubID2" data-clubid="846162">Copiar ID del Club</button></div>
+          <small class="hint">Si no ves “Buscar Club”, actualiza la app desde tu tienda.</small>
+        </article>
+
+        <article class="card">
+          <header><div class="step">3</div><h4>Activa tu bono y soporte <span class="neon">24/7</span></h4></header>
+          <p>Escríbenos por <strong>Telegram</strong> para activar tu <strong>25% de primer depósito</strong> y resolver cualquier duda.</p>
+          <a class="btn-telegram" href="https://t.me/creatorclubsupport2" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" class="ico" aria-hidden="true"><path d="M9.04 15.5l-.38 5.37c.54 0 .77-.23 1.05-.51l2.52-2.42 5.23 3.82c.96.53 1.65.25 1.92-.89l3.48-16.29h.01c.31-1.47-.53-2.04-1.48-1.68L1.66 10.41c-1.43.55-1.41 1.33-.25 1.69l5.2 1.62L18.9 6.63c.62-.41 1.18-.18.72.23"/></svg>
+            Escríbenos en Telegram
+          </a>
+          <ul class="bullets">
+            <li>Depósitos: <strong>Crypto, Yape/Plin/Transferencia (según país)</strong>.</li>
+            <li>Retiros típicos: <strong>&lt; 12 horas</strong>.</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="wrap">
+      <h3 class="section-title">Preguntas rápidas</h3>
+      <details><summary>¿Puedo jugar desde PC o sólo móvil?</summary><p>Puedes jugar en <strong>Android/iOS</strong>. En <strong>PC/Mac</strong> usa un emulador como BlueStacks e instala la app desde Google Play.</p></details>
+      <details><summary>¿Qué pasa si no encuentro “Buscar Club”?</summary><p>Actualiza la app desde tu tienda, reinicia y repite el Paso 2.</p></details>
+      <details><summary>¿Qué métodos de pago usan?</summary><p>Dependiendo del país: <strong>Yape/Plin/Transferencia</strong>, <strong>Zelle/Venmo</strong>, y <strong>Crypto</strong> (USDT TRC20).</p></details>
+    </div>
+  </section>
+
+  <footer class="bb-footer">
+    <div class="wrap"><p>¿Necesitas ayuda? Soporte 24/7 en <a href="https://t.me/creatorclubsupport2" target="_blank" rel="noopener" class="neon">Telegram</a>.</p></div>
+  </footer>
+
+  <button class="sticky-cta" onclick="location.href='#pasos'">Unirme ahora</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function copyClubId(btn){
+      const id = btn.getAttribute('data-clubid');
+      navigator.clipboard.writeText(id).then(()=>{
+        btn.textContent = 'ID copiado: ' + id;
+        setTimeout(()=>btn.textContent = 'Copiar ID del Club', 1800);
+      });
+    }
+    document.querySelectorAll('#copyClubID, #copyClubID2').forEach(b=>b.addEventListener('click', ()=>copyClubId(b)));
+  </script>
+</body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClubGG - BluffBroker</title>
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="BluffBroker — Private Poker Access" />
+  <meta property="og:description" content="Access 100+ private poker clubs on every major app. Built for grinders, by grinders." />
+  <meta property="og:image" content="https://bluffbroker.com/assets/facebook.png" />
+  <meta property="og:url" content="https://yourdomain.com/index.html" />
+  <meta property="og:type" content="website" />
+
+
+    <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Optional Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/club-detail.css">
+  <script defer src="clubgg.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid align-items-center justify-content-between d-flex">
+
+    <!-- LEFT: Hamburger Button (only visible on mobile) -->
+    <button class="navbar-toggler d-lg-none order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- CENTER ON MOBILE, LEFT ON DESKTOP: Logo -->
+    <a class="navbar-brand mx-lg-0 mx-auto order-2 order-lg-1" href="../index.html">
+      <img src="../assets/logo-bb.png" alt="BluffBroker Logo" class="bb-logo">
+    </a>
+
+    <!-- RIGHT ON MOBILE: Telegram button -->
+    <div class="d-lg-none order-3">
+      <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+    </div>
+
+    <!-- FULL MENU: appears collapsed in mobile -->
+    <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#description">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#poker-clubs">Poker Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+        <!-- DESKTOP ONLY TELEGRAM -->
+        <li class="nav-item d-none d-lg-block">
+          <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="intro">
+  <div class="container">
+    <h1>ClubGG Network</h1>
+    <p>
+      <span class="green">ClubGG</span> has emerged as the go-to hub for some of the <strong>largest private poker circles in America</strong>. Crafted by the <span class="green">GGPoker</span> team, it delivers <strong>rock-solid software</strong>, <span class="green">robust traffic management</span>, and a <strong>trusted player verification system</strong> that top agents rely on.
+    </p>
+    <br>
+    <p>
+      The difference isn’t just the client—it’s the hidden infrastructure. Most of the action unfolds in <span class="green">members-only clubs and alliances</span> you won’t see in a standard lobby. <strong>Entry is by invitation only</strong>, and new seats fill through agent referrals.
+    </p>
+    <br>
+    <p>
+      You’ll encounter everything from <span class="green">deep-stack PLO5</span> and <span class="green">6-max NL Hold’em</span> to tight unions running <span class="green">bomb pots</span> and <span class="green">double-board</span> formats. Some rooms cater to <strong>recreational players</strong>, while others serve <strong>grinders demanding endless action</strong>.
+    </p>
+    <br>
+    <p>
+      <span class="green">BluffBroker</span> monitors every corner—tracking which alliances are live, where real traffic is flowing, and how games evolve hour by hour. Whether you want a <span class="green">mid-stakes cluster</span> or a <strong>steady late-night grind</strong>, we point you in the right direction.
+    </p>
+    <br>
+    <ul>
+      <li><strong>Exclusive entry</strong> to <span class="green">ClubGG’s premier alliances</span></li>
+      <li><span class="green">NL Hold’em</span>, <span class="green">PLO4/PLO5</span>, and <span class="green">mixed-game rotations</span> daily</li>
+      <li><strong>Quick onboarding</strong>—<span class="green">no KYC</span>, <span class="green">crypto friendly</span>, with dedicated agent support</li>
+    </ul>
+    <h2>Compatible with Desktop &amp; Mobile</h2>
+    <p>
+      ClubGG isn’t about public tables—you don’t browse, you’re introduced. The platform is powerful, but it’s the private network that delivers value—and that’s exactly what we connect you to.
+    </p>
+  </div>
+</section>
+
+
+  
+  <section id="club-filters" class="filters-section">
+  <div class="container">
+    <h2>Browse Our Exclusive ClubGG Network</h2>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="unions">Top Unions</button>
+      <button class="filter-btn" data-filter="private">Private Clubs</button>
+      <button class="filter-btn" data-filter="stakes">High Stakes</button>
+      <button class="filter-btn" data-filter="israel">Israel Action</button>
+      <button class="filter-btn" data-filter="microstakes">Microstakes</button>
+      <button class="filter-btn" data-filter="low-stakes">Low Stakes</button>
+      <button class="filter-btn" data-filter="usa-clubs">USA Clubs</button>
+    </div>
+    <div id="club-list" class="club-list">
+
+
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Paradise Union</div>
+        <p>A top choice for <span class='green'>multi‑tabling</span> grinders who love <span class='green'>bomb pots</span>, <span class='green'>HU SNGs</span>, and mixed formats. Constant traffic and <span class='green'>fast-paced tables</span> make it perfect for volume players.</p>
+        <p><strong>Club ID:</strong> 407950</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Paradise%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <!--div class="club-card clubgg unions">
+        <div class="green-glow">Massiv Union</div>
+        <p>One of the largest <span class='green'>US unions</span> with <span class='green'>bad-beat jackpots</span>, <span class='green'>7-max tables</span>, and <span class='green'>steady traffic</span>. Perfect for players looking for constant action throughout the day.</p>
+        <p><strong>Club ID:</strong> 811121</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Massiv%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Four Seasons Armenia</div>
+        <p>Exclusive <span class='green'>Armenian union</span> offering <span class='green'>hidden high-stakes</span> Omaha, with occasional <span class='green'>NLH tables</span>. Great for players who seek unique games and regional traffic.</p>
+        <p><strong>Club ID:</strong> 165987</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Four%20Seasons%20Armenia%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Degens Online Union</div>
+        <p>Optimized for <span class='green'>HU SNGs</span> and <span class='green'>NLH action</span> with <span class='green'>soft fields</span> and <span class='green'>low competition</span>. Perfect for heads-up specialists and aggressive players.</p>
+        <p><strong>Club ID:</strong> 456262</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Degens%20Online%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Flamingoo Union</div>
+        <p>Small but consistent <span class='green'>Armenian-based union</span> with <span class='green'>mid-stakes PLO</span>, <span class='green'>steady tables</span>, and recreational traffic in <span class='green'>Omaha games</span>.</p>
+        <p><strong>Club ID:</strong> 971449</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Flamingoo%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Mammoth Union</div>
+        <p>Launched in 2025, <span class='green'>European alliance</span> with <span class='green'>diverse formats</span>, steady <span class='green'>PLO4 and NLH</span> traffic, and attractive fields for grinders.</p>
+        <p><strong>Club ID:</strong> 298265</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Mammoth%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Eclipse Union</div>
+        <p>Kazakhstan-based <span class='green'>micro-stakes hub</span> known for <span class='green'>quiet grinder sessions</span>, <span class='green'>steady recreational traffic</span>, and soft tables at all hours.</p>
+        <p><strong>Club ID:</strong> 800864</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Eclipse%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Halley Union</div>
+        <p>Specializes in <span class='green'>Big O</span> and <span class='green'>Squid Games</span> formats. Compact union with <span class='green'>creative setups</span> and <span class='green'>unique game variations</span>.</p>
+        <p><strong>Club ID:</strong> 731710</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Halley%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Italian Poker Club</div>
+        <p>Popular <span class='green'>mid-stakes</span> club with <span class='green'>Euro-style traffic</span>, <span class='green'>NLH/PLO4/PLO5</span> action, and reliable soft tables during European evenings.</p>
+        <p><strong>Club ID:</strong> 513031</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Italian%20Poker%20Club%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Cool Runnings Union</div>
+        <p>High-quality <span class='green'>Euro PLO6 club</span> with <span class='green'>tight-loose mixed fields</span>, regular <span class='green'>high VPIP tables</span>, and consistent action in the evenings.</p>
+        <p><strong>Club ID:</strong> 876027</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Cool%20Runnings%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div-->
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Atamans Union</div>
+        <p>Top choice for <span class='green'>PLO5</span>, <span class='green'>PLO6</span>, and <span class='green'>HU Omaha</span> lovers. Aggressive fields and <span class='green'>solid traffic</span> around the clock.</p>
+        <p><strong>Club ID:</strong> 571312</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Atamans%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Player’s Choice UK Union</div>
+        <p>UK-based club with <span class='green'>mixed-stakes NLH & Omaha</span>, <span class='green'>HU SNGs</span>, and a variety of <span class='green'>soft recreational tables</span>.</p>
+        <p><strong>Club ID:</strong> 385210</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Player’s%20Choice%20UK%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Galaxy VIP Union</div>
+        <p>Exclusive <span class='green'>South American union</span> featuring <span class='green'>soft VIP PLO tables</span>, <span class='green'>high VPIP</span>, and consistent action with recreational fields.</p>
+        <p><strong>Club ID:</strong> 934924</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Galaxy%20VIP%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Ribhoz Union</div>
+        <p>Low-stakes <span class='green'>Russian NLH</span> with <span class='green'>steady recreational traffic</span> and easy-to-beat <span class='green'>soft fields</span> perfect for grinders.</p>
+        <p><strong>Club ID:</strong> 135599</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Ribhoz%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Polska Unia</div>
+        <p>Poland's mid-stakes club. <span class='green'>ID unknown</span>, but known for <span class='green'>reliable action</span> in <span class='green'>PLO5</span> and <span class='green'>mid-stakes NLH</span> during EU peak hours.</p>
+        <p><strong>Club ID:</strong> </p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Polska%20Unia%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Europa Party Union</div>
+        <p>Lively <span class='green'>Moldovan union</span> with <span class='green'>bomb-pot PLO4 HU</span> setups, <span class='green'>high VPIP</span> tables, and a constant party-style environment.</p>
+        <p><strong>Club ID:</strong> 516948</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Europa%20Party%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">MDSquad Union</div>
+        <p>Low-stakes <span class='green'>NLH</span> and <span class='green'>PLO4</span> rooms with <span class='green'>consistent traffic</span> and <span class='green'>grinder-friendly volume</span> all day.</p>
+        <p><strong>Club ID:</strong> 201410</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20MDSquad%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">GG Mexico Union</div>
+        <p>Micro-stakes <span class='green'>NLH</span> and <span class='green'>PLO5</span> with <span class='green'>soft Mexican recreational fields</span> and <span class='green'>easy grind spots</span> for new players.</p>
+        <p><strong>Club ID:</strong> 155660</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20GG%20Mexico%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">The Reef Union</div>
+        <p>24/7 <span class='green'>US-based union</span> with <span class='green'>mixed-stakes tables</span>, <span class='green'>constant traffic</span>, and solid recreational presence at all hours.</p>
+        <p><strong>Club ID:</strong> 167956</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20The%20Reef%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Tilt Mavericks</div>
+        <p>Mid-to-high stakes <span class='green'>NLH</span> and <span class='green'>Omaha</span> rooms with <span class='green'>aggressive player pool</span> and <span class='green'>action-packed sessions</span>.</p>
+        <p><strong>Club ID:</strong> 510222</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Tilt%20Mavericks%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Turkish Airlines</div>
+        <p>French-based club with <span class='green'>Turkish international players</span> in <span class='green'>soft recreational fields</span> and <span class='green'>steady mid-stakes traffic</span>.</p>
+        <p><strong>Club ID:</strong> 694240</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Turkish%20Airlines%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Death Straddle</div>
+        <p>Specialized in <span class='green'>PLO4</span>, <span class='green'>PLO6</span>, and <span class='green'>double-board games</span> with frequent <span class='green'>deep stack action</span> and loose tables.</p>
+        <p><strong>Club ID:</strong> 326154</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Death%20Straddle%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Cork City</div>
+        <p>International club with <span class='green'>NLH</span>, <span class='green'>PLO5</span>, and <span class='green'>PLO8</span> games, <span class='green'>balanced fields</span>, and <span class='green'>reliable action</span> across multiple time zones.</p>
+        <p><strong>Club ID:</strong> 810718</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Cork%20City%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Westin Union</div>
+        <p>Mid/high-stakes <span class='green'>PLO4</span> American club with <span class='green'>steady traffic</span>, <span class='green'>soft recreational fields</span>, and consistent volume during evenings.</p>
+        <p><strong>Club ID:</strong> 814466</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Westin%20Union%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Cigar Lounge</div>
+        <p>Swedish poker club with <span class='green'>recreational NLH and Omaha</span> games, <span class='green'>low-stress environment</span>, and <span class='green'>steady action</span> at low stakes.</p>
+        <p><strong>Club ID:</strong> 156465</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Cigar%20Lounge%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+      
+      <div class="club-card clubgg unions">
+        <div class="green-glow">Buttermilk</div>
+        <p>Mid-stakes <span class='green'>NLH</span> and <span class='green'>Omaha</span> rooms with <span class='green'>balanced player pool</span>, <span class='green'>recreational traffic</span>, and reliable games.</p>
+        <p><strong>Club ID:</strong> 406232</p>
+        <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+        <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I%20am%20interested%20in%20joining%20Buttermilk%20on%20ClubGG', '_blank')">Request Access</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="faq" class="info-section">
+    <div class="container">
+      <h2>FAQs – ClubGG Isn't Just Another Poker App</h2>
+
+      <h3>What makes <span class="green">ClubGG</span> different?</h3>
+      <p>It's powered by the same team behind <strong>GGPoker</strong>, but ClubGG goes underground — <span class="green">private clubs</span>, <span class="green">exclusive unions</span>, and <strong>unfiltered action</strong> you won’t find anywhere else. It’s GGPoker’s wild younger brother.</p>
+
+      <h3>Why are top players moving to ClubGG?</h3>
+      <p>Because this is where the <span class="green">real whales</span> play. We’re talking about international fields with <span class="green">absurd VPIP</span>, low rake, and tables that run 24/7. It’s soft. It’s swingy. It’s exactly where edges still exist.</p>
+
+      <h3>How do I get into a ClubGG room?</h3>
+      <p>Download the ClubGG app. Enter our <span class="green">Club ID</span> and <span class="green">Referral ID</span> in the club join screen. Our agents will accept you fast — and boom, you’re in.</p>
+
+      <h3>What can I play once I’m in?</h3>
+      <p><span class="green">NLH</span>, <span class="green">PLO4</span>, <span class="green">PLO5</span>, <span class="green">PLO6</span>, <strong>Bombpots</strong>, <strong>Double Board</strong>, <span class="green">MTTs</span>, and even <strong>Omaha Hi-Lo</strong>. If you’re into volume or chaos, this is your playground.</p>
+
+      <h3>How do deposits and withdrawals work?</h3>
+      <p>You’ll deal directly with a trusted <strong>BluffBroker agent</strong>. We support <span class="green">crypto</span>, <span class="green">local bank transfers</span>, and international options. No delays, no excuses.</p>
+
+      <h3>Is ClubGG good for beginners?</h3>
+      <p><strong>Yes — if you’re ready to level up.</strong> ClubGG is full of recs from Israel, Asia, and Latin America. These are not solver users. They’re here to play. And you’re here to win.</p>
+
+      <h3>How do I know I’m joining the right union?</h3>
+      <p>You don’t — unless you’re with us. <span class="green">BluffBroker vets every room</span>. We don’t list fluff. We only recommend unions with real traffic, real recs, and real value.</p>
+    </div>
+  </section>
+
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const clubCards = document.querySelectorAll('.club-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Set active filter button
+      document.querySelector('.filter-btn.active')?.classList.remove('active');
+      btn.classList.add('active');
+
+      const filter = btn.dataset.filter;
+
+      // Apply filtering logic
+      clubCards.forEach(card => {
+        card.classList.remove('hidden'); // show all by default
+        if (filter !== 'all' && !card.classList.contains(filter)) {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+</script>
+
+  
+  <section id="review" class="info-section">
+    <div class="container">
+      <h3>Why We Chose ClubGG</h3>
+      <p>Launched in 2021 by the <span class="green">GGPoker</span> team, <span class="green">ClubGG</span> raised the bar for club-based poker. With professional-grade UI, stunning graphics, and multi-platform support, it's a hybrid between traditional poker sites and modern mobile ecosystems.</p>
+      <h3>Software & Compatibility</h3>
+      <p><span class="green">ClubGG</span> runs on PC, iOS, and Android with seamless gameplay and secure handling. No documents required. Some Israeli clubs may require a VPN to register — a 30-second setup for access to the softest games on Earth.</p>
+      <h3>Safety & Fairness</h3>
+      <p>Certified by <span class="green">BMM Test Labs</span> and continuously monitored, <span class="green">ClubGG</span> clubs offer RNG-verified security. Our trusted partners include teams dedicated to integrity and anti-collusion policies.</p>
+      <h3>Agent Deals & Rakeback</h3>
+      <p>If you're an agent, ClubGG is the most rewarding platform. As a <span class="green">BluffBroker</span> partner, you'll earn <span class="green">passive income</span> weekly when players use your referral ID (77777).</p>
+      <h3>Promotions</h3>
+      <p>We offer <span class="green">weekly bonuses</span>, private rake races, and cashback for volume players. Everything is tailored for performance — no fluff, just action.</p>
+    </div>
+  </section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

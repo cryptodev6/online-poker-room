@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokerrrr 2 - BluffBroker</title>
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/club-detail.css">
+  <script defer src="clubgg.js"></script>
+  <style type="text/css">
+    #club-filters {
+      padding: 60px 20px;
+      background: #000; /* fallback background */
+      background-image: url('/images/bg-map-green.jpg');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: #ffffff;
+
+      /* Force all text left-aligned */
+      text-align: left !important;
+    }
+
+    #club-filters .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      text-align: left !important;
+    }
+
+    #club-filters h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-weight: 700;
+      color: var(--green);
+      text-align: left !important;
+    }
+
+    #club-filters ul {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+
+    #club-filters ul li {
+      font-size: 1.1rem;
+      margin: 12px 0;
+      color: #ccc;
+      position: relative;
+      padding-left: 26px;
+      text-align: left !important;
+    }
+
+    #club-filters ul li::before {
+      content: "•";
+      color: var(--green);
+      position: absolute;
+      left: 0;
+      top: 2px;
+      font-size: 1.2rem;
+    }
+
+    #club-filters p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ccc;
+      margin-bottom: 20px;
+      text-align: left !important;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid align-items-center justify-content-between d-flex">
+
+    <!-- LEFT: Hamburger Button (only visible on mobile) -->
+    <button class="navbar-toggler d-lg-none order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- CENTER ON MOBILE, LEFT ON DESKTOP: Logo -->
+    <a class="navbar-brand mx-lg-0 mx-auto order-2 order-lg-1" href="../index.html">
+      <img src="../assets/logo-bb.png" alt="BluffBroker Logo" class="bb-logo">
+    </a>
+
+    <!-- RIGHT ON MOBILE: Telegram button -->
+    <div class="d-lg-none order-3">
+      <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+    </div>
+
+    <!-- FULL MENU: appears collapsed in mobile -->
+    <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#description">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#poker-clubs">Poker Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+        <!-- DESKTOP ONLY TELEGRAM -->
+        <li class="nav-item d-none d-lg-block">
+          <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<section class="overview">
+  <div class="container">
+    <h1>Exclusive <span class="green">Pokerrrr 2</span> Rooms</h1>
+    <p>
+      Say goodbye to waiting in public queues. Our secluded poker environments deliver quick deals, high-stakes tables, and a vetted player base.
+      No crowds. No idle lobbies. Just streamlined, pulse-pounding poker action.
+    </p>
+    <p>
+      At <strong>BluffBroker</strong>, we match determined competitors with vetted Pokerrrr 2 rooms that maintain integrity, process withdrawals reliably, and keep the game moving.
+      Whether you’re stacking chips, hunting weaker opponents, or swinging big — you’ll find your ideal arena here.
+    </p>
+  </div>
+</section>
+
+<section id="benefits" class="features-section">
+  <div class="container">
+    <h2>Perks of Our Private Rooms</h2>
+    <ul>
+      <li><span class="green">Strictly invite-only</span> — no spectators, only qualified players</li>
+      <li><span class="green">Rapid seat rotation</span> — constant action, zero downtime</li>
+      <li><span class="green">Specialized formats</span> — 6-max, heads-up, deep-stack, bomb pots</li>
+      <li><span class="green">Designed for mobile</span> — seamless on iOS &amp; Android</li>
+      <li><span class="green">Trusted payout channels</span> — crypto or traditional transfers</li>
+    </ul>
+  </div>
+</section>
+
+<section id="supported-games" class="games-section">
+  <div class="container">
+    <h2>Game Types &amp; App Specs</h2>
+    <p>
+      Our lightweight, low-latency client supports 
+      <span class="green">No-Limit Hold’em, Pot-Limit Omaha, Short Deck, Open-Face Chinese</span>, and more.
+      Clubs span micro-stakes through tornado nosebleeds, each running its own stakes and blind structures.
+    </p>
+    <p>
+      Rather than a generic referral, BluffBroker aligns you with a club that suits your preferred pace and playstyle — from head-to-head duels to frenzied 6-max rounds or deep-ante mayhem.
+    </p>
+  </div>
+</section>
+
+<section id="faq" class="faq-section">
+  <div class="container">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Who administers these clubs?</h3>
+    <p>
+      Individual hosts or tight-knit teams oversee each room. We only list clubs with solid reputations, transparent rules, and clear communication so you know exactly who’s at the helm before you pull a chair up.
+    </p>
+
+    <h3>How can I gain entry?</h3>
+    <p>
+      Access is by invitation only. Every room has its own entry code or agent-intro process. To join, send us a message on 
+      <a href="https://t.me/BluffBroker?text=Interested%20in%20BluffBroker%20rooms" class="green">Telegram</a> and we’ll manage the introduction discreetly.
+    </p>
+
+    <h3>What variants are on offer?</h3>
+    <ul>
+      <li><span class="green">NL Hold’em</span> – 6-max, HU, full-ring</li>
+      <li><span class="green">PL Omaha</span> – 4-card &amp; 5-card</li>
+      <li><span class="green">Short Deck Hold’em</span></li>
+      <li><span class="green">Open-Face Chinese (OFC)</span></li>
+      <li><span class="green">Mixed Games</span> in select high-volume rooms</li>
+    </ul>
+
+    <h3>How do deposits and withdrawals work?</h3>
+    <p>
+      Pokerrrr 2 never holds your funds. You transact directly with club hosts via 
+      <span class="green">USDT, BTC, Zelle, CashApp</span>, or local bank transfers.
+      We vet each host to ensure punctual payouts — no excuses.
+    </p>
+
+    <h3>Can I run it on desktop?</h3>
+    <p>
+      The official client is mobile-only, but most power users employ emulators (LDPlayer, BlueStacks, etc.) on PC. 
+      Reach out if you need guidance — we’ve perfected those setups.
+    </p>
+
+    <h3>What if an issue arises?</h3>
+    <p>
+      Club operators handle routine gameplay concerns. If you’re playing via BluffBroker and face a serious dispute, we’ll escalate directly to the owners. We don’t babysit — we resolve.
+    </p>
+
+    <div class="cta">
+      <p>
+        Ready to dive into top-tier action? Message us on 
+        <a href="https://t.me/BluffBroker?text=Interested%20in%20BluffBroker%20rooms" class="green">Telegram</a> with your preferred stakes and formats. We’ll set everything up.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

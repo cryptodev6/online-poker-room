@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X-Poker - BluffBroker</title>
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="BluffBroker — Private Poker Access" />
+  <meta property="og:description" content="Access 100+ private poker clubs on every major app. Built for grinders, by grinders." />
+  <meta property="og:image" content="https://bluffbroker.com/assets/facebook.png" />
+  <meta property="og:url" content="https://yourdomain.com/index.html" />
+  <meta property="og:type" content="website" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="../assets/club-detail.css">
+  <script defer src="xpoker.js"></script>
+  
+</head>
+<body>
+<nav class="navbar navbar-expand-lg custom-navbar">
+  <div class="container-fluid align-items-center justify-content-between d-flex">
+
+    <!-- LEFT: Hamburger Button (only visible on mobile) -->
+    <button class="navbar-toggler d-lg-none order-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- CENTER ON MOBILE, LEFT ON DESKTOP: Logo -->
+    <a class="navbar-brand mx-lg-0 mx-auto order-2 order-lg-1" href="../index.html">
+      <img src="../assets/logo-bb.png" alt="BluffBroker Logo" class="bb-logo">
+    </a>
+
+    <!-- RIGHT ON MOBILE: Telegram button -->
+    <div class="d-lg-none order-3">
+      <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+    </div>
+
+    <!-- FULL MENU: appears collapsed in mobile -->
+    <div class="collapse navbar-collapse justify-content-end order-lg-2" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#description">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#poker-clubs">Poker Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="../index.html#faq">FAQ</a></li>
+        <!-- DESKTOP ONLY TELEGRAM -->
+        <li class="nav-item d-none d-lg-block">
+          <a class="navbar-telegram-btn" href="https://t.me/BluffBroker?text=I'm%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs" target="_blank">Telegram</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+  <section class="intro">
+    <div class="container">
+      <h1>X-Poker</h1>
+      <p>Ever heard of the <strong>underground Macau games</strong>? The ones with <span class="green">Asian whales</span> punting six-figure pots at 2 a.m.? That action didn’t vanish — it moved to <b>X-Poker</b>.</p><br>
+
+      <p>This app is the digital vault of Asia’s private poker elite. <strong>Most Chinese, Korean, and Southeast Asian unions</strong> now run exclusively on X-Poker. And yes — we have direct access to their most lucrative clubs.</p><br>
+
+      <ul>
+        <li><strong>Macau-style unions</strong> with <span class="green">VIP-only tables</span> and massive rec traffic.</li>
+        <li><span class="green">PLO4</span>, <span class="green">PLO5</span>, <strong>Short Deck</strong>, <strong>Spin formats</strong>, and live-style Bombpots.</li>
+        <li><span class="green">No open invitations</span>. You request. We approve. Not everyone gets in.</li>
+      </ul>
+
+      <h2>Available on Android, iOS, and Emulator</h2>
+      <p>This is <strong>real underground poker</strong> — digital edition. If you want a seat at these tables, BluffBroker is the only way in.</p>
+    </div>
+  </section>
+
+  <section id="club-filters" class="filters-section">
+    <div class="container">
+      <h2>Choose Your Club – But Choose Wisely</h2>
+      <div class="filters">
+  <button class="filter-btn active" data-filter="all">All</button>
+  <button class="filter-btn" data-filter="asian">Asian Unions</button>
+  <button class="filter-btn" data-filter="bombpots">Bombpot Games</button>
+  <button class="filter-btn" data-filter="highstakes">High Stakes Action</button>
+  <button class="filter-btn" data-filter="exotic">Exotic Formats</button>
+</div>
+      <div id="club-list" class="club-list">
+  <div class="club-card xpoker  unions asian plo highstakes">
+    <div class="green-glow">TOP Union</div>
+    <p>China's elite playground. <span class="green">PLO5</span>, <span class="green">Squid Games</span>, and <strong>multi-straddle action</strong> that mimics Macau cash rooms. Real whales. Real volatility.</p>
+    <p><strong>Club ID:</strong> 2066484</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  unions asian exotic nlh">
+    <div class="green-glow">Taiwan Union</div>
+    <p><span class="green">Double Board NLH</span> and <span class="green">AoF</span> spin formats running 24/7. Fishy pool, passive regs. Ideal for strategy crushers.</p>
+    <p><strong>Club ID:</strong> 2026683</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  unions asian nlh exotic">
+    <div class="green-glow">Japanese Union</div>
+    <p>Tight but beatable. <span class="green">Heads-Up OFC</span>, <span class="green">AoF NLH</span>, and quirky local variants. Mid-stakes goldmine.</p>
+    <p><strong>Club ID:</strong> 2065031</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  unions asian plo nlh">
+    <div class="green-glow">Philippines Union</div>
+    <p><span class="green">NLH</span> and <span class="green">PLO</span> mixes across full ring, 6-max and HU. Low-stakes, <strong>high-rakeback potential</strong>.</p>
+    <p><strong>Club ID:</strong> 955197</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  unions asian plo highstakes">
+    <div class="green-glow">Malaysian Union (ASEAN Union)</div>
+    <p>One of the softest PLO5 pools online. <span class="green">Mid to high stakes</span>. Rec traffic from across Southeast Asia. Games pop late night.</p>
+    <p><strong>Club ID:</strong> 1879221</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  unions asian nlh exotic">
+    <div class="green-glow">Thailand Union</div>
+    <p>Low-stakes chaos. <span class="green">Tongits</span>, <span class="green">NLH</span>, and <strong>wild local formats</strong>. Easy money, weird hands, pure value.</p>
+    <p><strong>Club ID:</strong> 1698371</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  private plo nlh exotic">
+    <div class="green-glow">Explose Club</div>
+    <p><span class="green">PLO4–6</span>, <span class="green">Bombpots</span>, Squid, NLH — and unpredictable flips. The most <span class="green">degenerate</span> Aussie room on X-Poker. We love it.</p>
+    <p><strong>Club ID:</strong> 1830481</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  private plo highstakes">
+    <div class="green-glow">Argentina Club</div>
+    <p><span class="green">10/20 blinds</span> with whales that refuse to fold. Mid-to-high stakes <span class="green">PLO5</span> with real meat on the bone. Crushable.</p>
+    <p><strong>Club ID:</strong> 2182428</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  private plo">
+    <div class="green-glow">Crocodiles Club</div>
+    <p><span class="green">PLO5</span> madness from South America. High rake but high rewards. Includes free-pass flips and promo spots.</p>
+    <p><strong>Club ID:</strong> 2231053</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+
+  <div class="club-card xpoker  private plo bombpots">
+    <div class="green-glow">CZ Poker Club</div>
+    <p>Constant <span class="green">Bombpots</span> every 15 hands. Soft <span class="green">PLO5</span> pool with LATAM flow and Brazilian energy. Mid-blind beast.</p>
+    <p><strong>Club ID:</strong> 2280402</p>
+    <p><strong>Referral ID:</strong> (Ask for referral ID)</p>
+    <button class="cta-button" onclick="window.open('https://t.me/BluffBroker?text=I\'m%20interested%20in%20accessing%20the%20BluffBroker%20private%20clubs', '_blank')">Request Access</button>
+  </div>
+</div>
+    </div>
+  </section>
+
+  <section id="faq" class="info-section">
+    <div class="container">
+      <h2>FAQs – X-Poker: The App You Weren’t Supposed to Find</h2>
+
+      <h3>What is <span class="green">X-Poker</span>?</h3>
+      <p>It’s a next-gen mobile poker platform where <strong>private clubs run 24/7 games</strong> in PLO, NLH, and more. Fewer regs. More whales. And zero distractions from real edge-grinding.</p>
+
+      <h3>Why haven’t I heard of it?</h3>
+      <p>Because the best players don’t advertise the best rooms. <span class="green">X-Poker</span> is where VIPs move in silence. You don’t find it by luck — you find it through <strong>access</strong>. That’s what BluffBroker gives you.</p>
+
+      <h3>How do I join a club?</h3>
+      <p>Download the app, enter our <span class="green">Club ID</span> and <span class="green">Referral ID</span>, and wait for approval. Not every request gets in. We filter. We protect the action.</p>
+
+      <h3>Is this secure?</h3>
+      <p>Yes — if you enter through BluffBroker. We <strong>verify payout records, traffic, and agents</strong> before onboarding anyone. This isn’t an affiliate scam — we play where we send you.</p>
+
+      <h3>What games run best on X-Poker?</h3>
+      <p><span class="green">PLO5</span> is the main battleground. <span class="green">Double Board</span>, <span class="green">HU NLH</span>, <strong>Bombpots</strong>, and custom tourneys make it wild. Tables are sharp but beatable.</p>
+
+      <h3>How do I deposit and cash out?</h3>
+      <p>You’ll handle funds with our vetted agents. <span class="green">Crypto</span>, <span class="green">Pix</span>, <span class="green">USD</span>, or local — we keep it fast and simple.</p>
+
+      <h3>Is it beginner-friendly?</h3>
+      <p>It is — but you better show up ready. <strong>Recs run wild</strong>, but so do fast players. Learn fast, think sharp, and we’ll make sure you sit where the EV flows.</p>
+    </div>
+  </section>
+
+  <script>
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const clubCards = document.querySelectorAll('.club-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelector('.filter-btn.active')?.classList.remove('active');
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        clubCards.forEach(card => {
+          card.classList.remove('hidden');
+          if (filter !== 'all' && !card.classList.contains(filter)) {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

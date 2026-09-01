@@ -1,0 +1,215 @@
+/* club-detail.css */
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.intro {
+	background: url('background-intro.png') no-repeat center center;
+  background-size: cover;
+  margin-top: 120px !important;
+}
+
+#club-filters {
+  background: url('background-club-detail.png') no-repeat center top, #000;
+  background-size: 100% auto;
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #00aa00;
+  text-shadow: 0 0 10px rgba(0, 170, 0, 0.5);
+}
+
+.green {
+  color: rgb(1, 121, 0);
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(1, 121, 0, 0.7);
+}
+
+.filters-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.filters .filter-btn {
+  background-color: #111;
+  border: 1px solid rgb(1, 121, 0);
+  color: rgb(1, 121, 0);
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.filters .filter-btn.active,
+.filters .filter-btn:hover {
+  background-color: rgb(1, 121, 0);
+  color: #000;
+}
+
+.club-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.club {
+  background-color: #111;
+  border: 1px solid rgba(1, 121, 0, 0.5);
+  padding: 20px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.club h4 {
+  color: rgb(1, 121, 0);
+  font-size: 20px;
+  font-weight: bold;
+  animation: glow 2s infinite;
+}
+
+@keyframes glow {
+  0%   { text-shadow: 0 0 5px rgba(1,121,0,0.7); }
+  50%  { text-shadow: 0 0 15px rgba(1,121,0,1); }
+  100% { text-shadow: 0 0 5px rgba(1,121,0,0.7); }
+}
+
+.club p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.cta-button {
+  background-color: rgb(1, 121, 0);
+  color: #000;
+  border: none;
+  padding: 12px 18px;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 15px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0f0;
+  color: #000;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+  .club-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filters .filter-btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
+}
+
+
+.club-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.club-card {
+  background: rgba(0, 0, 0, 0.35); /* dark glass */
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 0, 0.15); /* slight neon edge */
+  border-radius: 20px;
+  padding: 1.8rem;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 15px rgba(1, 121, 0, 0.15);
+  position: relative;
+}
+
+.club-card:hover {
+  box-shadow: 0 0 25px rgba(1, 121, 0, 0.35);
+  transform: scale(1.015);
+}
+
+.club-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: #01a600;
+  text-shadow: 0 0 6px rgba(1, 121, 0, 0.4);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px rgba(1, 121, 0, 0.4);
+  }
+  to {
+    text-shadow: 0 0 14px rgba(1, 121, 0, 0.9);
+  }
+}
+
+.club-card p {
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+  line-height: 1.4;
+}
+
+.club-card .club-info {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  color: #a0ffa0;
+}
+
+.cta-button {
+  margin-top: 1.5rem;
+  padding: 0.9rem 1.2rem;
+  font-size: 1rem;
+  background: #017900;
+  color: white;
+  border: none;
+  width: 100%;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background: #01a600;
+  transform: scale(1.02);
+}
+
+.green-glow{
+	 color: rgb(1, 121, 0);
+	  font-weight: bold;
+	  text-shadow: 0 0 5px rgba(1, 121, 0, 0.7);
+	  font-size:25px !important;
+}
+.hidden {
+  display: none !important;
+}
