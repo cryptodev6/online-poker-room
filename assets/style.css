@@ -1428,6 +1428,90 @@ details p {
   transform: translateY(0);
 }
 
+/* =========================================================
+   ROOM ENTRY — SECCIONES APILADAS DURANTE EL SCROLL
+
+   Se usa sticky (no fixed) para conservar el espacio de cada
+   sección. Club cubre al Hero y el contenido siguiente cubre
+   Club, creando el efecto de entrar por capas a Voss Room.
+   ========================================================= */
+
+@media (min-width: 981px) and (min-height: 721px) {
+  main {
+    position: relative;
+    isolation: isolate;
+  }
+
+  .hero {
+    --room-exit-shift: 0px;
+    --room-exit-scale: 1;
+    --room-exit-opacity: 1;
+    --room-exit-shade: 0;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .hero::after {
+    position: absolute;
+    z-index: 2;
+    inset: 0;
+    background: #030303;
+    content: "";
+    opacity: var(--room-exit-shade);
+    pointer-events: none;
+  }
+
+  .hero-grid {
+    opacity: var(--room-exit-opacity);
+    transform: translate3d(0, var(--room-exit-shift), 0) scale(var(--room-exit-scale));
+    transform-origin: center center;
+    will-change: transform, opacity;
+  }
+
+  .trust-bar {
+    z-index: 2;
+    background: var(--obsidian-soft);
+  }
+
+  #club {
+    position: sticky;
+    z-index: 3;
+    top: 0;
+    box-shadow: 0 -34px 90px rgba(0, 0, 0, 0.72);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  .bonus,
+  #acceso,
+  #pagos,
+  #experiencias,
+  #alexander,
+  #faq,
+  .closing,
+  .legal-note {
+    position: relative;
+    z-index: 4;
+  }
+
+  #pagos,
+  #experiencias,
+  #alexander,
+  .closing,
+  .legal-note,
+  .site-footer {
+    background-color: var(--obsidian);
+  }
+
+  .site-footer {
+    position: relative;
+    z-index: 4;
+  }
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -1643,6 +1727,22 @@ details p {
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
+  }
+
+  .hero,
+  #club {
+    position: relative;
+    z-index: auto;
+    top: auto;
+  }
+
+  .hero::after {
+    display: none;
+  }
+
+  .hero-grid {
+    opacity: 1;
+    transform: none;
   }
 
   *,

@@ -739,6 +739,48 @@
     updateHeader();
     window.addEventListener("scroll", updateHeader, { passive: true });
 
+    /*
+      ROOM ENTRY
+      El Hero permanece anclado mientras Club sube y lo cubre.
+      La progresión añade profundidad sin sacar secciones del flujo.
+    */
+    const heroSection = document.querySelector(".hero");
+    const clubSection = document.getElementById("club");
+    const roomStackQuery = window.matchMedia("(min-width: 981px) and (min-height: 721px)");
+    const reducedMotionQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let roomEntryFrame = 0;
+
+    function updateRoomEntry() {
+      roomEntryFrame = 0;
+
+      if (!heroSection || !clubSection || !roomStackQuery.matches || reducedMotionQuery.matches) {
+        heroSection?.style.removeProperty("--room-exit-shift");
+        heroSection?.style.removeProperty("--room-exit-scale");
+        heroSection?.style.removeProperty("--room-exit-opacity");
+        heroSection?.style.removeProperty("--room-exit-shade");
+        return;
+      }
+
+      const clubTop = clubSection.getBoundingClientRect().top;
+      const progress = Math.min(1, Math.max(0, (window.innerHeight - clubTop) / window.innerHeight));
+
+      heroSection.style.setProperty("--room-exit-shift", `${-24 * progress}px`);
+      heroSection.style.setProperty("--room-exit-scale", String(1 - 0.035 * progress));
+      heroSection.style.setProperty("--room-exit-opacity", String(1 - 0.42 * progress));
+      heroSection.style.setProperty("--room-exit-shade", String(0.58 * progress));
+    }
+
+    function requestRoomEntryUpdate() {
+      if (roomEntryFrame) return;
+      roomEntryFrame = window.requestAnimationFrame(updateRoomEntry);
+    }
+
+    updateRoomEntry();
+    window.addEventListener("scroll", requestRoomEntryUpdate, { passive: true });
+    window.addEventListener("resize", requestRoomEntryUpdate, { passive: true });
+    roomStackQuery.addEventListener?.("change", requestRoomEntryUpdate);
+    reducedMotionQuery.addEventListener?.("change", requestRoomEntryUpdate);
+
     menuToggle.addEventListener("click", () => {
       const isOpen = navMenu.classList.toggle("is-open");
       menuToggle.setAttribute("aria-expanded", String(isOpen));
