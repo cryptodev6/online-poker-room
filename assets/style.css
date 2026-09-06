@@ -2347,3 +2347,100 @@ details p {
     animation: none;
   }
 }
+
+/* =========================================================
+   BONUS — BACKGROUND CINEMATOGRÁFICO
+   ========================================================= */
+
+.bonus {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-block: 1px solid var(--line);
+  background-color: #070707;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(7, 7, 7, 0.16) 0%,
+      rgba(7, 7, 7, 0.32) 48%,
+      rgba(7, 7, 7, 0.38) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 7, 7, 0.08) 0%,
+      rgba(7, 7, 7, 0.22) 55%,
+      rgba(7, 7, 7, 0.72) 100%
+    ),
+    url("../assets/bonus-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bonus > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Mantiene el panel legible dejando ver ligeramente el fondo */
+
+.bonus-panel {
+  background:
+    linear-gradient(
+      130deg,
+      rgba(198, 165, 104, 0.06),
+      transparent 36%
+    ),
+    rgba(5, 5, 5, 0.78);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+/* Facilita el desplazamiento desde el enlace del header */
+
+#bonus-title {
+  scroll-margin-top: 120px;
+}
+
+/* =========================================================
+   EFECTO APILADO — SOLO EN ESCRITORIO
+   ========================================================= */
+
+@media (min-width: 981px) and (min-height: 721px) {
+  .bonus {
+    position: sticky;
+    z-index: 4;
+    top: 0;
+    display: grid;
+    min-height: 100svh;
+    align-items: center;
+    padding-block: clamp(72px, 9vh, 110px);
+    box-shadow: 0 -34px 90px rgba(0, 0, 0, 0.76);
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* La siguiente sección sube y cubre el bono */
+
+  #acceso,
+  #faq,
+  .legal-note,
+  .site-footer {
+    position: relative;
+    z-index: 5;
+  }
+
+  #acceso {
+    box-shadow: 0 -34px 90px rgba(0, 0, 0, 0.72);
+  }
+}
+
+/* En tablet y móvil se conserva el fondo, pero no el sticky */
+
+@media (max-width: 980px), (max-height: 720px) {
+  .bonus {
+    position: relative;
+    min-height: auto;
+    background-position: 42% center;
+  }
+}
