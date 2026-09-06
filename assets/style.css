@@ -332,6 +332,7 @@ summary:focus-visible,
 }
 
 @media (max-width: 720px) {
+
   .hero {
     min-height: auto;
     padding: 124px 0 72px;
@@ -2280,6 +2281,9 @@ details p {
     border-top: 1px solid var(--line-soft);
     border-left: 0;
   }
+  .hero h1 {
+    font-size: 3rem !important;
+  }
 }
 
 @media (max-width: 520px) {
@@ -2442,5 +2446,40 @@ details p {
     position: relative;
     min-height: auto;
     background-position: 42% center;
+  }
+}
+@media (max-width: 720px) {
+  .hero-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  .card-status {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .status-label {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero-card .monogram {
+    margin-inline: auto;
+  }
+
+  .hero-card-bottom {
+    width: 100%;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .room-label {
+    text-align: center;
+  }
+
+  .id-chip {
+    justify-self: center;
   }
 }
