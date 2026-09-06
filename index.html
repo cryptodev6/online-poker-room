@@ -61,7 +61,7 @@
           <p class="hero-copy">
             Voss Room reúne a emprendedores, nómadas digitales y profesionales
             que viven y trabajan entre distintas ciudades, conectados por una
-            cosa: el poker. Muchos nos conocimos viajando y ya compartimos mesa
+            cosa: <b>la pasión por el poker</b>. Muchos nos conocimos viajando y ya compartimos mesa
             en persona. Hoy seguimos jugando juntos, estemos donde estemos.
           </p>
 
@@ -665,8 +665,10 @@
     </div>
   </footer>
 
-  <div class="mobile-dock" aria-label="Acción principal móvil">
-    <a class="btn btn-primary" data-whatsapp="access" href="#">Unirme a Voss Room</a>
+  <div class="mobile-dock is-hidden" aria-label="Acción principal móvil">
+    <a class="btn btn-primary" data-whatsapp="access" href="#">
+      Unirme a Voss Room
+    </a>
   </div>
 
   <div class="modal" id="paymentModal" role="dialog" aria-modal="true" aria-labelledby="paymentModalTitle" aria-hidden="true">
@@ -841,6 +843,16 @@
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && modal.classList.contains("is-open")) closePayments();
     });
+
+    const mobileDock = document.querySelector(".mobile-dock");
+
+    if (heroSection && mobileDock) {
+      const mobileDockObserver = new IntersectionObserver(([entry]) => {
+        mobileDock.classList.toggle("is-hidden", entry.isIntersecting);
+      });
+
+      mobileDockObserver.observe(heroSection);
+    }
 
     function renderPaymentPanel(method) {
       const panel = document.querySelector(`[data-panel="${method}"]`);

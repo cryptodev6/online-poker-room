@@ -343,6 +343,30 @@ summary:focus-visible,
       ),
       url("../assets/intro-background-mobile.png") 68% top / cover no-repeat !important;
   }
+
+  .mobile-dock {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease,
+      visibility 0s;
+  }
+
+  .mobile-dock.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(calc(100% + 28px));
+    transition:
+      opacity 220ms ease,
+      transform 220ms ease,
+      visibility 0s 220ms;
+  }
+
+
 }
 
 #club {
