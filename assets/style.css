@@ -2486,6 +2486,9 @@ details p {
   .bonus-section-mobile {
     display: block !important;
   }
+  #bonus-section {
+    display: none !important;
+  }
 
 
 }
