@@ -127,7 +127,7 @@ svg {
   max-width: 800px;
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.3rem, 5vw, 4.8rem);
+  font-size: clamp(2.3rem, 3vw, 4.8rem);
   font-weight: 400;
   line-height: 1.03;
   letter-spacing: -0.04em;
@@ -2064,7 +2064,7 @@ details p {
   opacity: 0;
   pointer-events: none;
   content: "";
-  animation: bonus-pass-glow 8s ease-out infinite 1.2s;
+  animation: bonus-pass-glow 6s ease-out infinite 1.2s;
 }
 
 .bonus-pass-top,
@@ -2489,9 +2489,13 @@ details p {
   #bonus-section {
     display: none !important;
   }
-
-
+  .section-lead{ 
+    display: block !important
+  }
 }
+.section-lead{ 
+    display: none !important
+  }
 .bonus-section-mobile {
   display: none;
 }
@@ -2503,5 +2507,66 @@ details p {
 
   .trust-item strong {
     min-height: 2.5em;
+  }
+}
+@media (min-width: 1024px) {
+  .private-access-copy {
+    align-self: center;
+    margin: 0;
+  }
+}
+.bonus-link-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .bonus-link-desktop {
+    display: none;
+  }
+
+  .bonus-link-mobile {
+    display: inline-flex;
+  }
+}
+
+.monogram {
+  animation: monogram-glow 4s ease-in-out infinite;
+  will-change: text-shadow, filter;
+}
+
+@keyframes monogram-glow {
+  0%,
+  68%,
+  100% {
+    text-shadow: none;
+    filter: brightness(1);
+  }
+
+  78% {
+    text-shadow:
+      0 0 8px rgba(212, 175, 55, 0.45),
+      0 0 18px rgba(212, 175, 55, 0.25);
+    filter: brightness(1.15);
+  }
+
+  84% {
+    text-shadow:
+      0 0 10px rgba(255, 220, 125, 0.9),
+      0 0 25px rgba(212, 175, 55, 0.65),
+      0 0 45px rgba(212, 175, 55, 0.3);
+    filter: brightness(1.4);
+  }
+
+  92% {
+    text-shadow:
+      0 0 6px rgba(212, 175, 55, 0.3),
+      0 0 14px rgba(212, 175, 55, 0.15);
+    filter: brightness(1.08);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monogram {
+    animation: none;
   }
 }
