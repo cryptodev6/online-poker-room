@@ -2449,9 +2449,10 @@ details p {
   }
 }
 @media (max-width: 720px) {
-  .hero-card {
+  .hero-card-wrap {
     align-items: center;
     text-align: center;
+    display: none !important;
   }
 
   .card-status {
@@ -2485,9 +2486,7 @@ details p {
   .bonus-section-mobile {
     display: block !important;
   }
-  .bonus {
-    display: none !important;
-  }
+
 
 }
 .bonus-section-mobile {
