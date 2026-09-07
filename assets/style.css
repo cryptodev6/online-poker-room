@@ -2482,9 +2482,6 @@ details p {
   .id-chip {
     justify-self: center;
   }
-  .hero-card-wrap {
-    display: none;
-  }
   .bonus-section-mobile {
     display: block !important;
   }
@@ -2495,4 +2492,14 @@ details p {
 }
 .bonus-section-mobile {
   display: none;
+}
+
+@media (max-width: 720px) {
+  .trust-item {
+    justify-content: flex-start;
+  }
+
+  .trust-item strong {
+    min-height: 2.5em;
+  }
 }
