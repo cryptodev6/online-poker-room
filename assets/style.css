@@ -2570,3 +2570,48 @@ details p {
     animation: none;
   }
 }
+.faq-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border-top: 1px solid var(--line-soft);
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(7, 7, 7, 0.28) 0%,
+      rgba(7, 7, 7, 0.55) 32%,
+      rgba(7, 7, 7, 0.92) 56%,
+      rgba(7, 7, 7, 0.98) 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(7, 7, 7, 0.08) 0%,
+      rgba(7, 7, 7, 0.35) 72%,
+      #070707 100%
+    ),
+    url("../assets/background-faq.jpeg") 18% center / cover no-repeat;
+
+  background-color: #070707;
+}
+
+.faq-section > .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Adaptación móvil */
+@media (max-width: 768px) {
+  .faq-section {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(7, 7, 7, 0.55) 0%,
+        rgba(7, 7, 7, 0.88) 28rem,
+        #070707 52rem
+      ),
+      url("../assets/background-faq.jpeg") 17% top / auto 52rem no-repeat;
+
+    background-color: #070707;
+  }
+}
