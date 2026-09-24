@@ -1,0 +1,9 @@
+VOSS LIMA · VERSIÓN 6 · 24 SEPTIEMBRE 2026
+
+Extrae TODO el ZIP a una carpeta nueva. Abre index.html dentro de esa carpeta.
+Desktop: la foto de After hours permanece fija mientras cambian las cuatro escenas.
+Móvil: cada capítulo nocturno muestra su propia foto al avanzar, sin imagen fija.
+Voss Room: martes 13, jueves 15 y martes 20 de octubre, S/10–S/25.
+FAQ: paquetes, cash en Atlantic City, ubicación, apartamento real, inclusiones y reserva a distancia.
+Web privada: https://voss-lima-poker-residence.corazaosoftware.chatgpt.site/?release=v6-navigation-faq
+Commit: b22137aadfea71d900b4374733ca668ba385166f
