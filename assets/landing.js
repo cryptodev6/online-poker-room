@@ -38,7 +38,7 @@
     sunday: "Hola, quiero consultar la mesa High Roller del domingo de Voss Room: NL400 o PLO500, entrada mínima US$1.000. ¿A qué hora empieza y hay asiento?",
     join: "Hola, quiero unirme a Voss Room. ¿Cómo encuentro el Club ID " + CLUB_ID + " y qué mesas están disponibles?",
     details: "Hola, quiero conocer las mesas, entradas mínimas, rake y asientos de la próxima sesión en Voss Room.",
-    pro: "Hola, juego póker online con frecuencia y quiero conocer el mejor deal de rakeback disponible para mi volumen en Voss Room, ClubGG " + CLUB_ID + ". Juego [NL/PLO5], límites [indica tus límites] y mi volumen aproximado es [indica tu volumen]. ¿Me confirmas rake, porcentaje de rakeback, cálculo, acreditación y compatibilidad con el bono?",
+    pro: "Hola, juego póker online con mucho volumen y quiero consultar si hay condiciones individuales de rakeback para mi juego en Voss Room, ClubGG " + CLUB_ID + ". Juego [NL/PLO5], límites [indica tus límites] y mi volumen aproximado es [indica tu volumen]. Entiendo que un acuerdo de rakeback no se combina con el bono de bienvenida.",
     bonus: "Hola, quiero consultar y reclamar el bono del 25% sobre mi primer depósito elegible. Antes de depositar US$1.000, confírmame si recibiría US$250 adicionales y todas las condiciones de uso y retiro.",
     payment: "Hola, quiero conocer los medios de pago vigentes y el plazo real de retiro antes de ingresar saldo en Voss Room.",
     question: "Hola, tengo una pregunta sobre las mesas de Voss Room.",
@@ -70,7 +70,7 @@
     toggle.setAttribute("aria-expanded", String(open));
     toggle.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
   });
-  menu.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
+  menu.querySelectorAll("a, button[data-open-bonus]").forEach((link) => link.addEventListener("click", closeMenu));
   document.addEventListener("keydown", (event) => {
     if (event.key === "Escape") closeMenu();
   });
@@ -152,10 +152,12 @@
   document.querySelectorAll("[data-close-lima]").forEach((button) => {
     button.addEventListener("click", () => limaDialog.close("dismissed"));
   });
-  document.querySelector("[data-open-bonus]").addEventListener("click", () => {
-    sequenceActive = false;
-    if (!bonusDialog.open) bonusDialog.showModal();
-    track("bonus_reopened");
+  document.querySelectorAll("[data-open-bonus]").forEach((button) => {
+    button.addEventListener("click", () => {
+      sequenceActive = false;
+      if (!bonusDialog.open) bonusDialog.showModal();
+      track("bonus_reopened");
+    });
   });
   bonusDialog.addEventListener("close", () => {
     if (!sequenceActive) return;

@@ -1,0 +1,118 @@
+/* Conversion details, community table and private game showcase. */
+.nav-links>button[data-open-bonus]{border:0;padding:0;background:none;color:#ecf2ee;font-size:.73rem;font-weight:750;white-space:nowrap}
+.nav-links>button[data-open-bonus]:hover,.nav-links>a[href="#juego-privado"]:hover{color:var(--gold)}
+.nav-links>a[href="#juego-privado"]{color:#f4d894}
+.table-layout{scroll-margin-top:112px}
+.volume-note{display:flex;align-items:center;justify-content:space-between;gap:26px;padding-top:24px;margin-top:34px;border-top:1px solid #d7e7ba40}
+.volume-note p{max-width:760px;margin:0;color:#cdddc6;font-size:.79rem;line-height:1.6}
+.volume-note strong{color:#e4eacc;font-weight:850}
+.volume-note a{flex:none;color:#d9e8bf;font-size:.65rem;font-weight:850;letter-spacing:.1em;text-decoration:underline;text-underline-offset:6px}
+.volume-note a:hover{color:var(--gold)}
+
+/* Deliberately illustrative ClubGG table: no player or live hand is implied. */
+.world-chapter--community{min-height:115svh;justify-content:center}
+.world-chapter--community>.community-layout{max-width:none;width:100%;padding-block:120px;display:grid;grid-template-columns:minmax(0,.87fr) minmax(0,1.13fr);align-items:center;gap:clamp(28px,4vw,65px)}
+.community-copy{max-width:490px}
+.world-chapter--community h2{font-size:clamp(2.8rem,3.85vw,4.6rem);line-height:1.03}
+.world-chapter--community p{font-size:1rem;line-height:1.65}
+.community-link{display:flex;justify-content:space-between;align-items:center;gap:15px;transition:color .25s}
+.community-link:hover{color:var(--gold)}
+.community-link span{font-size:1.15rem}
+.poker-demo{position:relative;min-width:0;overflow:hidden;border:1px solid #cde4a05b;border-radius:16px;background:radial-gradient(circle at 50% 38%,#1d5c3d44,transparent 58%),#081912;box-shadow:0 0 0 7px #d7ee9a0b,0 0 60px #a7eb6334,0 35px 90px #000c;backdrop-filter:blur(12px);transform:perspective(1200px) rotateY(-2deg);transition:transform .55s,box-shadow .55s}
+.poker-demo:hover{transform:perspective(1200px) rotateY(0) translateY(-4px);box-shadow:0 0 0 7px #d7ee9a10,0 0 85px #a7eb6359,0 42px 90px #000c}
+.poker-demo-head,.poker-demo-foot{display:flex;align-items:center;justify-content:space-between;gap:9px;min-height:50px;padding:0 18px;background:#0a2218;color:#dcefd4;font-size:.58rem;font-weight:900;letter-spacing:.11em}
+.poker-demo-head{border-bottom:1px solid #d6e9b733}
+.poker-demo-head b{color:var(--gold);font-size:1rem}
+.poker-demo-head .pulse-dot{width:6px;height:6px}
+.poker-demo-foot{min-height:40px;border-top:1px solid #d6e9b733;color:#adc3a7}
+.poker-demo-stage{position:relative;width:100%;height:410px;background:radial-gradient(ellipse at 50% 46%,#164b2e 0%,#0c2a1a 43%,#07190f 83%)}
+.felt-table{position:absolute;left:50%;top:51%;width:78%;height:51%;transform:translate(-50%,-50%);border:10px solid #29251b;border-radius:50%;background:radial-gradient(ellipse at 45% 32%,#236a43,#10422b 53%,#0b3321);outline:2px solid #c8aa58;box-shadow:0 0 0 8px #574528,0 15px 40px #000c,inset 0 8px 34px #00140da9}
+.felt-edge{position:absolute;inset:12px;border:1px solid #eadb9d86;border-radius:50%;pointer-events:none}
+.felt-logo{position:absolute;top:17%;left:50%;width:100px;height:55px;transform:translateX(-50%);opacity:.72;mix-blend-mode:screen}
+.felt-logo img{width:100%;height:100%;object-fit:contain}
+.felt-pot{position:absolute;top:43%;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:5px;white-space:nowrap;color:#f5f3d8;font-size:.55rem;font-weight:800;letter-spacing:.08em;text-shadow:0 1px 5px #000}
+.felt-pot strong{color:#f7dc83}
+.board{position:absolute;top:57%;left:50%;transform:translateX(-50%);display:flex;gap:4px}
+.board>span{display:flex;align-items:center;justify-content:center;gap:2px;width:28px;height:36px;border-radius:3px;background:#f5f5e7;color:#152419;font:900 .87rem/1 var(--sans);box-shadow:0 3px 10px #0008}
+.card-suit{font-size:.75rem}.card-suit.red{color:#cb302b}.card-suit.black{color:#26352f}
+.game-chip{position:absolute;width:18px;height:11px;border-radius:50%;border:3px dotted #f1e5ba;background:#c94d3c;box-shadow:0 3px 0 #71392b,0 5px 8px #0007}
+.game-chip--one{top:38%;left:26%;animation:chip-slide 7s ease-in-out infinite}
+.game-chip--two{top:59%;right:20%;background:#354eaa;box-shadow:0 3px 0 #202653,0 5px 8px #0007}
+.player{position:absolute;display:flex;align-items:center;gap:5px;min-width:108px;padding:5px 7px 5px 5px;border:1px solid #dfdfb46d;border-radius:7px;background:#112519f7;box-shadow:0 8px 17px #000b}
+.player-avatar{flex:none;display:grid;place-items:center;width:31px;height:31px;border-radius:50%;border:1px solid #dfca8a;background:linear-gradient(140deg,#286545,#163521);color:#fce7aa;font-size:.56rem;font-weight:900}
+.player-data{display:flex;flex-direction:column;min-width:0;line-height:1.18}.player-data b{white-space:nowrap;color:#f1f4e9;font-size:.59rem}.player-data small{color:#cde2b1;font-size:.59rem;font-weight:800;margin-top:3px}
+.player--one{top:5%;left:19%}.player--two{top:5%;right:14%}.player--three{top:42%;right:1%}.player--four{bottom:5%;right:17%}.player--five{bottom:5%;left:18%}.player--six{top:42%;left:1%}
+.player.is-acting{border-color:#e7d47b;animation:active-seat 3.2s ease-in-out infinite}
+@keyframes active-seat{50%{box-shadow:0 0 0 3px #b8f46744,0 0 25px #b8f467a3}}
+@keyframes chip-slide{50%{transform:translate(13px,7px)}}
+
+/* The in-person game is a prominent branch of the online club. */
+.private-feature{padding:clamp(105px,10vw,150px) 0;background:#091b12;border-block:1px solid #d9c17c6b}
+.private-feature::before{background:radial-gradient(circle at 70% 50%,#d8c27724,transparent 38%),linear-gradient(110deg,#07170f,#102618);background-attachment:scroll}
+.private-halo{position:absolute;z-index:0;left:35%;top:4%;width:60%;height:90%;border-radius:50%;background:#e4c66e1c;filter:blur(100px);pointer-events:none;animation:breath 8s ease-in-out infinite alternate}
+.private-showcase{position:relative;display:grid;grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr);gap:clamp(35px,4.5vw,70px);align-items:center}
+.private-story{position:relative;z-index:2;padding-block:20px}
+.private-story .eyebrow{color:#f2dc9b}
+.private-story h2{font-size:clamp(3rem,4.4vw,5.4rem);line-height:1.02;margin:0 0 28px}
+.private-story>p:not(.eyebrow){max-width:520px;margin:0 0 15px;color:#dfe9d2;font-size:1.03rem;line-height:1.75}
+.private-story .private-action{display:inline-flex;margin:23px 0 0;border:1px solid #ffefb1;padding:15px 20px;min-height:60px;white-space:normal;background:linear-gradient(110deg,#fae6b1,#e6ba64);color:#18301c;box-shadow:0 0 35px #e7c2735f;animation:cta-breathe 3.5s ease-in-out infinite}
+.private-story .private-action:hover{background:#fff0bd;box-shadow:0 0 50px #f9d983a4}
+.private-micro{display:block;margin-top:18px;color:#b8cda8;font-size:.61rem;font-weight:800;letter-spacing:.12em}
+.private-photo-wrap{position:relative;min-width:0;height:clamp(450px,42vw,590px);border:1px solid #ead1879e;box-shadow:0 0 0 9px #f3d6880d,0 0 65px #eccc7e50,0 30px 90px #000a;overflow:hidden}
+.private-photo-wrap::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#061a12cf,transparent 31%),linear-gradient(90deg,#061a125c,transparent 45%);pointer-events:none}
+.private-photo-wrap img{display:block;width:100%;height:100%;object-fit:cover;object-position:58% center;filter:brightness(1.13) saturate(1.1);transition:transform 1.2s ease,filter .5s}
+.private-photo-wrap:hover img{transform:scale(1.06);filter:brightness(1.22) saturate(1.18)}
+.private-photo-label,.private-photo-disclaimer{position:absolute;z-index:2;bottom:21px;color:#f9efd0;text-shadow:0 2px 12px #000e}
+.private-photo-label{left:22px;font-size:.64rem;font-weight:900;letter-spacing:.1em}.private-photo-label i{color:#f7d77d;font-style:normal;margin-inline:6px}
+.private-photo-disclaimer{right:20px;font-size:.56rem}
+
+.lima-photo{background-image:url("/assets/lima-coast-v4.webp");background-position:center 55%}
+.lima-modal-photo--coast{background-image:url("/assets/lima-coast-v4.webp")}
+.lima-modal-photo--night{background-image:url("/assets/lima-barranco-v4.webp")}
+.lima-modal-photo--table{background-image:url("/assets/lima-miraflores-v4.png")}
+
+/* Two equal columns keep the deposit and bonus in line at desktop widths. */
+.bonus-math{padding:14px 0 13px}
+.bonus-math>.bonus-math-pair{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:8px;padding:10px 0 17px}
+.bonus-math .math-item{min-width:0;display:flex;flex-direction:column;align-items:center;gap:10px;text-align:center}
+.bonus-math .math-item small{min-height:1.4em;white-space:nowrap;font-size:.57rem}
+.bonus-math .math-item strong{white-space:nowrap;font-size:clamp(1.35rem,2vw,2rem);line-height:1.05}
+.bonus-math .math-plus{font-size:1.45rem;align-self:end;line-height:1.1;margin-bottom:3px}
+.bonus-math>.math-total{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-top:1px solid #e3cb805c;padding:15px 0 0;text-align:center}
+.bonus-math .math-total strong{font-size:clamp(2.4rem,3vw,3.1rem);line-height:1.03}
+
+@media(max-width:1150px) and (min-width:981px){.nav{gap:20px}.nav-links{gap:13px}.nav-links>a,.nav-links>button[data-open-bonus]{font-size:.66rem}.nav-cta{padding:11px 13px;gap:12px}}
+@media(max-width:980px){
+  .nav-links>button[data-open-bonus]{width:100%;padding:13px 4px;border-bottom:1px solid var(--line);text-align:left;font-size:.95rem}
+  .world-chapter--community>.community-layout{grid-template-columns:1fr;gap:22px;padding-block:90px}
+  .community-copy{max-width:700px}.world-chapter--community h2{font-size:clamp(3rem,7.5vw,5.2rem)}
+  .poker-demo{width:min(690px,100%);margin-inline:auto}
+  .private-showcase{grid-template-columns:1fr;gap:38px}.private-story{max-width:750px;padding:0}
+  .private-photo-wrap{height:clamp(390px,55vw,570px)}
+}
+@media(max-width:720px){
+  .volume-note{align-items:flex-start;flex-direction:column;gap:9px}.volume-note p{font-size:.74rem}
+  .world-chapter--community{min-height:0}
+  .world-chapter--community>.community-layout{padding-block:105px 90px}
+  .world-chapter--community h2{font-size:clamp(2.9rem,8.8vw,4.4rem)}
+  .world-chapter--community p{font-size:.96rem}
+  .poker-demo{transform:none}.poker-demo:hover{transform:translateY(-3px)}
+  .private-feature{padding:95px 0}.private-story h2{font-size:clamp(2.65rem,8vw,4.7rem)}
+  .private-photo-wrap{height:440px}
+  .bonus-math>.bonus-math-pair{padding:6px 0 11px}
+}
+@media(max-width:480px){
+  .poker-demo-head,.poker-demo-foot{padding-inline:10px;font-size:.47rem;letter-spacing:.05em}
+  .poker-demo-stage{height:340px}
+  .felt-table{width:84%;height:51%;border-width:7px;box-shadow:0 0 0 5px #574528,0 12px 30px #000b}
+  .felt-logo{width:76px;height:43px;top:16%}
+  .felt-pot{top:45%;font-size:.46rem}.board{top:60%}.board>span{width:23px;height:30px;font-size:.72rem}
+  .player{min-width:87px;padding:3px;gap:3px}.player-avatar{width:23px;height:23px;font-size:.47rem}.player-data b,.player-data small{font-size:.48rem}
+  .player--one{left:14%}.player--two{right:10%}.player--three{right:1%}.player--four{right:12%}.player--five{left:14%}.player--six{left:1%}
+  .private-story>p:not(.eyebrow){font-size:.93rem}.private-story h2{font-size:clamp(2.45rem,8vw,3.75rem)}
+  .private-photo-wrap{height:385px}.private-photo-label{font-size:.53rem}.private-photo-disclaimer{font-size:.47rem}
+  .bonus-math .math-item small{font-size:.51rem}.bonus-math .math-item strong{font-size:clamp(1.15rem,6vw,1.65rem)}
+  .bonus-math .math-total strong{font-size:2.35rem}
+}
+@media(max-width:350px){.player{min-width:79px}.player-data b,.player-data small{font-size:.43rem}.bonus-math .math-item strong{font-size:1.1rem}}
+@media(prefers-reduced-motion:reduce){.poker-demo,.poker-demo:hover{transform:none}.game-chip--one,.player.is-acting,.private-halo,.private-story .private-action{animation:none}.private-photo-wrap img{transition:none}}

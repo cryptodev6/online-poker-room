@@ -56,7 +56,7 @@ body{background:#06130d;color:var(--cream)}
 
 /* The first screen remains behind the page as the visitor scrolls. */
 .hero{background:#06130c}
-.hero-bg{background-image:url("/assets/hero-rooftop-v2.webp");background-position:center 48%}
+.hero-bg{background-image:url("/assets/hero-rooftop-v2.png");background-position:center 48%}
 .hero-gradient{background:linear-gradient(90deg,#06170feF 0%,#06170fd9 33%,#06170f38 74%),linear-gradient(0deg,#05150ded,transparent 30%)}
 .hero-orb{background:radial-gradient(circle at 20% 42%,#c7d75b29,transparent 35%),radial-gradient(circle at 83% 58%,#96fa4852,transparent 28%);filter:blur(18px)}
 .hero-grid{opacity:.25;background:repeating-linear-gradient(0deg,transparent 0 110px,#a9ee6629 111px 112px),repeating-linear-gradient(90deg,transparent 0 110px,#a9ee6629 111px 112px)}
@@ -94,7 +94,7 @@ body{background:#06130d;color:var(--cream)}
 .game-main h3 i{color:var(--gold)}
 .game-facts small,.game-main-action small{color:#d0dfc7}
 .game-facts span{color:#e0ead9}
-.game-sunday{background:linear-gradient(110deg,#0a2117ed,#0a2117d7 72%,#0a21179d),url("/assets/hero-rooftop-v2.webp") 70%/cover;border-color:#e7c37792;box-shadow:0 0 47px #f0c36c28}
+.game-sunday{background:linear-gradient(110deg,#0a2117ed,#0a2117d7 72%,#0a21179d),url("/assets/hero-rooftop-v2.png") 70%/cover;border-color:#e7c37792;box-shadow:0 0 47px #f0c36c28}
 .game-sunday::before{content:"";position:absolute;z-index:1;top:-60%;bottom:-60%;left:-50%;width:40%;transform:translateX(-140%) skewX(-18deg);background:linear-gradient(90deg,transparent,#ffeba450,transparent);pointer-events:none;animation:highroller-sweep 7.5s ease-in-out infinite}
 .game-sunday::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 38px #eac86a40,0 0 32px #f7d47b40;opacity:.5;pointer-events:none;animation:highroller-frame 4.5s ease-in-out infinite}
 .sunday-tag,.sunday-body>p{color:#f8db95}
