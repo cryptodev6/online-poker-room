@@ -108,22 +108,34 @@ let currentNightSource = nightImage.getAttribute("src");
 let imageTimer = 0;
 let nightFrame = 0;
 let activeNight = nightSteps[0];
+const desktopNightMedia = window.matchMedia("(min-width: 901px) and (pointer: fine)");
 
 nightSteps.forEach((step) => {
   const preload = new Image();
   preload.src = step.dataset.img;
 });
 function activateNight(step) {
-  if (!step || step === activeNight) return;
-  activeNight = step;
-  nightSteps.forEach((item) => item.classList.toggle("is-active", item === step));
-  nightVisual.style.setProperty("--night-progress", String((nightSteps.indexOf(step) + 1) / nightSteps.length));
-  nightClock.textContent = step.dataset.clock || "";
-  nightCaption.textContent = step.dataset.caption || "";
-  nightImageNote.textContent = step.dataset.note || "";
+  if (!step) return;
+  if (step !== activeNight) {
+    activeNight = step;
+    nightSteps.forEach((item) => item.classList.toggle("is-active", item === step));
+    nightVisual.style.setProperty("--night-progress", String((nightSteps.indexOf(step) + 1) / nightSteps.length));
+    nightClock.textContent = step.dataset.clock || "";
+    nightCaption.textContent = step.dataset.caption || "";
+    nightImageNote.textContent = step.dataset.note || "";
+  }
   const next = step.dataset.img;
-  if (!next || next === currentNightSource) return;
   clearTimeout(imageTimer);
+  if (!next || next === currentNightSource) {
+    nightVisual.classList.remove("is-switching");
+    return;
+  }
+  if (reducedMotion.matches) {
+    nightImage.src = next;
+    nightImage.alt = step.dataset.alt || "";
+    currentNightSource = next;
+    return;
+  }
   nightVisual.classList.add("is-switching");
   imageTimer = window.setTimeout(() => {
     nightImage.src = next;
@@ -134,14 +146,16 @@ function activateNight(step) {
   }, 160);
 }
 function updateNightFromScroll() {
+  nightFrame = 0;
+  if (!desktopNightMedia.matches) {
+    clearTimeout(imageTimer);
+    nightVisual.classList.remove("is-switching");
+    return;
+  }
   const story = document.querySelector(".nights-story");
   const bounds = story.getBoundingClientRect();
-  nightFrame = 0;
   if (bounds.top >= window.innerHeight || bounds.bottom <= 0) return;
-  // Keep the chapter in view as the sticky image sits above the copy on mobile.
-  const focus = window.innerWidth <= 900
-    ? Math.min(window.innerHeight - 45, nightVisual.getBoundingClientRect().bottom + 65)
-    : window.innerHeight * .44;
+  const focus = window.innerHeight * .44;
   let selected = nightSteps[0];
   nightSteps.forEach((step) => {
     if (step.getBoundingClientRect().top <= focus) selected = step;
@@ -155,6 +169,7 @@ if (nightSteps.length) {
   updateNightFromScroll();
   window.addEventListener("scroll", requestNightUpdate, { passive: true });
   window.addEventListener("resize", requestNightUpdate);
+  desktopNightMedia.addEventListener("change", requestNightUpdate);
 }
 
 const faqItems = document.querySelectorAll(".faq-list details");
