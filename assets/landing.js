@@ -34,16 +34,19 @@
   document.getElementById("year").textContent = new Date().getFullYear();
 
   const messages = {
-    seat: "Hola, quiero jugar la mesa de Voss Room del " + dateLabel + " en el club " + CLUB_ID + ". ¿Hay asiento en NL200 o PLO5 200? Entiendo que la entrada mínima es US$500. Envíame las condiciones, rake y forma de ingreso.",
-    sunday: "Hola, quiero consultar la mesa High Roller del domingo de Voss Room: NL400 o PLO500, entrada mínima US$1.000. ¿A qué hora empieza y hay asiento?",
-    join: "Hola, quiero unirme a Voss Room. ¿Cómo encuentro el Club ID " + CLUB_ID + " y qué mesas están disponibles?",
-    details: "Hola, quiero conocer las mesas, entradas mínimas, rake y asientos de la próxima sesión en Voss Room.",
-    pro: "Hola, juego póker online con mucho volumen y quiero consultar si hay condiciones individuales de rakeback para mi juego en Voss Room, ClubGG " + CLUB_ID + ". Juego [NL/PLO5], límites [indica tus límites] y mi volumen aproximado es [indica tu volumen]. Entiendo que un acuerdo de rakeback no se combina con el bono de bienvenida.",
-    bonus: "Hola, quiero consultar y reclamar el bono del 25% sobre mi primer depósito elegible. Antes de depositar US$1.000, confírmame si recibiría US$250 adicionales y todas las condiciones de uso y retiro.",
-    payment: "Hola, quiero conocer los medios de pago vigentes y el plazo real de retiro antes de ingresar saldo en Voss Room.",
-    question: "Hola, tengo una pregunta sobre las mesas de Voss Room.",
-    support: "Hola, necesito ayuda con mi acceso al club Voss Room."
-  };
+    seat: "Hola, quiero unirme a la mesa de Voss Room. ¿Hay espacio?",
+    sunday: "Hola, quiero unirme a la mesa High Roller del domingo. ¿Hay espacio?",
+    join: "Hola, quiero unirme a Voss Room. ¿Cómo entro?",
+    details: "Hola, quiero jugar en Voss Room. ¿Qué mesas tienen disponibles?",
+    pro: "Hola, quiero jugar en Voss Room. Soy jugador regular y quiero conversar sobre condiciones para mi volumen.",
+    bonus: "Hola, quiero unirme a Voss Room y consultar el bono de bienvenida.",
+    payment: "Hola, quiero unirme a Voss Room. ¿Qué métodos de pago tienen?",
+    question: "Hola, tengo una pregunta sobre Voss Room.",
+    support: "Hola, necesito ayuda para entrar a Voss Room."
+  }; 
+
+
+ 
   document.querySelectorAll("[data-wa]").forEach((link) => {
     const purpose = link.dataset.wa;
     link.href = "https://wa.me/" + PHONE + "?text=" + encodeURIComponent(messages[purpose] || messages.seat);

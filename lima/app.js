@@ -4,8 +4,11 @@ document.documentElement.classList.add("js");
 
 const WHATSAPP_NUMBER = "573007068986";
 const messages = {
-  invite: "Hi Alexander, I'm interested in Voss Lima, October 7–21, 2026. Can you send me the private deck with the actual apartment photos, room availability, confirmed inclusions, price and terms?",
-  residence: "Hi Alexander, I’m considering the Voss Lima poker residence, October 7–21. Can you send me the actual apartment and bedroom photos, amenities and availability?",
+  invite: "Hi Alexander, I'm interested in Voss Lima, October 7–21, 2026. Can you send availability for both stays, the real apartment photos, confirmed inclusions, and payment and cancellation terms?",
+  duo: "Hi Alexander, I'm interested in the Voss Lima two-player apartment at US$1,000 per person for October 7–21, 2026. Is a room available? Please send the actual property and bedroom photos, inclusions and terms.",
+  house: "Hi Alexander, I'm interested in Voss House, the three-player premium apartment at US$1,499 per person for October 7–21, 2026. Is a room available? Please send the real property photos, inclusions and terms.",
+  residence: "Hi Alexander, I'm considering Voss Lima, October 7–21. Can you show me the actual photos, room layouts and amenities for the two-player apartment and Voss House?",
+  nights: "Hi Alexander, I'm interested in Voss Lima, October 7–21, 2026. What are the two stays, and what nightlife plans are you putting together for the group? Please send the real apartment photos, availability and terms.",
   question: "Hi Alexander, I have a question about Voss Lima, October 7–21, 2026."
 };
 
@@ -20,6 +23,8 @@ const header = document.getElementById("siteHeader");
 const progressBar = document.getElementById("scrollProgress");
 const hero = document.querySelector(".hero");
 const residencePan = document.getElementById("residencePan");
+const tournament = document.querySelector(".tournament-section");
+const city = document.querySelector(".city-section");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 let scrollFrame = 0;
 
@@ -36,6 +41,17 @@ function paintScroll() {
     const relative = (window.innerHeight - box.top) / (window.innerHeight + box.height);
     const offset = Math.max(-28, Math.min(28, (relative - .5) * 55));
     residencePan.style.setProperty("--pan-offset", offset.toFixed(1) + "px");
+    const tournamentBox = tournament.getBoundingClientRect();
+    if (tournamentBox.bottom > 0 && tournamentBox.top < window.innerHeight) {
+      const passage = (window.innerHeight - tournamentBox.top) / (window.innerHeight + tournamentBox.height);
+      tournament.style.setProperty("--tournament-shift", ((passage - .5) * 48).toFixed(1) + "px");
+    }
+    const cityBox = city.getBoundingClientRect();
+    if (cityBox.bottom > 0 && cityBox.top < window.innerHeight) {
+      const passage = Math.max(0, Math.min(1, (window.innerHeight - cityBox.top) / (window.innerHeight + cityBox.height)));
+      city.style.setProperty("--city-zoom", (1.06 + passage * .045).toFixed(3));
+      city.style.setProperty("--city-shift", ((passage - .5) * 38).toFixed(1) + "px");
+    }
   }
   scrollFrame = 0;
 }
@@ -90,14 +106,18 @@ const nightCaption = document.getElementById("nightCaption");
 const nightImageNote = document.getElementById("nightImageNote");
 let currentNightSource = nightImage.getAttribute("src");
 let imageTimer = 0;
+let nightFrame = 0;
+let activeNight = nightSteps[0];
 
 nightSteps.forEach((step) => {
   const preload = new Image();
   preload.src = step.dataset.img;
 });
 function activateNight(step) {
-  if (!step) return;
+  if (!step || step === activeNight) return;
+  activeNight = step;
   nightSteps.forEach((item) => item.classList.toggle("is-active", item === step));
+  nightVisual.style.setProperty("--night-progress", String((nightSteps.indexOf(step) + 1) / nightSteps.length));
   nightClock.textContent = step.dataset.clock || "";
   nightCaption.textContent = step.dataset.caption || "";
   nightImageNote.textContent = step.dataset.note || "";
@@ -113,13 +133,28 @@ function activateNight(step) {
     window.setTimeout(() => nightVisual.classList.remove("is-switching"), 550);
   }, 160);
 }
-if ("IntersectionObserver" in window && nightSteps.length) {
-  const nightObserver = new IntersectionObserver((entries) => {
-    const visible = entries.filter((entry) => entry.isIntersecting)
-      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
-    if (visible.length) activateNight(visible[0].target);
-  }, { rootMargin: "-22% 0px -46% 0px", threshold: [.05, .25, .5] });
-  nightSteps.forEach((step) => nightObserver.observe(step));
+function updateNightFromScroll() {
+  const story = document.querySelector(".nights-story");
+  const bounds = story.getBoundingClientRect();
+  nightFrame = 0;
+  if (bounds.top >= window.innerHeight || bounds.bottom <= 0) return;
+  // Keep the chapter in view as the sticky image sits above the copy on mobile.
+  const focus = window.innerWidth <= 900
+    ? Math.min(window.innerHeight - 45, nightVisual.getBoundingClientRect().bottom + 65)
+    : window.innerHeight * .44;
+  let selected = nightSteps[0];
+  nightSteps.forEach((step) => {
+    if (step.getBoundingClientRect().top <= focus) selected = step;
+  });
+  activateNight(selected);
+}
+function requestNightUpdate() {
+  if (!nightFrame) nightFrame = window.requestAnimationFrame(updateNightFromScroll);
+}
+if (nightSteps.length) {
+  updateNightFromScroll();
+  window.addEventListener("scroll", requestNightUpdate, { passive: true });
+  window.addEventListener("resize", requestNightUpdate);
 }
 
 const faqItems = document.querySelectorAll(".faq-list details");
