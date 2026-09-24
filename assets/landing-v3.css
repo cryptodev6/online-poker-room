@@ -1,0 +1,312 @@
+/* Voss Room — emerald, gold and motion. Loaded after the base layout. */
+:root{
+  --bg:#07140e;--bg2:#0e2618;--panel:#122f20;
+  --coral:#f2c867;--coral2:#f6d88e;--cyan:#a5f377;
+  --cream:#f7f6e9;--ink:#102419;--muted:#c6d4bd;
+  --line:rgba(221,238,192,.21);
+  --gold:#f2c867;--glow:#b8f467;--forest:#07190f;
+  --display:"Arial Black","Avenir Next",Arial,sans-serif;
+  --sans:Inter,"Avenir Next","Segoe UI",Arial,sans-serif;
+}
+body{background:#06130d;color:var(--cream)}
+::selection{background:var(--gold);color:#142316}
+:focus-visible{outline:3px solid var(--glow);outline-offset:4px}
+.progress{height:4px;background:linear-gradient(90deg,#3cae52,#c6fa70,#ffd679);box-shadow:0 0 20px #b8f467}
+.pulse-dot{background:var(--glow);box-shadow:0 0 0 4px #affc402e,0 0 19px #b8f467c8}
+.eyebrow{color:var(--glow)}.eyebrow-hot{color:var(--gold)}
+.announcement{background:#bdf16e;color:#0a2914;border-bottom:1px solid #fff6}
+.announcement-track i{color:#21653b}
+.header{background:#06150db8;border-bottom-color:#d6c38238}
+.header.scrolled{background:#06160ef0;box-shadow:0 15px 45px #0009,0 1px #d5bd6645}
+.brand-icon span,.nav-links>a:hover{color:var(--gold)}
+.brand-lines small{color:#c4d5af}
+.nav-cta,.nav-links .nav-mobile-cta,.mobile-cta a{background:linear-gradient(110deg,#d0fa76,#91e553);color:#092315;box-shadow:0 4px 28px #a4f2624a}
+.nav-cta:hover{background:#e5ffa7;box-shadow:0 0 34px #bcf27483}
+.btn-hot,.lima-button{position:relative;overflow:hidden;background:linear-gradient(115deg,#dcff92 0%,#adf065 58%,#8cdd5c 100%);color:#0b2915;border:1px solid #efffad88;box-shadow:0 14px 42px #a5f2644b,inset 0 1px #fff9}
+.btn-hot:hover,.lima-link:hover .lima-button{background:linear-gradient(115deg,#edffb5,#cbff89,#9ae66d);box-shadow:0 10px 52px #a8fa72a8,0 0 0 3px #befb5930}
+.btn-hot::after,.lima-button::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 20%,#fff9 48%,transparent 70%);transform:translateX(-130%);transition:transform .7s ease;pointer-events:none}
+.btn-hot:hover::after,.lima-link:hover .lima-button::after{transform:translateX(130%)}
+.btn-light{background:linear-gradient(110deg,#fbe5a5,#eabd56);color:#132318;box-shadow:0 0 36px #e9bf5180}
+.btn-light:hover{background:#fff1bf;box-shadow:0 0 48px #ffde7ca8}
+.line-link{color:#f8f7e8;border-color:#d1eab07d}
+.line-link:hover{color:var(--glow);border-color:var(--glow)}
+
+/* Modern, broad letterforms replace the old condensed / italic pairing. */
+.hero h1,.tables h2,.reason h2,.steps h2,.faq h2,.private h2,
+.world-chapter h2,.lima-center h2,.final h2,.bonus-left h2,.lima-modal-content h2{
+  font-family:var(--display);font-weight:900;font-style:normal;line-height:.99;letter-spacing:-.065em;
+  text-wrap:balance;
+}
+:is(.hero h1,.tables h2,.reason h2,.steps h2,.faq h2,.private h2,
+  .world-chapter h2,.lima-center h2,.final h2,.bonus-left h2,.lima-modal-content h2) em{
+  font-family:var(--display);font-weight:900;font-style:normal;letter-spacing:-.065em;color:var(--gold);
+  text-shadow:0 0 29px #f7c4653e;
+}
+.hero h1{font-size:clamp(4rem,6vw,7rem)}
+.hero h1 em{font-size:.65em;white-space:nowrap;display:inline-block;margin-top:12px}
+.tables h2,.reason h2,.steps h2,.faq h2,.private h2{font-size:clamp(2.9rem,4.6vw,5.5rem)}
+.world-chapter h2{font-size:clamp(3.7rem,5.9vw,7rem)}
+.lima-center h2{font-size:clamp(3.8rem,5.8vw,7rem)}
+.final h2{font-size:clamp(3.4rem,5.2vw,6rem)}
+.hero-panel :is(.panel-date,.panel-time b,.panel-min strong),.signal-grid strong,
+.game-main :is(h3,.game-facts strong),.game-sunday :is(h3,.sunday-min strong),
+.step-number,.club-id strong,.bonus-big,.bonus-math strong{
+  font-family:var(--display);letter-spacing:-.045em;
+}
+
+/* The first screen remains behind the page as the visitor scrolls. */
+.hero{background:#06130c}
+.hero-bg{background-image:url("/assets/hero-rooftop-v2.webp");background-position:center 48%}
+.hero-gradient{background:linear-gradient(90deg,#06170feF 0%,#06170fd9 33%,#06170f38 74%),linear-gradient(0deg,#05150ded,transparent 30%)}
+.hero-orb{background:radial-gradient(circle at 20% 42%,#c7d75b29,transparent 35%),radial-gradient(circle at 83% 58%,#96fa4852,transparent 28%);filter:blur(18px)}
+.hero-grid{opacity:.25;background:repeating-linear-gradient(0deg,transparent 0 110px,#a9ee6629 111px 112px),repeating-linear-gradient(90deg,transparent 0 110px,#a9ee6629 111px 112px)}
+.hero h1{text-shadow:0 8px 44px #000c}
+.hero h1 em{color:#f6d379;text-shadow:0 0 32px #f6c25280}
+.hero-lead{color:#f0f4e8}.hero-micro{color:#d2e3cb}
+.hero-panel{background:#0b2117e8;border:1px solid #d9c575a8;box-shadow:0 0 0 8px #b4e26513,0 27px 75px #000b,0 0 52px #a7f16e38}
+.hero-panel::after{border-image:linear-gradient(135deg,#f4d482,transparent 35%,transparent 68%,#96ea5c) 1}
+.panel-top{color:#c8d8bb}.panel-live{color:var(--glow)}
+.panel-date{font-size:clamp(1.2rem,1.6vw,1.8rem);line-height:1.15;margin-top:35px}
+.panel-time b{font-size:3.2rem}.panel-time span{color:#d4e4c9}
+.panel-games span{border-color:#b7e88180;color:#e3ffcc}
+.panel-min span{color:#b6ccac}.panel-min strong{color:var(--gold)}
+.hero-panel>a{background:linear-gradient(100deg,#d0f784,#90df5a);color:#103019}
+.hero-panel>a:hover{background:#e7ffaf}
+.site-flow{background:#07140e;box-shadow:0 -30px 80px #020b05b0}
+.signal-bar{background:linear-gradient(110deg,#f5e1a4,#d9c17b 55%,#b5d889);color:#16311c;border-bottom:4px solid #9dde56}
+.signal-grid>div{border-right-color:#25492743}
+.signal-grid small{color:#3a5737}.signal-grid i{color:#23853d}
+
+/* Every editorial section has its own photographic backdrop. */
+.tables,.reason,.steps,.private,.faq{position:relative;isolation:isolate;overflow:hidden}
+.tables::before,.reason::before,.steps::before,.private::before,.faq::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background-position:center;background-size:cover;
+}
+.tables>.container,.reason>.container,.steps>.container,.private>.container,.faq>.container{position:relative;z-index:1}
+.tables{background:#071710}
+.tables::before{background-image:linear-gradient(105deg,#06150fe8 0%,#06150fe4 50%,#06150fb0 100%),url("/assets/chips-night-v3.webp");background-attachment:fixed;opacity:.96}
+.tables-heading>p:last-child{color:#d8e2d4}
+.game-main{background:linear-gradient(100deg,#082217fa 0%,#09271dd7 59%,#071d16a6),url("/assets/chips-night-v3.webp") 58%/cover;border-color:#b4f075ad;box-shadow:0 0 50px #86f46026,0 23px 75px #0008}
+.game-main::after{border-color:#d6d78e36;box-shadow:0 0 0 50px #a4dd5d13,0 0 0 100px #a4dd5d0b}
+.game-main-top,.game-main-body>p{color:#c5fc96}
+.game-main h3{font-size:clamp(3.3rem,5.6vw,6.4rem);line-height:1.01}
+.game-main h3 i{color:var(--gold)}
+.game-facts small,.game-main-action small{color:#d0dfc7}
+.game-facts span{color:#e0ead9}
+.game-sunday{background:linear-gradient(110deg,#0a2117ed,#0a2117d7 72%,#0a21179d),url("/assets/hero-rooftop-v2.webp") 70%/cover;border-color:#e7c37792;box-shadow:0 0 47px #f0c36c28}
+.game-sunday::before{content:"";position:absolute;z-index:1;top:-60%;bottom:-60%;left:-50%;width:40%;transform:translateX(-140%) skewX(-18deg);background:linear-gradient(90deg,transparent,#ffeba450,transparent);pointer-events:none;animation:highroller-sweep 7.5s ease-in-out infinite}
+.game-sunday::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 38px #eac86a40,0 0 32px #f7d47b40;opacity:.5;pointer-events:none;animation:highroller-frame 4.5s ease-in-out infinite}
+.sunday-tag,.sunday-body>p{color:#f8db95}
+.sunday-tag{position:relative;z-index:2;display:flex;align-items:center;flex-wrap:wrap;gap:10px}
+.highroller-badge{display:inline-flex;align-items:center;min-height:27px;padding:4px 9px;border:1px solid #ffe2a2;background:linear-gradient(110deg,#fce5ac,#d6ad5a);color:#2b1e0e;font-size:.6rem;font-weight:950;letter-spacing:.13em;box-shadow:0 0 18px #f4d37b73;animation:highroller-badge 4.5s ease-in-out infinite}
+.sunday-decor{color:#e9ca7a13;font-size:13rem}
+.sunday-body{z-index:2}
+.sunday-body h3{font-size:clamp(2.5rem,3.4vw,4rem)}
+.sunday-body h3 em{font:inherit;font-style:normal;color:#f8db95;text-shadow:0 0 20px #f2c97467}
+.sunday-stakes span{border-color:#f3d38c9c;color:#f7ddaa}
+.sunday-min{border-color:#e1ca864d}.sunday-min small{color:#ded4ac}
+.sunday-body>a{color:#f8da91;border-color:#e5c578}
+.sunday-body>small{color:#d6d4bb}
+
+.world-section{background:#07160e}
+.world-wash{background:linear-gradient(90deg,#04150de8,#04150d9e 49%,#04150d35),linear-gradient(0deg,#04150dc4,transparent 38%)}
+.chapter-num{color:#b6fb86}.world-chapter h2{text-shadow:0 7px 34px #03130dcc}
+.world-chapter h2 em{color:#f5d47d}.chapter-line{border-top-color:#d3e3ad95;color:#f3f8e6}
+
+.reason{background:#081c13}
+.reason::before{background-image:linear-gradient(90deg,#07190feF 0%,#07190fd6 58%,#07190f9f 100%),url("/medellin/assets/rooftop-sunset.webp");background-position:center 46%;background-attachment:fixed;opacity:.96}
+.reason-head>p:not(.eyebrow),.reason-list article p{color:#e0e9d9}
+.reason-list article{border-color:#d6eabe44}
+.reason-list article>span{color:var(--gold)}
+
+.pro-section{position:relative;isolation:isolate;overflow:hidden;background:#071a11;color:#f6f6e9;border-top:1px solid #dfc7787a;border-bottom:1px solid #dfc7787a;box-shadow:0 -25px 90px #03140cb2,0 25px 90px #03140caa}
+.pro-section::before{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(105deg,#06170ff3 0%,#07180edc 49%,#081b10a0 100%),url("/assets/chips-night-v3.webp") center/cover fixed}
+.pro-section::after{content:"";position:absolute;inset:-40%;z-index:0;background:radial-gradient(circle at 78% 48%,#d8b6672b,transparent 32%);pointer-events:none;animation:breath 8s ease-in-out infinite alternate}
+.pro-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,6vw,90px);align-items:center;min-height:550px}
+.pro-copy{max-width:670px}
+.pro-copy h2{font:900 clamp(3rem,4.5vw,5.35rem)/1 var(--display);letter-spacing:-.066em;margin:0 0 25px;text-wrap:balance}
+.pro-copy h2 em,.pro-card p em{font:inherit;font-style:normal;color:#f6d47c;text-shadow:0 0 30px #f7d98155}
+.pro-copy>p:not(.eyebrow){font-size:1.07rem;line-height:1.7;max-width:610px;color:#e8efdc;margin-bottom:25px}
+.pro-copy>p strong{color:#ffe5a1}
+.pro-copy>small{display:block;max-width:560px;color:#c9d4bb;font-size:.72rem;line-height:1.55;margin-top:14px}
+.pro-card{position:relative;overflow:hidden;max-width:470px;margin-left:auto;width:100%;padding:25px 27px 0;background:linear-gradient(145deg,#122b1feb,#08170fec);border:1px solid #f5d381b0;box-shadow:0 0 0 7px #f9d98011,0 0 70px #edcc7a27,0 28px 65px #000a;backdrop-filter:blur(14px)}
+.pro-card::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#f8de9a,#a6ee7d,transparent);box-shadow:0 0 22px #f8da8c;pointer-events:none}
+.pro-card-kicker{display:block;color:#d2e8bd;font-size:.65rem;font-weight:850;letter-spacing:.12em}
+.pro-card>p{font:900 clamp(2.35rem,3.15vw,3.9rem)/1.06 var(--display);letter-spacing:-.06em;margin:54px 0 33px;color:#f6f8e8}
+.pro-card>div{border-top:1px solid #e2d6a845}
+.pro-card>div span{display:flex;gap:17px;align-items:center;border-bottom:1px solid #e2d6a845;padding:14px 2px;color:#eccc78;font-size:.66rem;font-weight:850;letter-spacing:.12em}
+.pro-card>div b{color:#f3f4df;font-size:.72rem}
+.pro-card>a{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:28px -27px 0;padding:17px 27px;background:linear-gradient(100deg,#f9e7af,#ddbb6b);color:#142719;font-size:.75rem;font-weight:900;letter-spacing:.07em;transition:background .25s,box-shadow .25s}
+.pro-card>a:hover{background:#fff0bf;box-shadow:0 0 35px #f9db8b76}
+.pro-card>a b{font-size:1.2rem}
+.steps{background:#e8e1c6;color:#122918}
+.steps::before{background-image:linear-gradient(90deg,#f5f0dfeF 0%,#f5f0dfe7 58%,#ebe5cccd),url("/assets/chips-night-v3.webp");background-position:center 36%}
+.steps .eyebrow{color:#295e32}.steps-top h2 em{color:#617a20;text-shadow:none}
+.steps-top>p:last-child{color:#365142}
+.steps-grid{background:#8ea783;border-color:#8ea783;box-shadow:0 24px 55px #172b1b30}
+.steps-grid article{background:#fbf9eced}
+.steps-grid article:hover{background:#eff9db;box-shadow:inset 0 0 0 2px #73ad59}
+.step-number,.steps-grid strong{color:#388141}
+.steps-grid p{color:#425b4b}.club-id{color:#102f1a}
+.club-id span{color:#367f41}
+
+.lima-band{box-shadow:0 0 0 1px #f4d2756b,0 -14px 75px #daba7052}
+.lima-photo{background-image:url("/lima/assets/lima-night.jpg")}
+.lima-overlay{background:linear-gradient(90deg,#071a12e8 0%,#071a12ac 60%,#071a126b),linear-gradient(0deg,#071a12e9,transparent 41%)}
+.lima-center>span:first-child{color:#c0f28c}.lima-center h2 em{color:#f8dc91}
+.lima-center p{color:#f0f2e8}.lima-link:hover .lima-button{transform:translateY(-4px)}
+.private{background:#0b2118;border-color:#dfc37568}
+.private::before{background-image:linear-gradient(90deg,#092319f3 0%,#092319ea 52%,#0923199e 100%),url("/lima/assets/poker-table.jpg");background-position:center 55%}
+.private-inner>a{color:#f8e1a3;border-color:var(--gold)}
+.private-inner>a:hover{color:#0c2011;background:var(--gold);box-shadow:0 0 30px #f2ce7688}
+.faq{background:#0a1b13}
+.faq::before{background-image:linear-gradient(90deg,#081d14ed 0%,#081d14df 48%,#081d14ae),url("/lima/assets/poker-table.jpg");background-position:center 42%;background-attachment:fixed}
+.faq-grid>div:first-child>p:not(.eyebrow),.faq-list details p{color:#e0ebd9}
+.faq-list summary::after{color:var(--gold)}
+.faq-list details a,.faq-action{color:#c3ff99}
+.final-bg{background:linear-gradient(90deg,#071b11f2 0%,#071b11cf 50%,#071b1170),url("/assets/beach-game-v2.webp") center 51%/cover}
+.final-inner>span{color:var(--glow)}.final h2 em{color:#f5d081}.final p{color:#f3f7e6}
+.footer{background:#06150e}.footer-top>div a:hover{color:var(--gold)}
+.mobile-cta{background:#092518ed;border-color:#bdf280}
+.mobile-cta small{color:#ccf6b2}
+.toast{background:var(--glow);color:#092017}
+
+/* Two deliberately different modal experiences: a luminous offer, then a rotating Lima gallery. */
+.offer-dialog,.lima-dialog{background:#091c13;box-shadow:0 0 0 1px #efcc6f9c,0 0 75px #ccdd7264,0 35px 150px #000e}
+.offer-dialog{width:min(1100px,calc(100vw - 34px));height:min(690px,calc(100dvh - 34px))}
+.offer-dialog::backdrop,.lima-dialog::backdrop{background:#03100cdd;backdrop-filter:blur(11px)}
+.bonus-modal{grid-template-columns:1fr 1fr}
+.modal-close-row{color:#f7f3dd}
+.modal-close{background:#06160edb;border-color:#f7e4af;color:#f7e9c4}
+.modal-close:hover{background:var(--gold);color:#132615}
+.bonus-left{background:linear-gradient(0deg,#071d15 0%,#071d15cd 39%,#081d146e 72%,#06190eae),url("/assets/chips-night-v3.webp") 73%/cover;padding:88px 40px 38px}
+.bonus-rays{background:repeating-conic-gradient(from 0deg,#ffe6a02c 0 7deg,transparent 7deg 21deg);opacity:.48}
+.bonus-mini{color:#d0f8aa}.bonus-big{color:#ffdb7f;text-shadow:0 0 22px #f5c463bf,0 0 90px #eed371a0}
+.bonus-left h2{font-size:clamp(2.55rem,3.75vw,4.4rem);line-height:1.02}
+.bonus-left h2 em{font-size:.79em;color:#f4d780}
+.bonus-left p{max-width:410px;color:#f0f3de}
+.bonus-right{background:radial-gradient(circle at 90% 72%,#2d6b2d52,transparent 53%),linear-gradient(130deg,#0b2318,#07160f);padding:75px 45px 28px}
+.bonus-right>span:first-child{color:#c8fa9c}
+.bonus-math{border-color:#d5e1a355;margin-bottom:18px}
+.bonus-math small{color:#dce5d3}.bonus-math .math-plus,.bonus-math .math-equals{color:var(--gold)}
+.bonus-math .math-total{border-color:#e3cb805c}
+.bonus-math .math-total strong{color:#f9d77e;text-shadow:0 0 24px #f5c76583}
+.bonus-right .btn-hot{background:linear-gradient(115deg,#ffe8a9,#e9bb57 60%,#d6a749);color:#172516;border-color:#ffedb6;box-shadow:0 0 36px #e9c3648a;animation:cta-breathe 3.5s ease-in-out infinite}
+.bonus-right .btn-hot:hover{background:linear-gradient(115deg,#fff0c0,#f8d47c);box-shadow:0 0 55px #ffdb87c0}
+.bonus-id{display:block!important;font-size:.63rem!important;letter-spacing:.16em;color:#b9dba7!important;margin:15px 0 0!important}
+.bonus-id i{font-style:normal;color:var(--gold);margin-inline:6px}
+.bonus-small{color:#c0d2bb;font-size:.66rem;margin-top:9px}
+.later-link{border-color:#d4e1bc;color:#e2f5d5}
+.later-link:hover{color:var(--gold);border-color:var(--gold)}
+
+.lima-dialog{display:none;width:min(1060px,calc(100vw - 34px));height:min(680px,calc(100dvh - 34px));grid-template-columns:48% 52%;overflow:hidden}
+.lima-dialog[open]{display:grid}
+.lima-modal-visual{position:relative;overflow:hidden;min-height:100%;background:#112c1b}
+.lima-modal-visual::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(0deg,#081a10b9,transparent 36%);pointer-events:none}
+.lima-modal-photo{position:absolute;inset:0;z-index:0;background-position:center;background-size:cover;opacity:0;animation:lima-rotate 18s linear infinite;animation-play-state:paused}
+.lima-dialog[open] .lima-modal-photo{animation-play-state:running}
+.lima-modal-photo--coast{background-image:url("/lima/assets/lima-coast.jpg")}
+.lima-modal-photo--night{background-image:url("/lima/assets/lima-night.jpg");animation-delay:-6s}
+.lima-modal-photo--table{background-image:url("/lima/assets/poker-table.jpg");animation-delay:-12s}
+.lima-modal-visual-label,.lima-modal-visual-dots{position:absolute;z-index:2;color:#fbf1d1;font-weight:850;text-shadow:0 2px 14px #000e}
+.lima-modal-visual-label{left:29px;bottom:30px;font-size:.63rem;letter-spacing:.13em}
+.lima-modal-visual-dots{right:28px;bottom:28px;color:#f4d87d;font-size:.61rem;letter-spacing:.15em}
+.lima-modal-content{min-height:0;overflow:auto;padding:56px 44px 36px;background:radial-gradient(circle at 85% 10%,#1a47298c,transparent 48%),#0b2117}
+.lima-modal-eyebrow{color:#bff39d}
+.lima-modal-content h2{font-size:clamp(3rem,4vw,4.9rem);line-height:1.02;margin:20px 0 12px}
+.lima-modal-content h2 em{font-size:.88em;color:#f5d177}
+.lima-modal-content p{color:#e8efda;margin:9px 0 5px;line-height:1.55;font-size:.94rem}
+.lima-modal-content .btn{margin-top:17px;min-width:290px}
+.lima-modal-content>small{color:#b8cbb3;font-size:.62rem}
+.lima-close{right:16px;top:16px}
+
+@keyframes lima-rotate{0%,28%{opacity:1;transform:scale(1.01)}33%,95%{opacity:0;transform:scale(1.1)}100%{opacity:1;transform:scale(1.01)}}
+@keyframes cta-breathe{50%{box-shadow:0 0 52px #f7cd7fab,0 0 0 3px #f4d27535}}
+@keyframes beacon{50%{box-shadow:0 0 0 7px #baf76736,0 0 27px #b9f569;transform:scale(1.1)}}
+@keyframes bonus-throb{50%{text-shadow:0 0 37px #ffe7ad,0 0 115px #f2cb77e8;transform:scale(1.025)}}
+@keyframes highroller-sweep{0%,52%{transform:translateX(-140%) skewX(-18deg)}76%,100%{transform:translateX(430%) skewX(-18deg)}}
+@keyframes highroller-frame{50%{opacity:1;box-shadow:inset 0 0 52px #f8d47768,0 0 49px #efcf7b78}}
+@keyframes highroller-badge{50%{box-shadow:0 0 31px #ffe9a7c8,0 0 0 3px #fce6a027}}
+
+@media(max-width:1150px){.hero h1{font-size:clamp(3.8rem,6vw,6.3rem)}.game-main h3{font-size:clamp(3.25rem,5.5vw,6rem)}}
+@media(max-width:980px){
+  .nav-links{background:#0a2116}
+  .hero-bg{background-position:75% 44%}
+  .hero h1{font-size:clamp(3.6rem,6vw,5.7rem)}
+  .hero h1 em{font-size:.66em}
+  .panel-time b{font-size:2.8rem}
+  .tables h2,.reason h2,.steps h2,.faq h2,.private h2{font-size:clamp(2.8rem,5vw,4.5rem)}
+  .pro-copy h2{font-size:clamp(2.7rem,4.5vw,4.5rem)}
+  .lima-modal-content{padding-inline:32px}
+}
+@media(max-width:720px){
+  .hero-gradient{background:linear-gradient(90deg,#06170feb,#06170fa3 69%,#06170f70),linear-gradient(0deg,#06170ff0,transparent 49%)}
+  .hero h1{font-size:clamp(3.7rem,11vw,6.2rem)}
+  .hero h1 em{font-size:.62em;white-space:normal}
+  .hero-panel{background:#0b2117ef}
+  .tables h2,.reason h2,.steps h2,.faq h2,.private h2{font-size:clamp(2.75rem,8.2vw,4.8rem)}
+  .pro-layout{grid-template-columns:1fr;gap:34px;min-height:0}
+  .pro-card{max-width:none;margin:0}
+  .pro-copy h2{font-size:clamp(3rem,8.2vw,4.9rem)}
+  .pro-section::before{background-attachment:scroll}
+  .game-main h3{font-size:clamp(3rem,8.7vw,5.4rem)}
+  .game-sunday h3{font-size:clamp(2.4rem,7vw,4rem)}
+  .world-wash{background:linear-gradient(90deg,#06190fdf,#06190fa9 75%),linear-gradient(0deg,#06190fc8,transparent 50%)}
+  .world-chapter h2{font-size:clamp(3.5rem,9vw,5.6rem)}
+  .lima-center h2{font-size:clamp(3.3rem,8.5vw,5.5rem)}
+  .tables::before,.reason::before,.faq::before{background-attachment:scroll}
+  .offer-dialog,.lima-dialog{width:100vw;height:100dvh;max-height:none;margin:0;box-shadow:none}
+  .bonus-modal{display:flex;flex-direction:column;min-height:100%;overflow:visible}
+  .bonus-left{min-height:43dvh;padding:73px 27px 28px}
+  .bonus-big{font-size:clamp(6rem,22vw,10rem);line-height:.83}
+  .bonus-left h2{font-size:clamp(2.3rem,8.5vw,4rem)}
+  .bonus-right{min-height:57dvh;padding:32px 27px 35px}
+  .bonus-id{margin-top:9px!important}
+  .lima-dialog[open]{display:flex;flex-direction:column;overflow:auto}
+  .lima-modal-visual{flex:none;min-height:35dvh}
+  .lima-modal-visual-label{left:22px;bottom:20px}
+  .lima-modal-visual-dots{right:22px;bottom:18px}
+  .lima-modal-content{overflow:visible;min-height:65dvh;padding:38px 27px 36px}
+  .lima-modal-content h2{font-size:clamp(3rem,8.7vw,5rem)}
+}
+@media(max-width:480px){
+  .hero h1{font-size:clamp(3.15rem,11.1vw,4.5rem)}
+  .hero h1 em{font-size:.64em}
+  .hero-lead{font-size:1rem}
+  .signal-grid strong{font-size:1rem}
+  .tables h2,.reason h2,.steps h2,.faq h2,.private h2{font-size:clamp(2.45rem,8.5vw,3.6rem)}
+  .pro-copy h2{font-size:clamp(2.5rem,8.6vw,3.6rem)}
+  .pro-copy>p:not(.eyebrow){font-size:.97rem}
+  .pro-copy .btn{width:100%;gap:10px;font-size:.7rem}
+  .pro-card>p{font-size:clamp(2.2rem,9vw,3.5rem);margin:38px 0 24px}
+  .game-main h3{font-size:clamp(2.85rem,9vw,4.5rem)}
+  .game-facts{gap:18px}.game-facts strong{font-size:1.4rem}
+  .world-chapter h2{font-size:clamp(3.1rem,9.6vw,4.6rem)}
+  .steps-grid article{min-height:182px}
+  .lima-center h2{font-size:clamp(3.05rem,9.3vw,4.8rem)}
+  .final h2{font-size:clamp(3rem,8.6vw,4.5rem)}
+  .bonus-left{min-height:42dvh;padding:60px 23px 20px}
+  .bonus-big{font-size:clamp(6rem,22vw,8rem)}
+  .bonus-left h2{font-size:clamp(2.3rem,8.8vw,3.3rem)}
+  .bonus-right{min-height:58dvh;padding:24px 23px 24px}
+  .bonus-math strong{font-size:1.5rem}.bonus-math .math-total strong{font-size:2.25rem}
+  .bonus-right .btn{gap:8px;font-size:.68rem}
+  .lima-modal-visual{min-height:31dvh}.lima-modal-content{min-height:69dvh}
+  .lima-modal-content h2{font-size:clamp(2.85rem,10vw,4.3rem)}
+  .lima-modal-content .btn{min-width:0;width:100%}
+}
+@media(max-height:650px) and (min-width:721px){
+  .bonus-left{padding-bottom:22px}.bonus-big{font-size:7.5rem}
+  .bonus-right{padding-top:55px;padding-bottom:15px}
+  .lima-modal-content{padding-top:39px;padding-bottom:18px}
+  .lima-modal-content h2{font-size:clamp(2.8rem,3.7vw,4rem)}
+}
+@media(prefers-reduced-motion:reduce){
+  .btn-hot::after,.lima-button::after{display:none}
+  .bonus-right .btn-hot{animation:none}
+  .lima-modal-photo{animation:none!important;opacity:0}
+  .lima-modal-photo--coast{opacity:1}
+  .game-sunday::before,.game-sunday::after,.highroller-badge{animation:none}
+  .pro-section::after{animation:none}
+}
