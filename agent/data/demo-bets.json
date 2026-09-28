@@ -1,0 +1,402 @@
+[
+  {
+    "id": "52870100",
+    "player": "AtlasRiver",
+    "asset": "ETH",
+    "wager_usd": 15,
+    "payout_usd": 30.0,
+    "multiplier": 2.0
+  },
+  {
+    "id": "52870101",
+    "player": "Norte21",
+    "asset": "LTC",
+    "wager_usd": 150,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870102",
+    "player": "LunaVerde",
+    "asset": "SOL",
+    "wager_usd": 300,
+    "payout_usd": 675.0,
+    "multiplier": 2.25
+  },
+  {
+    "id": "52870103",
+    "player": "Maverick77",
+    "asset": "BTC",
+    "wager_usd": 50,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870104",
+    "player": "ZetaCards",
+    "asset": "USDT",
+    "wager_usd": 50,
+    "payout_usd": 100.0,
+    "multiplier": 2.0
+  },
+  {
+    "id": "52870105",
+    "player": "OroFino",
+    "asset": "ETH",
+    "wager_usd": 2.5,
+    "payout_usd": 0.0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870106",
+    "player": "DaniAce",
+    "asset": "LTC",
+    "wager_usd": 15,
+    "payout_usd": 26.25,
+    "multiplier": 1.75
+  },
+  {
+    "id": "52870107",
+    "player": "RioAzul",
+    "asset": "SOL",
+    "wager_usd": 150,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870108",
+    "player": "CryptoVale",
+    "asset": "BTC",
+    "wager_usd": 250,
+    "payout_usd": 625.0,
+    "multiplier": 2.5
+  },
+  {
+    "id": "52870109",
+    "player": "SieteNegro",
+    "asset": "USDT",
+    "wager_usd": 25,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870110",
+    "player": "ApexFold",
+    "asset": "ETH",
+    "wager_usd": 30,
+    "payout_usd": 63.0,
+    "multiplier": 2.1
+  },
+  {
+    "id": "52870111",
+    "player": "MinaSol",
+    "asset": "LTC",
+    "wager_usd": 150,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870112",
+    "player": "RojoTrebol",
+    "asset": "SOL",
+    "wager_usd": 25,
+    "payout_usd": 56.25,
+    "multiplier": 2.25
+  },
+  {
+    "id": "52870113",
+    "player": "VossGuest14",
+    "asset": "BTC",
+    "wager_usd": 12,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870114",
+    "player": "BetoStack",
+    "asset": "USDT",
+    "wager_usd": 25,
+    "payout_usd": 50.0,
+    "multiplier": 2.0
+  },
+  {
+    "id": "52870115",
+    "player": "AndesAce",
+    "asset": "ETH",
+    "wager_usd": 125,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870116",
+    "player": "NicoRiver",
+    "asset": "LTC",
+    "wager_usd": 5,
+    "payout_usd": 11.25,
+    "multiplier": 2.25
+  },
+  {
+    "id": "52870117",
+    "player": "MayaCards",
+    "asset": "SOL",
+    "wager_usd": 75,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870118",
+    "player": "TheDealer",
+    "asset": "BTC",
+    "wager_usd": 10,
+    "payout_usd": 19.0,
+    "multiplier": 1.9
+  },
+  {
+    "id": "52870119",
+    "player": "CobreKing",
+    "asset": "USDT",
+    "wager_usd": 50,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870120",
+    "player": "NorthStar",
+    "asset": "ETH",
+    "wager_usd": 40,
+    "payout_usd": 70.0,
+    "multiplier": 1.75
+  },
+  {
+    "id": "52870121",
+    "player": "Jota777",
+    "asset": "LTC",
+    "wager_usd": 300,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870122",
+    "player": "PaloAlto",
+    "asset": "SOL",
+    "wager_usd": 15,
+    "payout_usd": 26.25,
+    "multiplier": 1.75
+  },
+  {
+    "id": "52870123",
+    "player": "ZeroTilt",
+    "asset": "BTC",
+    "wager_usd": 150,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870124",
+    "player": "Senda24",
+    "asset": "USDT",
+    "wager_usd": 500,
+    "payout_usd": 1125.0,
+    "multiplier": 2.25
+  },
+  {
+    "id": "52870125",
+    "player": "SantiagoQ",
+    "asset": "ETH",
+    "wager_usd": 200,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870126",
+    "player": "MundoAce",
+    "asset": "LTC",
+    "wager_usd": 200,
+    "payout_usd": 350.0,
+    "multiplier": 1.75
+  },
+  {
+    "id": "52870127",
+    "player": "KappaLuz",
+    "asset": "SOL",
+    "wager_usd": 10,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870128",
+    "player": "NeonChip",
+    "asset": "BTC",
+    "wager_usd": 7.5,
+    "payout_usd": 15.75,
+    "multiplier": 2.1
+  },
+  {
+    "id": "52870129",
+    "player": "PampaClub",
+    "asset": "USDT",
+    "wager_usd": 40,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870130",
+    "player": "Cairo12",
+    "asset": "ETH",
+    "wager_usd": 2.5,
+    "payout_usd": 5.25,
+    "multiplier": 2.1
+  },
+  {
+    "id": "52870131",
+    "player": "RafaNueve",
+    "asset": "LTC",
+    "wager_usd": 15,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870132",
+    "player": "Punto21",
+    "asset": "SOL",
+    "wager_usd": 20,
+    "payout_usd": 30.0,
+    "multiplier": 1.5
+  },
+  {
+    "id": "52870133",
+    "player": "Brava21",
+    "asset": "BTC",
+    "wager_usd": 15,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870134",
+    "player": "AylaMoon",
+    "asset": "USDT",
+    "wager_usd": 150,
+    "payout_usd": 285.0,
+    "multiplier": 1.9
+  },
+  {
+    "id": "52870135",
+    "player": "CardinalX",
+    "asset": "ETH",
+    "wager_usd": 20,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870136",
+    "player": "NovaStack",
+    "asset": "LTC",
+    "wager_usd": 15,
+    "payout_usd": 26.25,
+    "multiplier": 1.75
+  },
+  {
+    "id": "52870137",
+    "player": "RocaFina",
+    "asset": "SOL",
+    "wager_usd": 7.5,
+    "payout_usd": 0.0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870138",
+    "player": "BlueChips",
+    "asset": "BTC",
+    "wager_usd": 7.5,
+    "payout_usd": 15.75,
+    "multiplier": 2.1
+  },
+  {
+    "id": "52870139",
+    "player": "AxelTrebol",
+    "asset": "USDT",
+    "wager_usd": 7.5,
+    "payout_usd": 0.0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870140",
+    "player": "OmarQ",
+    "asset": "ETH",
+    "wager_usd": 10,
+    "payout_usd": 15.0,
+    "multiplier": 1.5
+  },
+  {
+    "id": "52870141",
+    "player": "DeltaFive",
+    "asset": "LTC",
+    "wager_usd": 12,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870142",
+    "player": "Sofia77",
+    "asset": "SOL",
+    "wager_usd": 20,
+    "payout_usd": 35.0,
+    "multiplier": 1.75
+  },
+  {
+    "id": "52870143",
+    "player": "OrbitAce",
+    "asset": "BTC",
+    "wager_usd": 125,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870144",
+    "player": "Vega88",
+    "asset": "USDT",
+    "wager_usd": 125,
+    "payout_usd": 312.5,
+    "multiplier": 2.5
+  },
+  {
+    "id": "52870145",
+    "player": "ZorroNorte",
+    "asset": "ETH",
+    "wager_usd": 150,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870146",
+    "player": "LucasB",
+    "asset": "LTC",
+    "wager_usd": 125,
+    "payout_usd": 187.5,
+    "multiplier": 1.5
+  },
+  {
+    "id": "52870147",
+    "player": "CasinoFan",
+    "asset": "SOL",
+    "wager_usd": 500,
+    "payout_usd": 0,
+    "multiplier": 0
+  },
+  {
+    "id": "52870148",
+    "player": "AnaSiete",
+    "asset": "BTC",
+    "wager_usd": 5,
+    "payout_usd": 7.5,
+    "multiplier": 1.5
+  },
+  {
+    "id": "52870149",
+    "player": "ZetaNoche",
+    "asset": "USDT",
+    "wager_usd": 10,
+    "payout_usd": 0,
+    "multiplier": 0
+  }
+]

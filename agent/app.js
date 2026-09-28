@@ -69,8 +69,8 @@ if (window.matchMedia("(pointer: fine)").matches) {
 /* Una barra compartida para el lobby y las páginas de juegos. */
 const navItems = [
   { label: "Voss", href: "/#inicio", icon: "voss" },
-  { label: "Casino", href: "/casino/#juegos", icon: "cards" },
-  { label: "Deportes", href: "/casino/#deportes", icon: "ball" },
+  { label: "Casino", href: "/#juegos", icon: "cards" },
+  { label: "Deportes", href: "/#deportes", icon: "ball" },
   { label: "Actividad", href: "/casino/blackjack/#actividad", icon: "activity" }
 ];
 const icons = {
@@ -88,7 +88,7 @@ navItems.forEach((item) => {
   link.href = item.href;
   link.className = "voss-dock__item";
   link.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">${icons[item.icon]}</svg><span>${item.label}</span>`;
-  if (item.icon === (isGame ? "activity" : "cards")) link.setAttribute("aria-current", "page");
+  if (item.icon === (isGame ? "activity" : "voss")) link.setAttribute("aria-current", "page");
   dock.append(link);
 });
 document.body.append(dock);

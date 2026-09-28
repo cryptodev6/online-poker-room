@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#06120d">
+  <meta name="description" content="Blackjack en VossCasino: 100% de bono en tu primera apuesta y actividad de muestra en criptomonedas.">
+  <title>Blackjack — VossCasino</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%2306100b'/%3E%3Cpath d='M10 12h13l9 33 9-33h13L40 54H24z' fill='%23f4cb73'/%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="../../assets/blackjack.webp">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../../blackjack.css">
+  <script defer src="../../app.js"></script>
+  <script defer type="module" src="../../activity.js"></script>
+</head>
+<body data-page="blackjack">
+  <a class="skip-link" href="#mesa">Saltar a la mesa</a>
+  <div class="offer-line"><span class="offer-line__diamond" aria-hidden="true">◆</span><span><b>100% BONO BLACKJACK</b> <span class="offer-line__detail">· en tu primera apuesta</span></span><a href="#bono-blackjack">VER BONO <span aria-hidden="true">↗</span></a></div>
+  <header class="site-header" id="inicio"><div class="shell header-inner">
+    <a class="brand" href="/" aria-label="VossCasino, inicio"><span class="brand__mark">V</span><span class="brand__word">VOSS<span>CASINO</span><small>CASINO & SPORTSBOOK</small></span></a>
+    <nav class="desktop-nav" aria-label="Navegación principal"><a href="/#juegos">CASINO</a><a href="/#deportes">DEPORTES</a><a href="#actividad">ACTIVIDAD</a><a href="#bono-blackjack">BONO BLACKJACK</a></nav>
+    <div class="header-actions"><a class="header-login" data-route="login" href="/">Ingresar</a><a class="button button--gold button--small" data-deposit-cta data-deposit-product="blackjack" href="#bono-blackjack">OBTENER BONO <span aria-hidden="true">↗</span></a></div>
+    <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  </div><nav class="mobile-menu" id="mobile-menu" aria-label="Navegación móvil" hidden><a href="/#juegos">Casino <span>↗</span></a><a href="/#deportes">Deportes <span>↗</span></a><a href="#actividad">Actividad <span>↓</span></a><a href="#bono-blackjack">Bono blackjack <span>↓</span></a></nav></header>
+
+  <main class="blackjack-main shell" id="mesa">
+    <section class="bj-hero" id="bono-blackjack" aria-labelledby="blackjack-title">
+      <img class="bj-hero__image" src="../../assets/blackjack.webp" alt="" fetchpriority="high">
+      <div class="bj-hero__shade"></div><div class="bj-hero__light" aria-hidden="true"></div>
+      <div class="bj-hero__content">
+        <span class="bj-hero__eyebrow"><span aria-hidden="true">♠</span> VOSS SELECT / BLACKJACK</span>
+        <h1 id="blackjack-title"><span class="bj-hero__game">BLACKJACK</span><span class="bj-hero__lead">RECIBE</span><span class="bj-hero__amount">100<sup>%</sup></span><span class="bj-hero__promise">DE BONO EN TU<br>PRIMERA APUESTA.</span></h1>
+        <div class="bj-hero__actions"><a class="button button--gold bj-hero__cta" data-deposit-cta data-deposit-product="blackjack" href="#bono-blackjack">OBTENER MI BONO <span aria-hidden="true">↗</span></a><a class="bj-hero__secondary" href="#actividad">VER ACTIVIDAD DE MUESTRA <span aria-hidden="true">↓</span></a></div>
+        <p class="bj-hero__terms">Oferta de muestra. Condiciones y disponibilidad pendientes de definición.</p>
+      </div>
+      <div class="bj-hero__signature" aria-hidden="true">VOSS <span>♠</span> 21</div>
+    </section>
+
+    <section class="bj-scene" aria-labelledby="scene-title">
+      <img src="../../assets/blackjack-dealer-emerald.webp" alt="Un dealer reparte un as y un rey sobre una mesa verde de blackjack" loading="lazy">
+      <div class="bj-scene__shade"></div>
+      <div class="bj-scene__content"><span>VOSS BLACKJACK / LA MESA</span><h2 id="scene-title">CARTAS EN MESA.<br><em>TU DECISIÓN.</em></h2><a class="button button--outline" data-deposit-cta data-deposit-product="blackjack" href="#bono-blackjack">OBTENER BONO BLACKJACK <span aria-hidden="true">↗</span></a></div>
+    </section>
+
+    <section class="activity-panel" id="actividad" aria-labelledby="activity-title" data-activity-feed data-source="../../data/demo-bets.json">
+      <div class="activity-panel__heading"><div><span class="section-kicker"><i></i> VOSS BLACKJACK</span><h2 id="activity-title">ACTIVIDAD <em>DE MUESTRA.</em></h2></div><span class="activity-panel__mode"><span aria-hidden="true">◇</span> DEMO FRONTEND</span></div>
+      <p class="activity-panel__disclosure">Apuestas ficticias para probar la interfaz. No representan actividad real ni pagos efectuados.</p>
+      <div class="activity-table-wrap" role="region" aria-label="Apuestas de muestra" tabindex="0">
+        <table class="activity-table"><thead><tr><th scope="col">JUGADOR</th><th scope="col">RESULTADO</th><th scope="col">MULT.</th><th scope="col">APUESTA</th><th scope="col">ID</th></tr></thead><tbody id="activity-rows"><tr><td colspan="5" class="activity-loading">Cargando registros de muestra…</td></tr></tbody></table>
+      </div>
+      <div class="activity-panel__foot"><span>50 registros ficticios · USD equivalente para cada criptomoneda</span><span>EL CHAT SE AÑADIRÁ MÁS ADELANTE</span></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><div class="footer-brand"><span class="brand__mark">V</span><strong>VOSS<span>CASINO</span></strong></div><p>© 2026 VossCasino · Solo para mayores de edad · Juega con responsabilidad.<br>Oferta ilustrativa. Depósito y acceso al casino pendientes de habilitación.</p><a href="/#juegos">EXPLORAR JUEGOS ↗</a></div></footer>
+  <dialog class="deposit-dialog" id="deposit-dialog" aria-labelledby="deposit-dialog-title"><button class="deposit-dialog__close" type="button" data-close-deposit aria-label="Cerrar">×</button><span class="section-kicker"><i></i> VOSS BLACKJACK</span><h2 id="deposit-dialog-title">EL BONO ESTÁ EN PREPARACIÓN.</h2><p>El depósito y las condiciones del bono aparecerán aquí cuando estén disponibles.</p><a class="button button--gold" href="#actividad" data-close-deposit>VER ACTIVIDAD DE MUESTRA <span aria-hidden="true">↓</span></a></dialog>
+</body>
+</html>

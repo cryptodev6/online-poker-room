@@ -76,6 +76,36 @@
   };
 
   const bonusDialog = document.getElementById("bonusDialog");
+  const bonusNudge = document.getElementById("bonusNudge");
+  let nudgeDismissed = false;
+  let nudgeTimer;
+
+  const hideBonusNudge = () => {
+    if (!bonusNudge) return;
+    clearTimeout(nudgeTimer);
+    bonusNudge.hidden = true;
+    bonusNudge.classList.remove("is-visible", "is-settled");
+  };
+
+  const showBonusNudge = () => {
+    if (!bonusNudge || nudgeDismissed) return;
+    bonusNudge.hidden = false;
+    bonusNudge.classList.add("is-visible");
+    nudgeTimer = setTimeout(() => {
+      bonusNudge.classList.add("is-settled");
+    }, 4500);
+    track("bonus_nudge_view");
+  };
+
+  bonusNudge?.querySelector(".bonus-nudge__close")?.addEventListener("click", () => {
+    nudgeDismissed = true;
+    hideBonusNudge();
+    track("bonus_nudge_dismissed");
+  });
+
+  bonusNudge?.querySelector(".bonus-nudge__main")?.addEventListener("click", () => {
+    track("sports_bonus_nudge_click", { destination: "/casino/" });
+  });
 
   document.querySelectorAll("[data-wa]").forEach((link) => {
     const purpose = link.dataset.wa;
@@ -278,6 +308,16 @@
   // ==================================================
 
   if (bonusDialog) {
+    bonusDialog.addEventListener("cancel", () => {
+      bonusDialog.returnValue = "dismissed";
+    });
+
+    bonusDialog.addEventListener("close", () => {
+      if (bonusDialog.returnValue !== "engaged") {
+        showBonusNudge();
+      }
+    });
+
     bonusDialog.addEventListener("click", (event) => {
       if (event.target === bonusDialog) {
         bonusDialog.close("dismissed");
@@ -297,6 +337,8 @@
       .forEach((button) => {
         button.addEventListener("click", () => {
           if (!bonusDialog.open) {
+            hideBonusNudge();
+            bonusDialog.returnValue = "";
             bonusDialog.showModal();
             track("bonus_reopened");
           }
@@ -311,6 +353,8 @@
         return;
       }
 
+      hideBonusNudge();
+      bonusDialog.returnValue = "";
       bonusDialog.showModal();
       track("bonus_modal_view");
     };

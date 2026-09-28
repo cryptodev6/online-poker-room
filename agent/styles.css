@@ -83,18 +83,3 @@ body{padding-bottom:86px}
   .hero-copy small{margin-top:10px;font-size:10px;line-height:1.35;color:#bac8b7}
 }
 @media(max-width:380px){.hero-stage,.hero-copy{min-height:500px}.hero-copy{padding-inline:19px}.hero-lead{margin-top:27px}.hero-number{font-size:clamp(79px,25vw,92px)}.hero-word{font-size:clamp(35px,11vw,41px)}.bonus-wheel{top:87px;right:-60px;width:195px;opacity:.26}.hero-actions{gap:6px}.hero-actions .button{font-size:11px}}
-
-/* Cinco mesas con un contorno luminoso pausado; las luces avanzan de una tarjeta a otra. */
-.game-grid .game-tile{border-color:#d7b66d9c;box-shadow:0 0 0 1px #d8b1642b,0 0 18px #c6a35440,inset 0 0 0 1px #fff2c31c}
-.game-grid .game-tile--slots{grid-column:span 2}
-.game-grid .game-tile::after{opacity:.48;box-shadow:inset 0 0 0 1px #ffe3a073,inset 0 0 18px #f0c66d4d;background:radial-gradient(260px circle at var(--mx,50%) var(--my,50%),#ffe9ad30,transparent 75%);animation:tile-lights 6s ease-in-out infinite}
-.game-grid .game-tile:nth-child(2)::after{animation-delay:-1.2s}
-.game-grid .game-tile:nth-child(3)::after{animation-delay:-2.4s}
-.game-grid .game-tile:nth-child(4)::after{animation-delay:-3.6s}
-.game-grid .game-tile:nth-child(5)::after{animation-delay:-4.8s}
-.game-grid .game-tile:hover,.game-grid .game-tile:focus-visible,.game-grid .game-tile:active{border-color:#ffe6a2;box-shadow:0 15px 34px #0009,0 0 26px #ecc8768c,inset 0 0 0 1px #fff2c18c}
-.game-grid .game-tile:hover::after,.game-grid .game-tile:focus-visible::after,.game-grid .game-tile:active::after{animation:none;opacity:1;box-shadow:inset 0 0 0 1px #fff0b8,inset 0 0 21px #f8d88e82}
-.game-grid .game-tile:focus-visible{outline:2px solid #ffe8aa;outline-offset:3px}
-@keyframes tile-lights{0%,100%{opacity:.32}50%{opacity:.72}}
-@media(max-width:680px){.game-grid .game-tile--slots{height:230px}.game-tile--slots img{object-position:center 50%}.game-grid .game-tile::after{animation-duration:7.5s}}
-@media(prefers-reduced-motion:reduce){.game-grid .game-tile::after{animation:none;opacity:.55}}

@@ -2,6 +2,8 @@
 .nav-links>button[data-open-bonus]{border:0;padding:0;background:none;color:#ecf2ee;font-size:.73rem;font-weight:750;white-space:nowrap}
 .nav-links>button[data-open-bonus]:hover,.nav-links>a[href="#juego-privado"]:hover{color:var(--gold)}
 .nav-links>a[href="#juego-privado"]{color:#f4d894}
+.nav-links>a.nav-casino{color:#c9f68d}
+.nav-links>a.nav-casino:hover{color:#ffe395}
 .table-layout{scroll-margin-top:112px}
 .volume-note{display:flex;align-items:center;justify-content:space-between;gap:26px;padding-top:24px;margin-top:34px;border-top:1px solid #d7e7ba40}
 .volume-note p{max-width:760px;margin:0;color:#cdddc6;font-size:.79rem;line-height:1.6}
@@ -116,3 +118,26 @@
 }
 @media(max-width:350px){.player{min-width:79px}.player-data b,.player-data small{font-size:.43rem}.bonus-math .math-item strong{font-size:1.1rem}}
 @media(prefers-reduced-motion:reduce){.poker-demo,.poker-demo:hover{transform:none}.game-chip--one,.player.is-acting,.private-halo,.private-story .private-action{animation:none}.private-photo-wrap img{transition:none}}
+
+/* Pestaña deportiva: emerge del borde como una hoja de luz dorada. */
+.bonus-nudge{position:fixed;right:0;bottom:34px;z-index:70;width:207px;filter:drop-shadow(0 8px 17px #0009)}
+.bonus-nudge[hidden]{display:none}
+.bonus-nudge.is-visible{animation:bonus-nudge-enter .72s cubic-bezier(.16,1,.3,1) both}
+.bonus-nudge__main{position:relative;isolation:isolate;overflow:hidden;display:flex;align-items:center;gap:12px;width:100%;min-height:76px;padding:8px 18px 8px 12px;border:1px solid #f8e7a2;border-right:0;border-radius:17px 0 0 17px;background:radial-gradient(circle at 5% 45%,#fff6c2 0%,#f8da82 25%,transparent 60%),linear-gradient(135deg,#e6b85b 0%,#b88435 61%,#76501e 100%);color:#291a08;text-align:left;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 0 #fff7cd,0 0 0 2px #dbac4444,0 0 22px #eec9688c;transition:transform .25s ease,box-shadow .25s ease}
+.bonus-nudge__main:hover,.bonus-nudge__main:focus-visible{transform:translateX(-4px);box-shadow:inset 0 1px 0 #fff9d5,0 0 0 2px #f9dc82aa,0 0 29px #ffe490a8}
+.bonus-nudge__main:focus-visible{outline:2px solid #fff7cc;outline-offset:3px}
+.bonus-nudge__main::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(105deg,transparent 28%,#fff9d49c 49%,transparent 69%);transform:translateX(-130%);animation:bonus-nudge-shine 1.9s ease-in-out .7s 2;pointer-events:none}
+.bonus-nudge__blade{position:relative;z-index:2;flex:none;width:5px;height:53px;border-radius:5px;background:linear-gradient(180deg,#fbe8a5,#fffdf0 48%,#ffe793);box-shadow:0 0 6px 2px #fff9d4,0 0 15px 5px #f8d875,0 0 29px 10px #dfab4b80;animation:bonus-nudge-glow 3.5s ease-in-out infinite alternate}
+.bonus-nudge__copy{position:relative;z-index:2;display:flex;flex-direction:column;gap:2px;white-space:nowrap;line-height:1.12;text-shadow:0 1px 0 #fff2ba70}
+.bonus-nudge__copy strong{color:#241406;font:900 1.04rem/1 var(--display);letter-spacing:.01em}
+.bonus-nudge__copy span{color:#3a260e;font-size:.65rem;font-weight:900;letter-spacing:.04em}
+.bonus-nudge__copy b{color:#432406;font-size:.93rem}
+.bonus-nudge__close{position:absolute;top:-12px;left:-12px;z-index:3;display:grid;place-items:center;width:27px;height:27px;border:1px solid #ecca75;border-radius:50%;background:#4a3114;color:#fff4d2;font:400 1rem/1 var(--sans);cursor:pointer;box-shadow:0 3px 10px #0009}
+.bonus-nudge__close:hover,.bonus-nudge__close:focus-visible{background:#f0cc72;color:#291a08}
+.bonus-nudge.is-settled .bonus-nudge__main{box-shadow:inset 0 1px 0 #fff7cd,0 0 0 2px #dbac443b,0 0 20px #eec96870}
+@keyframes bonus-nudge-enter{from{opacity:0;transform:translateX(105%)}to{opacity:1;transform:translateX(0)}}
+@keyframes bonus-nudge-shine{to{transform:translateX(130%)}}
+@keyframes bonus-nudge-glow{to{box-shadow:0 0 8px 3px #fff9d4,0 0 18px 7px #f8d875,0 0 33px 12px #dfab4b9c}}
+@media(max-width:720px){.bonus-nudge{bottom:calc(87px + env(safe-area-inset-bottom));width:190px}.bonus-nudge__main{min-height:69px;padding:7px 13px 7px 11px}.bonus-nudge__blade{height:49px}.bonus-nudge__copy strong{font-size:.98rem}.bonus-nudge__copy span{font-size:.61rem}}
+@media(max-width:350px){.bonus-nudge{width:176px}.bonus-nudge__main{gap:9px}.bonus-nudge__copy strong{font-size:.9rem}.bonus-nudge__copy span{font-size:.55rem}}
+@media(prefers-reduced-motion:reduce){.bonus-nudge,.bonus-nudge__main::after,.bonus-nudge__blade{animation:none!important}.bonus-nudge__main{transition:none}}
