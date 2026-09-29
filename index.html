@@ -20,6 +20,22 @@
     <link rel="stylesheet" href="/assets/landing-v3.css">
     <link rel="stylesheet" href="/assets/landing-v4.css">
     <script src="/assets/landing.js" defer></script>
+
+    <style id="voss-room-targeted-tweaks">
+      /* Keep the original table-card design; restore its two-column layout. */
+      #horarios.table-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
+      #horarios .game-main{min-width:0}
+      #horarios .game-main--premium{border:1px solid #c6a568;background:linear-gradient(145deg,rgba(198,165,104,.13),rgba(15,14,12,.96) 62%);box-shadow:inset 0 1px rgba(226,204,156,.22),0 14px 40px rgba(0,0,0,.22)}
+      #horarios .game-main--premium .game-main-top{color:#e2cc9c;border-color:rgba(198,165,104,.35)}
+      #horarios .game-main--premium .game-main-body>p{color:#c6a568}
+      #horarios .game-main--premium .game-main-body h3,#horarios .game-main--premium .game-facts strong{color:#e2cc9c}
+      #horarios .game-main--premium .game-main-action{border-color:rgba(198,165,104,.35)}
+      #horarios .game-main--premium .btn{background:linear-gradient(110deg,#e2cc9c,#c6a568);color:#17120a;border-color:#c6a568}
+      /* Align the offer figure without rebuilding the original promo dialog. */
+      #bonusDialog .bonus-big{display:flex;align-items:baseline;gap:.04em;line-height:.9;white-space:nowrap}
+      #bonusDialog .bonus-big span{font-size:.56em;line-height:1;vertical-align:baseline}
+      @media(max-width:760px){#horarios.table-layout{grid-template-columns:1fr;gap:16px}}
+    </style>
   </head>
   <body><a class="skip-link" href="#contenido">Saltar al contenido</a>
     <div class="progress" id="scrollProgress" aria-hidden="true"></div>
@@ -80,7 +96,19 @@
                   <div><small>ENTRADA MÍNIMA</small><strong>US$500</strong><span>Consulta disponibilidad<br>de la próxima mesa</span></div>
                 </div>
               </div>
-              <div class="game-main-action"><a class="btn btn-hot" data-wa="seat" href="https://wa.me/573007068986">QUIERO UN ASIENTO MAR / JUE <span aria-hidden="true">↗</span></a><small>Te confirmamos asiento, rake y condiciones antes de jugar.</small><a class="btn btn-hot purchase-link" href="/payment/">COMPRAR US$500 EN FICHAS <span aria-hidden="true">↗</span></a></div>
+              <div class="game-main-action"><a class="btn btn-hot" data-wa="seat" href="https://wa.me/573007068986">QUIERO UN ASIENTO MAR / JUE <span aria-hidden="true">↗</span></a><small>Te confirmamos asiento, rake y condiciones antes de jugar.</small></div>
+            </article>
+            <article class="game-main game-main--premium" data-reveal>
+              <div class="game-main-top"><span>✦ MESA HIGH ROLLER</span><span>02 / 02</span></div>
+              <div class="game-main-body">
+                <p>DOMINGO</p>
+                <h3>NL400 <i>×</i><br>PLO5 400</h3>
+                <div class="game-facts">
+                  <div><small>SESIÓN</small><strong>DOMINGO</strong><span>Horario por confirmar<br>con el anfitrión</span></div>
+                  <div><small>ENTRADA MÍNIMA</small><strong>US$1.000</strong><span>Confirma disponibilidad<br>antes de depositar</span></div>
+                </div>
+              </div>
+              <div class="game-main-action"><a class="btn btn-hot" data-wa="seat" href="https://wa.me/573007068986">CONSULTAR ASIENTO HIGH ROLLER <span aria-hidden="true">↗</span></a><small>Te confirmamos horario, disponibilidad y condiciones.</small></div>
             </article>
           </div>
           <div class="container volume-note" data-reveal>
@@ -299,7 +327,7 @@
             </div>
             <div class="math-total"><small>SALDO PARA JUGAR</small><strong>US$1.250</strong></div>
           </div>
-          <div class="bonus-purchases"><a class="btn btn-hot purchase-link" href="/payment/">INGRESAR <span aria-hidden="true">↗</span></a></div><a class="line-link" data-wa="bonus" href="https://wa.me/573007068986">CONSULTAR CONDICIONES DEL BONO <b aria-hidden="true">↗</b></a><span class="bonus-id">VOSS ROOM <i>✦</i> CLUBGG 598956</span>
+          <div class="bonus-purchases"><a class="btn btn-hot purchase-link" href="/payment/">DEPOSITA Y COMPRA FICHAS <span aria-hidden="true">↗</span></a></div><a class="line-link" data-wa="bonus" href="https://wa.me/573007068986">CONSULTAR CONDICIONES DEL BONO <b aria-hidden="true">↗</b></a><span class="bonus-id">VOSS ROOM <i>✦</i> CLUBGG 598956</span>
           <p class="bonus-small">Máximo depósito elegible comunicado: US$1.000. Confirma elegibilidad, acreditación, uso y condiciones de retiro antes de depositar. No acumulable con otros beneficios individuales. El bono aumenta el saldo para jugar; no garantiza ganancias.</p><button type="button" class="later-link" data-close-bonus>Seguir explorando la web ↓</button>
         </div>
       </div>
