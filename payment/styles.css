@@ -26,3 +26,28 @@ body{background:radial-gradient(ellipse at 50% -15%,#21422a 0,transparent 42%),v
 .offer-1000 .offer-body{padding-top:34px;padding-bottom:34px}.offer-1000 h2 strong{display:inline-block;font-size:clamp(48px,6vw,70px);color:#ffe8aa;text-shadow:0 0 30px #efc06770}.offer-1000 .gold-tag{background:linear-gradient(110deg,#fff1bf,#e0b44e);box-shadow:0 0 22px #f2c75e55;padding:9px 14px;font-size:10px}.offer-1000 .offer-lead b{color:#ffe7a4}.offer-1000 .pay-button-gold{max-width:430px;min-height:62px;font-size:14px;border:1px solid #fff2b1;background:linear-gradient(105deg,#fff3c4,#e3b443 48%,#ffeca8);box-shadow:0 0 34px #ebbd5480}.offer-1000 .offer-total{border-color:#eac36e7a}.offer-kicker{line-height:2.2}.offer h2{margin-top:16px}
 .crypto-section{padding:42px 24px;border-radius:10px}.crypto-inner{width:100%}.crypto-section .section-heading h2{font-size:clamp(26px,3.3vw,38px)}.confirmation{padding:50px 0}.pay-button:focus-visible{outline-offset:6px}
 @media(max-width:740px){.offer-500{background:linear-gradient(90deg,#062011f5,#082216c7 65%,#06201480),url('deposit-500.webp') 63% center/cover no-repeat}.offer-1000{background:linear-gradient(100deg,#201507f2,#271a0bd9 60%,#4a2c0870),url('payment-hero.png') 74% center/cover no-repeat}.offer-1000 .offer-body{padding:27px 18px}.offer-1000 h2 strong{font-size:54px}.offer-500 .pay-button-green{font-size:12px}.offer-1000 .pay-button-gold{font-size:13px}.crypto-section{padding:30px 16px}.confirmation{padding:38px 0}.offer-kicker{font-size:8px}.offer-tag{display:inline-block;line-height:1.3}}
+
+/* UX clarity refinements: keep the existing Voss visual system. */
+.intro>p:last-child{max-width:560px;margin:0 auto;color:#c3cec3;font-size:13px;line-height:1.65}
+.crypto-shortcut{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:44px;margin-top:15px;padding:11px 15px;border:1px solid #dcca8150;border-radius:4px;background:#dcca810d;color:#e8d59b;font-size:10px;font-weight:800;letter-spacing:.07em}
+.crypto-shortcut span{font-size:15px;color:#f5d98c;transition:transform .2s}.crypto-shortcut:hover{background:#dcca811c;border-color:#e2c875}.crypto-shortcut:hover span{transform:translateY(3px)}
+.offer-1000{transform:scale(1.008);z-index:1}
+.offer-1000 .offer-tag{font-size:10px;letter-spacing:.09em}
+.offer-1000 .offer-lead{font-size:17px}
+.offer-1000 .offer-total{box-shadow:inset 0 0 18px #d3ad4820}
+.offer-1000 .offer-total b{font-size:13px}
+.offer-total{line-height:1.35}
+.offer-total b{line-height:1.35}
+.terms p{max-width:810px}
+@media(max-width:740px){
+ .intro>p:last-child{max-width:360px;font-size:12px}
+ .crypto-shortcut{width:100%;margin-top:13px}
+ .offer-1000{transform:none;margin-top:2px}
+ .offer-1000 .offer-body{padding-top:25px;padding-bottom:25px}
+ .offer-1000 .offer-lead{font-size:15px}
+ .offer-total{width:100%;gap:7px 8px;justify-content:space-between;padding:10px 9px}
+ .offer-total span{font-size:8px}.offer-total b{font-size:10px}
+ .casino-copy h2{font-size:33px;max-width:300px}
+ .casino-copy>p:not(.eyebrow),.casino-copy>small{max-width:100%}
+ .pay-button-light{max-width:none}
+}
