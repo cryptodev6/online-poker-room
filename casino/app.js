@@ -1,43 +1,9 @@
-/* Rutas centralizadas: el primer juego ya vive en este sitio. */
-const EXTERNAL_BASE = "https://vosspoker.org";
-const PATHS = Object.freeze({
-  login: "/casino/ingresar", register: "/casino/registro",
-  casinoBonus: "/casino/bono-bienvenida", sportsBonus: "/casino/deportes/bono",
-  baccarat: "/casino/baccarat", roulette: "/casino/ruleta",
-  liveCasino: "/casino/en-vivo", slots: "/casino/slots",
-  crash: "/casino/crash", plinko: "/casino/plinko",
-  mines: "/casino/mines", dice: "/casino/dice",
-  videoPoker: "/casino/video-poker", keno: "/casino/keno",
-  sports: "/casino/deportes", football: "/casino/deportes/futbol",
-  basketball: "/casino/deportes/basquet", tennis: "/casino/deportes/tenis",
-  mma: "/casino/deportes/mma", esports: "/casino/deportes/esports"
-});
-
-window.VOSSCASINO_ROUTES = Object.freeze({
-  ...Object.fromEntries(Object.entries(PATHS).map(([key, path]) => [key, EXTERNAL_BASE + path])),
-  blackjack: "/casino/blackjack/"
-});
-// Enlaces independientes para cada oferta. Añade el de Mercado Pago cuando esté listo.
-const DEPOSIT_URLS = Object.freeze({ welcome: "", blackjack: "" });
-document.querySelectorAll("[data-route]").forEach((link) => {
-  const url = window.VOSSCASINO_ROUTES[link.dataset.route];
-  if (url) link.href = url;
-});
-
-const depositDialog = document.querySelector("#deposit-dialog");
-document.querySelectorAll("[data-deposit-cta]").forEach((link) => {
-  const depositUrl = DEPOSIT_URLS[link.dataset.depositProduct || "welcome"];
-  if (depositUrl) link.href = depositUrl;
-  else link.addEventListener("click", (event) => {
-    event.preventDefault();
-    depositDialog?.showModal();
-  });
-});
-depositDialog?.querySelectorAll("[data-close-deposit]").forEach((control) => {
-  control.addEventListener("click", () => depositDialog.close());
-});
-depositDialog?.addEventListener("click", (event) => {
-  if (event.target === depositDialog) depositDialog.close();
+/* Destino único de compra de fichas del casino. Los href también funcionan sin JavaScript. */
+const CASINO_PAYMENT_URL = "/payment/";
+document.querySelectorAll("[data-route], [data-deposit-cta]").forEach((link) => {
+  link.href = CASINO_PAYMENT_URL;
+  link.removeAttribute("target");
+  link.removeAttribute("rel");
 });
 
 const menuButton = document.querySelector(".menu-toggle");

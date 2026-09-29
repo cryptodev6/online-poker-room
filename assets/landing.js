@@ -64,6 +64,7 @@
     new Date().getFullYear();
 
   const messages = {
+    receipt: "Hola, compré fichas de Voss Room por Mercado Pago. Quiero enviar mi comprobante y mi ID de ClubGG para coordinar la acreditación.",
     seat: "Hola, quiero unirme a la mesa de Voss Room. ¿Hay espacio?",
     sunday: "Hola, quiero unirme a la mesa High Roller del domingo. ¿Hay espacio?",
     join: "Hola, quiero unirme a Voss Room. ¿Cómo entro?",
