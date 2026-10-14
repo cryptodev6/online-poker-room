@@ -9,7 +9,8 @@
   // Popup automático del bono.
   // true = se muestra en cada visita/recarga.
   // false = solo se abre manualmente.
-  const AUTO_PROMOS_ENABLED = true;
+  const AUTO_PROMOS_ENABLED = false;
+  const BONUS_MODAL_ENABLED = false; // Temporarily hide automatic and manual opening.
 
   const motionOff = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -42,8 +43,8 @@
     const candidate = new Date(today + offset * 86400000);
 
     if (
-      [2, 4].includes(candidate.getUTCDay()) &&
-      (offset > 0 || get("hour") < 18)
+      [2, 0].includes(candidate.getUTCDay()) &&
+      (offset > 0 || candidate.getUTCDay() === 0 || get("hour") < 18)
     ) {
       nextSession = candidate;
       break;
@@ -59,6 +60,12 @@
 
   document.getElementById("nextDate").textContent =
     dateLabel.toLocaleUpperCase("es-PE");
+
+  // Sunday has its own stakes.
+  if (nextSession.getUTCDay() === 0) {
+    document.querySelector(".panel-games").innerHTML = "<span>NL400</span><span>PLO5 400</span>";
+    document.querySelector(".panel-min strong").textContent = "US$1.000";
+  }
 
   document.getElementById("year").textContent =
     new Date().getFullYear();
@@ -308,7 +315,7 @@
   // POPUP DE BONO
   // ==================================================
 
-  if (bonusDialog) {
+  if (BONUS_MODAL_ENABLED && bonusDialog) {
     bonusDialog.addEventListener("cancel", () => {
       bonusDialog.returnValue = "dismissed";
     });

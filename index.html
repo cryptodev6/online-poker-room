@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#07160e">
-    <meta name="description" content="Juega póker online en Voss Room por ClubGG, ID 598956. NL200 y PLO5 200 martes y jueves desde US$500; domingo NL400 y PLO5 400 desde US$1.000. Consulta tu asiento y el bono de bienvenida del 25%.">
+    <meta name="description" content="Juega póker online en Voss Room por ClubGG, ID 598956. NL200 y PLO5 200 los martes desde US$500; domingo NL400 y PLO5 400 desde US$1.000. Consulta tu asiento y el bono de bienvenida del 25%.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_LA">
     <meta property="og:url" content="https://vosspoker.org/">
     <meta property="og:title" content="Voss Room — La mesa te espera. Entra en juego.">
-    <meta property="og:description" content="NL200 y PLO5 200 martes y jueves a las 18:00 Perú/Colombia. ClubGG 598956. Pide asiento y consulta las condiciones antes de jugar.">
+    <meta property="og:description" content="Martes: NL200 y PLO5 200 a las 18:00 Perú/Colombia. Domingos: NL400 y PLO5 400, horario por confirmar. ClubGG 598956. Pide asiento y consulta las condiciones antes de jugar.">
     <meta property="og:image" content="https://vosspoker.org/assets/hero-rooftop-v2.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://vosspoker.org/">
@@ -22,6 +22,8 @@
     <script src="/assets/landing.js" defer></script>
 
     <style id="voss-room-targeted-tweaks">
+      /* Bonus modal temporarily disabled, including its launch buttons. */
+      #bonusDialog,[data-open-bonus]{display:none!important}
       /* Keep the original table-card design; restore its two-column layout. */
       #horarios.table-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:stretch}
       #horarios .game-main{min-width:0}
@@ -40,7 +42,7 @@
   <body><a class="skip-link" href="#contenido">Saltar al contenido</a>
     <div class="progress" id="scrollProgress" aria-hidden="true"></div>
     <div class="announcement" aria-label="Próximas mesas">
-      <div class="announcement-track" aria-hidden="true"><span>MARTES / JUEVES <b>NL200 + PLO5 200</b></span><i>✦</i><span>DESDE <b>US$500</b></span><i>✦</i><span>CLUB ID <b>598956</b></span><i>✦</i><span>DOMINGO <b>NL400 + PLO5 400</b></span><i>✦</i><span>MARTES / JUEVES <b>NL200 + PLO5 200</b></span><i>✦</i><span>DESDE <b>US$500</b></span><i>✦</i><span>CLUB ID <b>598956</b></span><i>✦</i><span>DOMINGO <b>NL400 + PLO5 400</b></span><i>✦</i></div>
+      <div class="announcement-track" aria-hidden="true"><span>MARTES <b>NL200 + PLO5 200</b></span><i>✦</i><span>DESDE <b>US$500</b></span><i>✦</i><span>CLUB ID <b>598956</b></span><i>✦</i><span>DOMINGO <b>NL400 + PLO5 400</b></span><i>✦</i><span>MARTES <b>NL200 + PLO5 200</b></span><i>✦</i><span>DESDE <b>US$500</b></span><i>✦</i><span>CLUB ID <b>598956</b></span><i>✦</i><span>DOMINGO <b>NL400 + PLO5 400</b></span><i>✦</i></div>
     </div>
     <header class="header" id="header">
       <div class="container nav"><a class="brand" href="#inicio" aria-label="Voss Room, inicio"><span class="brand-icon">V<span>.</span></span><span class="brand-lines"><strong>VOSS ROOM</strong><small>PRIVATE GAME</small></span></a>
@@ -64,10 +66,10 @@
               y empieza ganando desde el primer día.
             </p>
             <div class="hero-actions"><a class="btn btn-hot btn-large" href="/payment">PEDIR MI ASIENTO <span aria-hidden="true">↗</span></a><a class="line-link" href="#mesas">VER HORARIOS Y ENTRADAS <span aria-hidden="true">↓</span></a></div>
-            <div class="hero-micro"><span>CLUB ID <b>598956</b></span><span>ENTRADA MARTES / JUEVES <b>US$500</b></span></div>
+            <div class="hero-micro"><span>CLUB ID <b>598956</b></span><span>ENTRADA MARTES <b>US$500</b></span></div>
           </div>
           <aside class="hero-panel" aria-label="Próxima sesión programada" data-reveal>
-            <div class="panel-top"><span class="panel-live"><i class="pulse-dot"></i> PRÓXIMA SESIÓN</span><span>01 / ONLINE</span></div><strong class="panel-date" id="nextDate">MARTES / JUEVES</strong>
+            <div class="panel-top"><span class="panel-live"><i class="pulse-dot"></i> PRÓXIMA SESIÓN</span><span>01 / ONLINE</span></div><strong class="panel-date" id="nextDate">MARTES / DOMINGO</strong>
             <div class="panel-time"><b>18:00</b><span>PERÚ / COLOMBIA<br>20:00 BRASILIA / RÍO</span></div>
             <div class="panel-games"><span>NL200</span><span>PLO5 200</span></div>
             <div class="panel-min"><span>ENTRADA MÍNIMA</span><strong>US$500</strong></div><a href="/payment">QUIERO JUGAR ESTA MESA <b aria-hidden="true">↗</b></a>
@@ -88,20 +90,20 @@
           <div class="container tables-heading" data-reveal>
             <p class="eyebrow eyebrow-hot">LA PRÓXIMA SESIÓN / TÚ ELIGES</p>
             <h2 id="tablesTitle">ESCOGE EL JUEGO.<br><em>PIDE TU ASIENTO.</em></h2>
-            <p>Dos modalidades, horarios claros y entradas a la vista. Mira dónde quieres jugar y escríbenos para confirmar disponibilidad.</p>
+            <p>Jugamos dos veces por semana: martes y domingos. Dos modalidades, horarios claros y entradas a la vista. Mira dónde quieres jugar y escríbenos para confirmar disponibilidad.</p>
           </div>
           <div class="container table-layout" id="horarios">
             <article class="game-main" data-reveal>
               <div class="game-main-top"><span><i class="pulse-dot"></i> SESIÓN PRINCIPAL</span><span>01 / 02</span></div>
               <div class="game-main-body">
-                <p>MARTES + JUEVES</p>
+                <p>MARTES</p>
                 <h3>NL200 <i>×</i><br>PLO5 200</h3>
                 <div class="game-facts">
                   <div><small>INICIO</small><strong>18:00</strong><span>Perú y Colombia<br>20:00 Brasilia / Río</span></div>
                   <div><small>ENTRADA MÍNIMA</small><strong>US$500</strong><span>Consulta disponibilidad<br>de la próxima mesa</span></div>
                 </div>
               </div>
-              <div class="game-main-action"><a class="btn btn-hot" href="/payment">QUIERO UN ASIENTO MAR / JUE <span aria-hidden="true">↗</span></a><small>Te confirmamos asiento, rake y condiciones antes de jugar.</small></div>
+              <div class="game-main-action"><a class="btn btn-hot" href="/payment">QUIERO UN ASIENTO MARTES <span aria-hidden="true">↗</span></a><small>Te confirmamos asiento, rake y condiciones antes de jugar.</small></div>
             </article>
             <article class="game-main game-main--premium" data-reveal>
               <div class="game-main-top"><span>✦ MESA HIGH ROLLER</span><span>02 / 02</span></div>
@@ -130,7 +132,7 @@
             <article class="world-chapter" data-scene="beach">
               <div data-reveal><span class="chapter-num">01 / LIBERTAD</span>
                 <h2 id="worldTitle">TU MESA.<br><em>TU LUGAR.</em></h2>
-                <p>La playa, tu casa o una escala entre ciudades. Cuando llega la sesión, abres ClubGG y vuelves al juego. La mesa tiene horario; el lugar lo eliges tú.</p><span class="chapter-line">MARTES Y JUEVES / 18:00 PERÚ Y COLOMBIA.</span>
+                <p>La playa, tu casa o una escala entre ciudades. Cuando llega la sesión, abres ClubGG y vuelves al juego. La mesa tiene horario; el lugar lo eliges tú.</p><span class="chapter-line">MARTES Y DOMINGOS / DOS VECES POR SEMANA.</span>
               </div>
             </article>
             <article class="world-chapter world-chapter--community" data-scene="night">
@@ -164,13 +166,13 @@
             <div class="reason-head" data-reveal>
               <p class="eyebrow eyebrow-hot">EL JUEGO SE SIENTE DISTINTO</p>
               <h2 id="reasonTitle">ENTRA POR EL PÓKER.<br><em>VUELVE POR LA MESA.</em></h2>
-              <p>Una partida puede entretenerte una noche. La mesa correcta te da ganas de volver el jueves. Aquí hay juego, gente y un próximo asiento que pedir.</p><a class="line-link" data-wa="details" href="https://wa.me/573007068986">VER SI HAY LUGAR EN LA PRÓXIMA ↗</a>
+              <p>Una partida puede entretenerte una noche. La mesa correcta te da ganas de volver el domingo. Aquí hay juego, gente y un próximo asiento que pedir.</p><a class="line-link" data-wa="details" href="https://wa.me/573007068986">VER SI HAY LUGAR EN LA PRÓXIMA ↗</a>
             </div>
             <div class="reason-list">
               <article data-reveal><span>01</span>
                 <div>
                   <h3>El martes ya tiene plan.</h3>
-                  <p>NL200 o PLO5. Una hora marcada, decisiones nuevas y una mesa a la que quieres volver el jueves.</p>
+                  <p>NL200 o PLO5. Una hora marcada, decisiones nuevas y una mesa a la que quieres volver el domingo.</p>
                 </div>
               </article>
               <article data-reveal><span>02</span>
@@ -244,18 +246,6 @@
             <div class="private-photo-wrap" data-reveal><img src="/assets/private-table-v4.webp" alt="Vista ilustrativa de una mesa de póker privada frente al mar al atardecer" loading="lazy"><span class="private-photo-label">VOSS ROOM <i>✦</i> LA MESA EN PERSONA</span><span class="private-photo-disclaimer">Imagen ilustrativa</span></div>
           </div>
         </section>
-        <section class="lima-band" id="lima" aria-labelledby="limaTitle"><a class="lima-link" href="/lima/" data-event="lima_banner_click" aria-label="Ver Voss Lima, 7 al 21 de octubre de 2026">
-            <div class="lima-photo" aria-hidden="true"></div>
-            <div class="lima-overlay" aria-hidden="true"></div>
-            <div class="container lima-content">
-              <div class="lima-top"><span>PRÓXIMA EXPERIENCIA / EN VIVO</span><span>07—21 OCT 2026</span></div>
-              <div class="lima-center"><span>LA MESA SALE DE LA PANTALLA</span>
-                <h2 id="limaTitle">ESTA VEZ<br><em>NOS VEMOS</em><br>EN LIMA.</h2>
-                <p>Dos semanas para jugar, encontrarte con otros jugadores y vivir la ciudad. Conoce también el torneo independiente anunciado con <strong>S/200.000 de pozo garantizado</strong> y <strong>S/100.000 para el primer puesto</strong>.</p><span class="lima-button">DESCUBRIR LA EXPERIENCIA <b aria-hidden="true">↗</b></span>
-              </div>
-              <div class="lima-bottom">MIRAFLORES / VOSS LIMA <span>VER LA EXPERIENCIA COMPLETA ↗</span></div>
-            </div>
-          </a></section>
         <section class="faq section" id="faq" aria-labelledby="faqTitle">
           <div class="container faq-grid">
             <div data-reveal>
@@ -270,7 +260,7 @@
               </details>
               <details>
                 <summary>¿Cuándo jugamos y cuál es la entrada mínima?</summary>
-                <p>Martes y jueves a las 18:00 en Perú y Colombia (20:00 en Brasilia y Río): NL200 y PLO5 200, entrada mínima de <strong>US$500</strong>. Los domingos hay mesa High Roller de NL400 y PLO5 400, desde <strong>US$1.000</strong>; te confirmamos la hora y los asientos disponibles.</p>
+                <p>Los martes a las 18:00 en Perú y Colombia (20:00 en Brasilia y Río): NL200 y PLO5 200, entrada mínima de <strong>US$500</strong>. Los domingos hay mesa High Roller de NL400 y PLO5 400, desde <strong>US$1.000</strong>; te confirmamos la hora y los asientos disponibles.</p>
               </details>
               <details>
                 <summary>¿Cómo funciona el bono de bienvenida del 25%?</summary>
@@ -299,7 +289,7 @@
           <div class="final-bg" aria-hidden="true"></div>
           <div class="container final-inner" data-reveal><span>VOSS ROOM / CLUBGG 598956</span>
             <h2 id="finalTitle">LA PRÓXIMA MANO<br><em>EMPIEZA CONTIGO.</em></h2>
-            <p>Martes y jueves · NL200 + PLO5 200 · entrada mínima US$500. Pide asiento y te contamos lo que necesitas para entrar.</p><a class="btn btn-hot btn-large" href="/payment">PEDIR MI ASIENTO <b aria-hidden="true">↗</b></a>
+            <p>Martes y domingos · dos veces por semana. Martes: NL200 + PLO5 200 desde US$500. Domingos: NL400 + PLO5 400 desde US$1.000. Pide asiento y te contamos lo que necesitas para entrar.</p><a class="btn btn-hot btn-large" href="/payment">PEDIR MI ASIENTO <b aria-hidden="true">↗</b></a>
           </div>
         </section>
       </div>
@@ -313,7 +303,7 @@
         <p>Solo para mayores de edad y donde esté permitido. El póker implica riesgo; los resultados nunca están garantizados. © <span id="year">2026</span> Voss Room.</p>
       </div>
     </footer>
-    <div class="mobile-cta"><span><small>MAR / JUE · 18:00</small><strong>NL200 + PLO5 200</strong></span><a href="/payment">PEDIR ASIENTO ↗</a></div>
+    <div class="mobile-cta"><span><small>MARTES · 18:00</small><strong>NL200 + PLO5 200</strong></span><a href="/payment">PEDIR ASIENTO ↗</a></div>
     <div class="bonus-nudge" id="bonusNudge" hidden><a class="bonus-nudge__main" href="/casino/" aria-label="100% bono para apuestas deportivas. Ir a Voss Casino"><span class="bonus-nudge__blade" aria-hidden="true"></span><span class="bonus-nudge__copy"><strong>100% BONO</strong><span>PARA APUESTAS</span><span>DEPORTIVAS <b aria-hidden="true">↗</b></span></span></a><button type="button" class="bonus-nudge__close" aria-label="Ocultar bono deportivo">×</button></div>
     <div class="toast" role="status" aria-live="polite" id="toast"></div>
     <dialog class="offer-dialog" id="bonusDialog" aria-labelledby="bonusTitle">
