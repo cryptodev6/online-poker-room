@@ -3,7 +3,7 @@
 
   document.body.classList.add("js");
 
-  const CLUB_ID = "598956";
+  const CLUB_ID = "526745";
   const PHONE = "573007068986";
 
   // Popup automático del bono.
