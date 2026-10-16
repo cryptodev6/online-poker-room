@@ -276,3 +276,23 @@ blockquote{margin:0;font-family:var(--serif)}
   .why-list li{grid-template-columns:105px 1fr;gap:14px}.why-list span{font-size:13px}
   .reality-photo-section{min-height:850px}.reality-bg{object-position:72% center}.reality-photo-content{padding-top:76px;padding-bottom:78px}.reality-photo-content h2{font-size:clamp(2.9rem,11vw,4.45rem)}.reality-body{font-size:15px}.reality-body blockquote{font-size:1.48rem}
 }
+
+/* Yoshi private A/B variant — mobile image framing */
+@media (max-width: 720px){
+  .world-voss>img{object-position:70% center}
+  .freedom-photo img{object-position:42% center}
+  .access-photo{object-position:55% center}
+  .why-photo img{object-position:50% center}
+  .mentor-photo img{object-position:50% 45%}
+  .reality-bg{object-position:60% center}
+  .lifestyle-photo{object-position:58% center}
+}
+
+/* Yoshi private variant — lifestyle image focal points, mobile first */
+@media (max-width: 720px){
+  .freedom-photo img{object-position:42% center}
+  .access-photo{object-position:50% center}
+  .mentor-photo img{object-position:50% center}
+  .live-photo img{object-position:50% center}
+  .lifestyle-photo{object-position:30% center}
+}
