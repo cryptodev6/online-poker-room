@@ -62,9 +62,31 @@
     dateLabel.toLocaleUpperCase("es-PE");
 
   // Sunday has its own stakes.
+  // Domingo normalmente = High Roller.
+  // TODO: QUITAR ESTE HARDCODE DESPUÉS DEL DOMINGO 18/10/2026.
+  const SPECIAL_SUNDAY = Date.UTC(2026, 9, 18); // 18 octubre 2026
+
+  const isSpecialSunday =
+    nextSession.getUTCDay() === 0 &&
+    nextSession.getTime() === SPECIAL_SUNDAY;
+
   if (nextSession.getUTCDay() === 0) {
-    document.querySelector(".panel-games").innerHTML = "<span>NL400</span><span>PLO5 400</span>";
-    document.querySelector(".panel-min strong").textContent = "US$1.000";
+    if (isSpecialSunday) {
+      // SOLO DOMINGO 18/10/2026
+      // Sesión Premium: NL200 + PLO5 200 · Buy-in mínimo US$500
+      document.querySelector(".panel-games").innerHTML =
+        "<span>NL200</span><span>PLO5 200</span>";
+
+      document.querySelector(".panel-min strong").textContent =
+        "US$500";
+    } else {
+      // Domingos normales: HIGH ROLLER
+      document.querySelector(".panel-games").innerHTML =
+        "<span>NL400</span><span>PLO5 400</span>";
+
+      document.querySelector(".panel-min strong").textContent =
+        "US$1.000";
+    }
   }
 
   document.getElementById("year").textContent =
