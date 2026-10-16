@@ -156,3 +156,39 @@
 .purchase-note{color:#c7d5cc;font-size:.9rem}
 .bonus-purchases{display:grid;gap:10px;margin:14px 0}.bonus-purchases .purchase-link{padding:15px 12px}
 @media(max-width:640px){.purchase-grid{grid-template-columns:1fr}.purchase-card{padding:24px}.purchase-link{width:100%}.purchase-section{scroll-margin-top:85px}}
+
+/* Secondary learning route: editorial, below the complete playing funnel. */
+.nav-links>a.nav-learn{color:#d5d0c5}
+.nav-links>a.nav-learn:hover{color:#e2cc9c}
+.learn-editorial{padding:64px 0;background:#0e0d0b;border-block:1px solid #c6a56830;scroll-margin-top:112px}
+.learn-editorial__inner{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(32px,6vw,80px);align-items:center}
+.learn-editorial .eyebrow{margin:0 0 18px;color:#c6a568}
+.learn-editorial h2{margin:0;color:#f3efe7;font:900 clamp(1.8rem,2.7vw,2.65rem)/1.1 var(--display);letter-spacing:-.045em;text-wrap:balance}
+.learn-editorial__signature{margin:20px 0 0;color:#a6a096;font-size:.62rem;font-weight:750;letter-spacing:.14em}
+.learn-editorial__copy{min-width:0;max-width:610px}
+.learn-editorial__copy p{margin:0 0 14px;color:#bcb6ac;font-size:.96rem;line-height:1.7}
+.learn-editorial__copy strong{color:#f3efe7;font-weight:650}
+.learn-editorial__link{display:inline-flex;align-items:center;justify-content:space-between;gap:20px;max-width:100%;min-height:48px;padding:12px 0;border-bottom:1px solid #c6a56870;color:#e2cc9c;font-size:.69rem;font-weight:800;letter-spacing:.06em;line-height:1.5}
+.learn-editorial__link span{flex:none;font-size:1.2rem}
+.learn-editorial__link:hover{color:#f3efe7;border-color:#e2cc9c}
+.learn-editorial__link:focus-visible,.nav-links>a.nav-learn:focus-visible{outline:2px solid #e2cc9c;outline-offset:5px}
+/* The additional nav item needs the existing collapsible menu on tablets. */
+@media(min-width:1151px) and (max-width:1280px){.nav{gap:20px}.nav-links{gap:14px}.nav-links>a{font-size:.68rem}.nav-cta{gap:12px;padding-inline:13px}}
+@media(min-width:981px) and (max-width:1150px){
+  .nav-links{display:none;position:absolute;top:78px;left:0;right:0;margin:0;padding:17px 23px 26px;background:#0a2116;box-shadow:0 24px 40px #0008;border-top:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}
+  .nav-links.open{display:flex}
+  .nav-links>a{font-size:.95rem;padding:13px 4px;border-bottom:1px solid var(--line)}
+  .nav-links .nav-mobile-cta{display:flex!important;justify-content:space-between;padding:15px;margin-top:17px;font-weight:900}
+  .nav-cta{margin-left:auto}
+  .menu-toggle{display:flex!important;flex-direction:column;justify-content:center;gap:6px;width:42px;height:42px;background:none;border:1px solid #ffffff70}
+  .menu-toggle span{width:19px;height:2px;background:#fff;margin:0 auto}
+}
+@media(max-width:1150px){.nav-links{max-height:calc(100vh - 120px);max-height:calc(100dvh - 120px);overflow-y:auto;overscroll-behavior:contain}}
+@media(max-width:720px){
+  .nav-links{max-height:calc(100vh - 170px - env(safe-area-inset-bottom));max-height:calc(100dvh - 170px - env(safe-area-inset-bottom))}
+  .learn-editorial{padding:44px 0;scroll-margin-top:100px}
+  .learn-editorial__inner{grid-template-columns:1fr;gap:24px}
+  .learn-editorial h2{font-size:clamp(1.8rem,6.5vw,2.4rem)}
+  .learn-editorial__signature{margin-top:14px}
+  .learn-editorial__copy p{font-size:.93rem;line-height:1.65}
+}
