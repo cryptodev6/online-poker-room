@@ -5,7 +5,7 @@ Archivos:
 - style.css
 - main.js
 - alexander-voss-ensena-poker.png
-- world-voss.webp
+- world-voss.png
 - access-voss.webp
 - hero.webp
 - poker-reality.webp
