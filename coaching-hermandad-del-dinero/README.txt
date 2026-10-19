@@ -1,17 +1,7 @@
-LA HERMANDAD DEL DINERO — Lifestyle-first rebuild
+VERSIÓN VISUAL — 16 OCTUBRE 2026
 
-Archivos:
-- index.html
-- style.css
-- main.js
-- alexander-voss-ensena-poker.png
-- world-voss.png
-- access-voss.webp
-- hero.webp
-- poker-reality.webp
-- voss.png
-- hermandad-social-v3.png
+Subir el contenido de esta carpeta a la misma ubicación del sitio, reemplazando index.html y style.css. Conservar main.js y las imágenes incluidas.
 
-Publicación:
-Sube todos los archivos al mismo directorio en el servidor.
-La landing no requiere build ni dependencias.
+Copy, enlaces y orden de secciones conservados. Fotografías completas en móvil; escenas sticky en desktop; franja con fondo fijo en pantallas grandes. Movimiento desactivado con prefers-reduced-motion.
+
+Verificación: contenido, enlaces y archivos de imagen comprobados. Pendiente revisión visual en navegador real: el entorno no dispone de navegador ejecutable.

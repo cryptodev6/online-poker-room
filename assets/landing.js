@@ -73,12 +73,12 @@
   if (nextSession.getUTCDay() === 0) {
     if (isSpecialSunday) {
       // SOLO DOMINGO 18/10/2026
-      // Sesión Premium: NL200 + PLO5 200 · Buy-in mínimo US$500
+      // Sesión Premium: NL200 + PLO5 200 · Buy-in mínimo US$250
       document.querySelector(".panel-games").innerHTML =
         "<span>NL200</span><span>PLO5 200</span>";
 
       document.querySelector(".panel-min strong").textContent =
-        "US$500";
+        "US$250";
     } else {
       // Domingos normales: HIGH ROLLER
       document.querySelector(".panel-games").innerHTML =
