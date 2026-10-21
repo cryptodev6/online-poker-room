@@ -19,90 +19,37 @@
     window.dataLayer.push({ event, ...extras });
   };
 
-  const dateParts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "America/Lima",
-    year: "numeric",
-    month: "numeric",
-    day: "numeric",
-    hour: "numeric",
-    hourCycle: "h23"
-  }).formatToParts(new Date());
-
-  const get = (name) =>
-    Number(dateParts.find((part) => part.type === name).value);
-
-  const today = Date.UTC(
-    get("year"),
-    get("month") - 1,
-    get("day")
-  );
-
-  let nextSession;
-
-  for (let offset = 0; offset < 8; offset += 1) {
-    const candidate = new Date(today + offset * 86400000);
-
-    if (
-      [2, 0].includes(candidate.getUTCDay()) &&
-      (offset > 0 || candidate.getUTCDay() === 0 || get("hour") < 18)
-    ) {
-      nextSession = candidate;
-      break;
-    }
-  }
-
-  const dateLabel = new Intl.DateTimeFormat("es-PE", {
-    timeZone: "UTC",
-    weekday: "long",
-    day: "numeric",
-    month: "long"
-  }).format(nextSession);
+  // SESIÓN FIJA — miércoles 21/10/2026 a las 18:00 (Perú / Colombia).
+  // Actualizar manualmente estos datos cuando se programe otra mesa.
+  const NEXT_SESSION = {
+    dateLabel: "MÍERCOLES 21 OCT",
+    time: "18:00",
+    minimumBuyIn: "US$100"
+  };
 
   document.getElementById("nextDate").textContent =
-    dateLabel.toLocaleUpperCase("es-PE");
+    NEXT_SESSION.dateLabel;
 
-  // Sunday has its own stakes.
-  // Domingo normalmente = High Roller.
-  // TODO: QUITAR ESTE HARDCODE DESPUÉS DEL DOMINGO 18/10/2026.
-  const SPECIAL_SUNDAY = Date.UTC(2026, 9, 18); // 18 octubre 2026
+  document.querySelector(".panel-time b").textContent =
+    NEXT_SESSION.time;
 
-  const isSpecialSunday =
-    nextSession.getUTCDay() === 0 &&
-    nextSession.getTime() === SPECIAL_SUNDAY;
-
-  if (nextSession.getUTCDay() === 0) {
-    if (isSpecialSunday) {
-      // SOLO DOMINGO 18/10/2026
-      // Sesión Premium: NL200 + PLO5 200 · Buy-in mínimo US$250
-      document.querySelector(".panel-games").innerHTML =
-        "<span>NL200</span><span>PLO5 200</span>";
-
-      document.querySelector(".panel-min strong").textContent =
-        "US$250";
-    } else {
-      // Domingos normales: HIGH ROLLER
-      document.querySelector(".panel-games").innerHTML =
-        "<span>NL400</span><span>PLO5 400</span>";
-
-      document.querySelector(".panel-min strong").textContent =
-        "US$1.000";
-    }
-  }
+  document.querySelector(".panel-min strong").textContent =
+    NEXT_SESSION.minimumBuyIn;
 
   document.getElementById("year").textContent =
     new Date().getFullYear();
 
   const messages = {
-    receipt: "Hola, compré fichas de Voss Room por Mercado Pago. Quiero enviar mi comprobante y mi ID de ClubGG para coordinar la acreditación.",
-    seat: "Hola, quiero unirme a la mesa de Voss Room. ¿Hay espacio?",
-    sunday: "Hola, quiero unirme a la mesa High Roller del domingo. ¿Hay espacio?",
-    join: "Hola, quiero unirme a Voss Room. ¿Cómo entro?",
-    details: "Hola, quiero jugar en Voss Room. ¿Qué mesas tienen disponibles?",
-    pro: "Hola, quiero jugar en Voss Room. Soy jugador regular y quiero conversar sobre condiciones para mi volumen.",
-    bonus: "Hola, quiero unirme a Voss Room y consultar el bono de bienvenida.",
-    payment: "Hola, quiero unirme a Voss Room. ¿Qué métodos de pago tienen?",
-    question: "Hola, tengo una pregunta sobre Voss Room.",
-    support: "Hola, necesito ayuda para entrar a Voss Room."
+    receipt: "Hola, compré fichas por Mercado Pago. Quiero enviar mi comprobante y mi ID de ClubGG para coordinar la acreditación.",
+    seat: "Hola, quiero unirme a la mesa del miércoles 21 de octubre a las 6:00 p. m. con entrada mínima de US$100. ¿Hay espacio?",
+    sunday: "Hola, quiero consultar la próxima mesa online del miércoles 21 de octubre a las 6:00 p. m. ¿Hay espacio?",
+    join: "Hola, quiero unirme a las mesas privadas online de ClubGG. ¿Cómo ingreso?",
+    details: "Hola, quiero jugar online. ¿Qué mesas y horarios tienen disponibles?",
+    pro: "Hola, soy jugador regular y quiero consultar las condiciones de rakeback disponibles.",
+    bonus: "Hola, quiero consultar los beneficios y bonos disponibles para jugadores.",
+    payment: "Hola, quiero consultar los métodos de pago disponibles para jugar.",
+    question: "Hola, tengo una pregunta sobre las mesas privadas.",
+    support: "Hola, necesito ayuda para ingresar a ClubGG."
   };
 
   const bonusDialog = document.getElementById("bonusDialog");
