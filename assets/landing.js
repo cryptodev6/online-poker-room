@@ -19,12 +19,12 @@
     window.dataLayer.push({ event, ...extras });
   };
 
-  // SESIÓN FIJA — miércoles 21/10/2026 a las 18:00 (Perú / Colombia).
+  // SESIÓN FIJA — domingo 25/10/2026 a las 18:00 (Perú / Colombia).
   // Actualizar manualmente estos datos cuando se programe otra mesa.
   const NEXT_SESSION = {
-    dateLabel: "MÍERCOLES 21 OCT",
+    dateLabel: "DOMINGO 25 OCT",
     time: "18:00",
-    minimumBuyIn: "US$100"
+    minimumBuyIn: "US$500"
   };
 
   document.getElementById("nextDate").textContent =
@@ -41,8 +41,8 @@
 
   const messages = {
     receipt: "Hola, compré fichas por Mercado Pago. Quiero enviar mi comprobante y mi ID de ClubGG para coordinar la acreditación.",
-    seat: "Hola, quiero unirme a la mesa del miércoles 21 de octubre a las 6:00 p. m. con entrada mínima de US$100. ¿Hay espacio?",
-    sunday: "Hola, quiero consultar la próxima mesa online del miércoles 21 de octubre a las 6:00 p. m. ¿Hay espacio?",
+    seat: "Hola, quiero unirme a la mesa del domingo 25 de octubre a las 6:00 p. m. (Perú / Colombia), con entrada mínima de US$500. ¿Hay espacio?",
+    sunday: "Hola, quiero unirme a la mesa del domingo 25 de octubre a las 6:00 p. m. (Perú / Colombia), con entrada mínima de US$500. ¿Hay espacio?",
     join: "Hola, quiero unirme a las mesas privadas online de ClubGG. ¿Cómo ingreso?",
     details: "Hola, quiero jugar online. ¿Qué mesas y horarios tienen disponibles?",
     pro: "Hola, soy jugador regular y quiero consultar las condiciones de rakeback disponibles.",
