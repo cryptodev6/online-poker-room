@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#07160e">
-    <meta name="description" content="Juega póker online en Voss Poker por ClubGG, ID 526745. NL200 y PLO5 200 los martes desde US$100; domingo NL400 y PLO5 400 desde US$500. Consulta tu asiento y el bono de bienvenida del 25%.">
+    <meta name="description" content="Juega póker online en Voss Poker por ClubGG, ID 526745. Martes: NL200 y PLO5 200 desde US$100 a las 09:00, hora de Perú. Viernes: NL400 y PLO5 400 desde US$500 a las 13:00, hora de Perú.">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="es_LA">
     <meta property="og:url" content="https://vosspoker.org/">
     <meta property="og:title" content="Voss Poker — La mesa te espera. Entra en juego.">
-    <meta property="og:description" content="Martes: NL200 y PLO5 200 desde US$100 a las 18:00 Perú/Colombia. Domingos: NL400 y PLO5 400 desde US$500, 18:00 Perú/Colombia. ClubGG 526745. Pide asiento y consulta las condiciones antes de jugar.">
+    <meta property="og:description" content="Martes: NL200 y PLO5 200 desde US$100 a las 09:00, hora de Perú. Viernes: NL400 y PLO5 400 desde US$500 a las 13:00, hora de Perú. ClubGG 526745. Pide asiento y consulta las condiciones antes de jugar.">
     <meta property="og:image" content="https://vosspoker.org/assets/hero-rooftop-v2.png">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://vosspoker.org/">
@@ -27,6 +27,11 @@
       .hero-copy-id__hint{font-size:9px;font-weight:800;letter-spacing:.06em}
       .hero-micro .hero-copy-id:hover{background:#c6a56820;border-color:#e2cc9c}
       .hero-micro .hero-copy-id:focus-visible{outline:2px solid #e2cc9c;outline-offset:3px}
+      .hero-panel .panel-time{align-items:baseline;gap:12px}
+      .hero-panel .panel-time span{font-size:.64rem}
+      .panel-timezones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:7px 12px;margin:14px 0 2px;padding:0;list-style:none}
+      .panel-timezones li{display:flex;justify-content:space-between;align-items:center;gap:6px;color:#cad7d3;font-size:.68rem}
+      .panel-timezones strong{color:#fff;font-size:.72rem;font-variant-numeric:tabular-nums}
       /* Bonus modal temporarily disabled, including its launch buttons. */
       #bonusDialog,[data-open-bonus]{display:none!important}
       /* Keep the original table-card design; restore its two-column layout. */
@@ -47,11 +52,11 @@
   <body><a class="skip-link" href="#contenido">Saltar al contenido</a>
     <div class="progress" id="scrollProgress" aria-hidden="true"></div>
     <div class="announcement" aria-label="Próximas mesas">
-      <div class="announcement-track" aria-hidden="true"><span>MARTES <b>NL200 + PLO5 200</b></span><i>✦</i><span>ENTRADA MÍNIMA <b>US$100</b></span><i>✦</i><span>CLUB ID <b>526745</b></span><i>✦</i><span>DOMINGO <b>NL400 + PLO5 400 · MÍNIMO US$500</b></span><i>✦</i><span>MARTES <b>NL200 + PLO5 200</b></span><i>✦</i><span>ENTRADA MÍNIMA <b>US$100</b></span><i>✦</i><span>CLUB ID <b>526745</b></span><i>✦</i><span>DOMINGO <b>NL400 + PLO5 400 · MÍNIMO US$500</b></span><i>✦</i></div>
+      <div class="announcement-track" aria-hidden="true"><span>MARTES · 09:00 PERÚ <b>NL200 + PLO5 200</b></span><i>✦</i><span>ENTRADA MÍNIMA <b>US$100</b></span><i>✦</i><span>CLUB ID <b>526745</b></span><i>✦</i><span>VIERNES · 13:00 PERÚ <b>NL400 + PLO5 400 · MÍNIMO US$500</b></span><i>✦</i><span>MARTES · 09:00 PERÚ <b>NL200 + PLO5 200</b></span><i>✦</i><span>ENTRADA MÍNIMA <b>US$100</b></span><i>✦</i><span>CLUB ID <b>526745</b></span><i>✦</i><span>VIERNES · 13:00 PERÚ <b>NL400 + PLO5 400 · MÍNIMO US$500</b></span><i>✦</i></div>
     </div>
     <header class="header" id="header">
       <div class="container nav"><a class="brand" href="#inicio" aria-label="Voss Poker, inicio"><span class="brand-icon">V<span>.</span></span><span class="brand-lines"><strong>Voss Poker</strong><small>PRIVATE GAME</small></span></a>
-        <nav id="navLinks" class="nav-links" aria-label="Navegación principal"><a href="#mesas">Mesas</a><button type="button" data-open-bonus>Bono 25%</button><a href="#horarios">Cuándo jugamos</a><a href="#acceso">Cómo entrar</a><a href="/payment">Comprar fichas</a><a href="#juego-privado">Private Game</a><a class="nav-learn" href="/coaching/" data-event="learn_poker_nav_click">Aprende poker</a><a class="nav-mobile-cta" href="/payment">UNIRME A LA MESA <span aria-hidden="true">↗</span></a></nav><a class="nav-cta" href="/payment"><span>UNIRME A LA MESA</span><b aria-hidden="true">↗</b></a><button class="menu-toggle" type="button" id="menuToggle" aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span></button>
+        <nav id="navLinks" class="nav-links" aria-label="Navegación principal"><a href="#mesas">Mesas</a><button type="button" data-open-bonus>Bono 25%</button><a href="#horarios">Cuándo jugamos</a><a href="#acceso">Cómo entrar</a><a href="/payment">Comprar fichas</a><a href="#juego-privado">Private Game</a><a class="nav-mobile-cta" href="/payment">UNIRME A LA MESA <span aria-hidden="true">↗</span></a></nav><a class="nav-cta" href="/payment"><span>UNIRME A LA MESA</span><b aria-hidden="true">↗</b></a><button class="menu-toggle" type="button" id="menuToggle" aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span></button>
       </div>
     </header>
     <main id="contenido">
@@ -81,7 +86,8 @@
             <div class="hero-actions">
               <a
                 class="btn btn-hot btn-large"
-                href="https://wa.me/573007068986?text=Hola%2C%20quiero%20unirme%20a%20la%20mesa%20del%20domingo%2025%20de%20octubre%20a%20las%206%3A00%20p.%20m.%20%28Per%C3%BA%20%2F%20Colombia%29%2C%20con%20entrada%20m%C3%ADnima%20de%20US%24500.%20%C2%BFHay%20espacio%3F"
+                href="https://wa.me/573007068986"
+                data-next-session
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -122,18 +128,23 @@
           </div>
         
           <strong class="panel-date" id="nextDate">
-            JUEVES 29 OCT
+            MARTES 10 NOV
           </strong>
         
           <div class="panel-time">
-            <b>18:00</b>
+            <b>09:00</b>
             <span>
-              PERÚ / COLOMBIA<br>
-              17:00 MÉXICO (CDMX)<br>
-              19:00 NUEVA YORK (EDT)<br>
-              20:00 BRASILIA / RÍO
+              🇵🇪 PERÚ
             </span>
           </div>
+          <ul class="panel-timezones" aria-label="Hora equivalente en otros países">
+            <li><span>🇲🇽 México (CDMX)</span><strong data-timezone="America/Mexico_City">08:00</strong></li>
+            <li><span>🇨🇴 Colombia</span><strong data-timezone="America/Bogota">09:00</strong></li>
+            <li><span>🇫🇷 Francia</span><strong data-timezone="Europe/Paris">15:00</strong></li>
+            <li><span>🇩🇪 Alemania</span><strong data-timezone="Europe/Berlin">15:00</strong></li>
+            <li><span>🇺🇸 USA (Miami)</span><strong data-timezone="America/New_York">09:00</strong></li>
+            <li><span>🇦🇺 Australia (Sídney)</span><strong data-timezone="Australia/Sydney">01:00</strong></li>
+          </ul>
         
           <div class="panel-games">
             <span>NL200</span>
@@ -146,7 +157,8 @@
           </div>
         
           <a
-            href="https://wa.me/573007068986?text=Hola%2C%20quiero%20consultar%20disponibilidad%20para%20la%20sesion%20del%20jueves%2029%20de%20octubre%20a%20las%2018%3A00.%20NL200%20y%20PLO5%20200.%20Entrada%20minima%20US%24100."
+            href="https://wa.me/573007068986"
+            data-next-session
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -161,7 +173,7 @@
         <div class="signal-bar" aria-label="Datos del club">
           <div class="container signal-grid">
             <div><small>01 / EL JUEGO</small><strong>NL200 <i>+</i> PLO5 200</strong></div>
-            <div><small>02 / EL HORARIO</small><strong>MAR <i>/</i> DOM</strong></div>
+            <div><small>02 / EL HORARIO</small><strong>MAR <i>/</i> VIE</strong></div>
             <div><small>03 / EL CLUB</small><strong>526745</strong></div>
             <div><small>04 / EL ACCESO</small><strong>DIRECTO POR WHATSAPP</strong></div>
           </div>
@@ -170,7 +182,7 @@
           <div class="container tables-heading" data-reveal>
             <p class="eyebrow eyebrow-hot">LA PRÓXIMA SESIÓN / TÚ ELIGES</p>
             <h2 id="tablesTitle">ESCOGE EL JUEGO.<br><em>PIDE TU ASIENTO.</em></h2>
-            <p>Jugamos solo dos veces por semana: <strong>martes, entrada mínima US$100; domingos, entrada mínima US$500.</strong> Dos modalidades, horarios claros y entradas a la vista. Mira dónde quieres jugar y escríbenos para confirmar disponibilidad.</p>
+            <p>Jugamos dos veces por semana: <strong>martes a las 09:00, entrada mínima US$100; viernes a las 13:00, entrada mínima US$500</strong> (hora de Perú). Dos modalidades, horarios claros y entradas a la vista. Mira dónde quieres jugar y escríbenos para confirmar disponibilidad.</p>
           </div>
           <div class="container table-layout" id="horarios">
             <article class="game-main" data-reveal>
@@ -179,7 +191,7 @@
                 <p>MARTES</p>
                 <h3>NL200 <i>×</i><br>PLO5 200</h3>
                 <div class="game-facts">
-                  <div><small>INICIO</small><strong>18:00</strong><span>Perú y Colombia<br>20:00 Brasilia / Río</span></div>
+                  <div><small>INICIO</small><strong>09:00</strong><span>Hora de Perú</span></div>
                   <div><small>ENTRADA MÍNIMA</small><strong>US$100</strong><span>Consulta disponibilidad<br>de la próxima mesa</span></div>
                 </div>
               </div>
@@ -188,14 +200,14 @@
             <article class="game-main game-main--premium" data-reveal>
               <div class="game-main-top"><span>✦ MESA HIGH ROLLER</span><span>02 / 02</span></div>
               <div class="game-main-body">
-                <p>DOMINGO</p>
+                <p>VIERNES</p>
                 <h3>NL400 <i>×</i><br>PLO5 400</h3>
                 <div class="game-facts">
-                  <div><small>INICIO</small><strong>18:00</strong><span>Perú y Colombia<br>20:00 Brasilia / Río</span></div>
+                  <div><small>INICIO</small><strong>13:00</strong><span>Hora de Perú</span></div>
                   <div><small>ENTRADA MÍNIMA</small><strong>US$500</strong><span>Confirma disponibilidad<br>antes de depositar</span></div>
                 </div>
               </div>
-              <div class="game-main-action"><a class="btn btn-hot" data-wa="sunday" href="https://wa.me/573007068986">CONSULTAR ASIENTO HIGH ROLLER <span aria-hidden="true">↗</span></a><small>Te confirmamos disponibilidad y condiciones.</small></div>
+              <div class="game-main-action"><a class="btn btn-hot" data-wa="friday" href="https://wa.me/573007068986">CONSULTAR ASIENTO HIGH ROLLER <span aria-hidden="true">↗</span></a><small>Te confirmamos disponibilidad y condiciones.</small></div>
             </article>
           </div>
           <div class="container volume-note" data-reveal>
@@ -212,7 +224,7 @@
             <article class="world-chapter" data-scene="beach">
               <div data-reveal><span class="chapter-num">01 / LIBERTAD</span>
                 <h2 id="worldTitle">TU MESA.<br><em>TU LUGAR.</em></h2>
-                <p>La playa, tu casa o una escala entre ciudades. Cuando llega la sesión, abres ClubGG y vuelves al juego. La mesa tiene horario; el lugar lo eliges tú.</p><span class="chapter-line">MARTES Y DOMINGOS / DOS VECES POR SEMANA.</span>
+                <p>La playa, tu casa o una escala entre ciudades. Cuando llega la sesión, abres ClubGG y vuelves al juego. La mesa tiene horario; el lugar lo eliges tú.</p><span class="chapter-line">MARTES Y VIERNES / DOS VECES POR SEMANA.</span>
               </div>
             </article>
             <article class="world-chapter world-chapter--community" data-scene="night">
@@ -246,13 +258,13 @@
             <div class="reason-head" data-reveal>
               <p class="eyebrow eyebrow-hot">EL JUEGO SE SIENTE DISTINTO</p>
               <h2 id="reasonTitle">ENTRA POR EL PÓKER.<br><em>VUELVE POR LA MESA.</em></h2>
-              <p>Una partida puede entretenerte una noche. La mesa correcta te da ganas de volver el domingo. Aquí hay juego, gente y un próximo asiento que pedir.</p><a class="line-link" data-wa="details" href="https://wa.me/573007068986">VER SI HAY LUGAR EN LA PRÓXIMA ↗</a>
+              <p>Una partida puede entretenerte una noche. La mesa correcta te da ganas de volver. Aquí hay juego, gente y un próximo asiento que pedir.</p><a class="line-link" data-wa="details" href="https://wa.me/573007068986">VER SI HAY LUGAR EN LA PRÓXIMA ↗</a>
             </div>
             <div class="reason-list">
               <article data-reveal><span>01</span>
                 <div>
                   <h3>El martes ya tiene plan.</h3>
-                  <p>NL200 o PLO5. Una hora marcada, decisiones nuevas y una mesa a la que quieres volver el domingo.</p>
+                  <p>NL200 o PLO5. Una hora marcada, decisiones nuevas y una mesa a la que quieres volver el viernes.</p>
                 </div>
               </article>
               <article data-reveal><span>02</span>
@@ -263,8 +275,8 @@
               </article>
               <article data-reveal><span>03</span>
                 <div>
-                  <h3>El domingo, otra escala.</h3>
-                  <p>Cuando quieras jugar más alto, pregunta por NL400 y PLO5 400. La mesa High Roller tiene su propia noche.</p>
+                  <h3>El viernes, otra escala.</h3>
+                  <p>Cuando quieras jugar más alto, pregunta por NL400 y PLO5 400. La mesa High Roller empieza a las 13:00, hora de Perú.</p>
                 </div>
               </article>
             </div>
@@ -279,7 +291,7 @@
           <div class="container steps-grid">
             <article data-reveal><span class="step-number">01</span>
               <h3>Pide tu asiento.</h3>
-              <p>Escríbenos y elige NL200, PLO5 o la mesa del domingo. Te confirmamos cupos y condiciones.</p>
+              <p>Escríbenos y elige NL200, PLO5 o la mesa High Roller del viernes. Te confirmamos cupos y condiciones.</p>
             </article>
             <article data-reveal><span class="step-number">02</span>
               <h3>Instala ClubGG.</h3>
@@ -308,20 +320,6 @@
             <div class="private-photo-wrap" data-reveal><img src="/assets/private-table-v4.webp" alt="Vista ilustrativa de una mesa de póker privada frente al mar al atardecer" loading="lazy"><span class="private-photo-label">Voss Poker <i>✦</i> LA MESA EN PERSONA</span><span class="private-photo-disclaimer">Imagen ilustrativa</span></div>
           </div>
         </section>
-        <section class="learn-editorial" id="aprender-poker" aria-labelledby="learnTitle">
-          <div class="container learn-editorial__inner">
-            <div class="learn-editorial__heading">
-              <p class="eyebrow">FORMACIÓN</p>
-              <h2 id="learnTitle">¿QUIERES<br>APRENDER POKER?</h2>
-              <p class="learn-editorial__signature">CON ALEXANDER VOSS</p>
-            </div>
-            <div class="learn-editorial__copy">
-              <p>Si estás construyendo tu juego, también hay una forma de empezar desde la base.</p>
-              <p><strong>Hermandad del Dinero</strong> es el programa donde enseño poker desde los fundamentos: cómo funciona el juego y cómo tomar mejores decisiones en la mesa.</p>
-              <a class="learn-editorial__link" href="/hermandad-del-dinero/" data-event="learn_poker_editorial_click">CONOCER HERMANDAD DEL DINERO <span aria-hidden="true">→</span></a>
-            </div>
-          </div>
-        </section>
         <section class="faq section" id="faq" aria-labelledby="faqTitle">
           <div class="container faq-grid">
             <div data-reveal>
@@ -336,7 +334,7 @@
               </details>
               <details>
                 <summary>¿Cuándo jugamos y cuál es la entrada mínima?</summary>
-                <p>Los martes a las 18:00 en Perú y Colombia (20:00 en Brasilia y Río): NL200 y PLO5 200, entrada mínima de <strong>US$100</strong>. Los domingos hay mesa High Roller de NL400 y PLO5 400, con entrada mínima de <strong>US$500</strong>; a las 18:00 en Perú y Colombia (20:00 en Brasilia y Río). Consulta los asientos disponibles.</p>
+                <p>Los martes a las 09:00, hora de Perú: NL200 y PLO5 200, entrada mínima de <strong>US$100</strong>. Los viernes a las 13:00, hora de Perú, hay mesa High Roller de NL400 y PLO5 400, con entrada mínima de <strong>US$500</strong>. Consulta los asientos disponibles.</p>
               </details>
               <details>
                 <summary>¿Qué métodos de pago aceptan?</summary>
@@ -361,7 +359,7 @@
           <div class="final-bg" aria-hidden="true"></div>
           <div class="container final-inner" data-reveal><span>Voss Poker / CLUBGG 526745</span>
             <h2 id="finalTitle">LA PRÓXIMA MANO<br><em>EMPIEZA CONTIGO.</em></h2>
-            <p>Martes y domingos · dos veces por semana. Martes: NL200 + PLO5 200 desde US$500. Domingos: NL400 + PLO5 400 desde US$1.000. Pide asiento y te contamos lo que necesitas para entrar.</p><a class="btn btn-hot btn-large" href="/payment">PEDIR MI ASIENTO <b aria-hidden="true">↗</b></a>
+            <p>Martes y viernes · dos veces por semana. Martes: NL200 + PLO5 200 desde US$100 a las 09:00. Viernes: NL400 + PLO5 400 desde US$500 a las 13:00 (hora de Perú). Pide asiento y te contamos lo que necesitas para entrar.</p><a class="btn btn-hot btn-large" href="/payment">PEDIR MI ASIENTO <b aria-hidden="true">↗</b></a>
           </div>
         </section>
       </div>
@@ -375,7 +373,7 @@
         <p>Solo para mayores de edad y donde esté permitido. El póker implica riesgo; los resultados nunca están garantizados. © <span id="year">2026</span> Voss Poker.</p>
       </div>
     </footer>
-    <div class="mobile-cta"><span><small>DOMINGO · 18:00 · MÍN. US$500</small><strong>NL400 + PLO5 400</strong></span><a href="https://wa.me/573007068986?text=Hola%2C%20me%20quiero%20unir%20a%20la%20mesa%20de%20Voss%20Room.%20%C2%BFMe%20ayudas%20a%20reservar%20mi%20asiento%3F" target="_blank" rel="noopener noreferrer">PEDIR ASIENTO ↗</a></div>
+    <div class="mobile-cta"><span><small id="nextSessionMobile">PRÓXIMA SESIÓN</small><strong id="nextGamesMobile">NL200 + PLO5 200</strong></span><a data-next-session href="https://wa.me/573007068986" target="_blank" rel="noopener noreferrer">PEDIR ASIENTO ↗</a></div>
     <div class="bonus-nudge" id="bonusNudge" hidden><a class="bonus-nudge__main" href="/casino/" aria-label="100% bono para apuestas deportivas. Ir a Voss Casino"><span class="bonus-nudge__blade" aria-hidden="true"></span><span class="bonus-nudge__copy"><strong>100% BONO</strong><span>PARA APUESTAS</span><span>DEPORTIVAS <b aria-hidden="true">↗</b></span></span></a><button type="button" class="bonus-nudge__close" aria-label="Ocultar bono deportivo">×</button></div>
     <div class="toast" role="status" aria-live="polite" id="toast"></div>
     <dialog class="offer-dialog" id="bonusDialog" aria-labelledby="bonusTitle">

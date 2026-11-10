@@ -4,7 +4,7 @@ Archivos listos para subir en la misma carpeta:
 - index.html
 - style.css
 - main.js
-- alexander-voss-ensena-poker.png
+- poker-coaching-session.png
 - hero.webp
 - voss.png
 - hermandad-social-v3.png

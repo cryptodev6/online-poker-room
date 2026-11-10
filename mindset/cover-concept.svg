@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="960" viewBox="0 0 720 960" role="img" aria-labelledby="title description">
+  <title id="title">Portada conceptual provisional — El juego detrás del juego</title>
+  <desc id="description">Composición editorial abstracta de líneas, nodos y capas de información sobre un fondo oscuro.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#202725"/>
+      <stop offset=".52" stop-color="#111715"/>
+      <stop offset="1" stop-color="#090c0b"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d5c19d" stop-opacity=".85"/>
+      <stop offset="1" stop-color="#91acb3" stop-opacity=".05"/>
+    </linearGradient>
+    <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse">
+      <path d="M38 0H0V38" fill="none" stroke="#d7d2c4" stroke-opacity=".065" stroke-width="1"/>
+    </pattern>
+    <filter id="soft-glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+  <rect width="720" height="960" fill="url(#paper)"/>
+  <rect width="720" height="960" fill="url(#grid)"/>
+  <path d="M65 520 230 345l172 113 198-227 69 83M99 652l140-161 169 79 174-106" fill="none" stroke="url(#beam)" stroke-width="1.5"/>
+  <path d="M65 520 230 345l172 113 198-227 69 83" fill="none" stroke="#bca987" stroke-opacity=".24" stroke-width="15" filter="url(#soft-glow)"/>
+  <g fill="#c6b28e">
+    <circle cx="230" cy="345" r="4"/><circle cx="402" cy="458" r="4"/><circle cx="600" cy="231" r="4"/>
+    <circle cx="239" cy="491" r="3" fill="#9ab1b6"/><circle cx="408" cy="570" r="3" fill="#9ab1b6"/><circle cx="582" cy="464" r="3" fill="#9ab1b6"/>
+  </g>
+  <g fill="none" stroke="#d9d2c2" stroke-opacity=".22">
+    <circle cx="397" cy="442" r="119"/><circle cx="397" cy="442" r="150" stroke-dasharray="2 8"/>
+    <path d="M397 276v332M231 442h332M279 324l236 236M515 324 279 560"/>
+  </g>
+  <path d="M68 68h34M68 68v34M652 68h-34M652 68v34M68 892h34M68 892v-34M652 892h-34M652 892v-34" fill="none" stroke="#c6b28e" stroke-opacity=".52"/>
+  <text x="74" y="126" fill="#c6b28e" font-family="Arial,sans-serif" font-size="12" letter-spacing="3">UNA OBRA SOBRE LA DECISIÓN</text>
+  <text x="73" y="696" fill="#f1eee6" font-family="Georgia,serif" font-size="58" letter-spacing="-2">EL JUEGO</text>
+  <text x="73" y="763" fill="#f1eee6" font-family="Georgia,serif" font-size="58" font-style="italic" letter-spacing="-2">DETRÁS DEL</text>
+  <text x="73" y="830" fill="#f1eee6" font-family="Georgia,serif" font-size="58" letter-spacing="-2">JUEGO.</text>
+  <path d="M75 855h82" stroke="#c6b28e" stroke-width="1"/>
+  <text x="74" y="886" fill="#c5c6bf" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">BY ALEXANDER VOSS</text>
+  <text x="645" y="880" fill="#c6b28e" font-family="Arial,sans-serif" font-size="9" text-anchor="end" letter-spacing="1.5">PORTADA CONCEPTUAL · PROVISIONAL</text>
+</svg>

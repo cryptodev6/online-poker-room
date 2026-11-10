@@ -3,7 +3,7 @@ const syncHeader = () => header?.classList.toggle('scrolled', window.scrollY > 4
 window.addEventListener('scroll', syncHeader, { passive: true });
 syncHeader();
 
-const whatsappMessage = 'Hola Yoshi, quiero información para entrar a La Hermandad del Dinero con Alexander Voss. Quiero reservar mi lugar para la primera edición.';
+const whatsappMessage = 'Hola Yoshi, quiero información para entrar a La Hermandad del Dinero. Quiero reservar mi lugar para la primera edición.';
 const whatsappUrl = `https://wa.me/51929000877?text=${encodeURIComponent(whatsappMessage)}`;
 document.querySelectorAll('[data-whatsapp]').forEach((link) => {
   link.href = whatsappUrl;
