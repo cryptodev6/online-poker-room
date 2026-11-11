@@ -22,31 +22,6 @@
 
   const syllabus = document.getElementById("syllabus-chapters");
   const syllabusContent = content.syllabusGroups;
-  syllabusContent.forEach((group, index) => {
-    const section = document.createElement("article");
-    section.className = "syllabus-set";
-    section.dataset.syllabusIndex = String(index);
-
-    const label = document.createElement("p");
-    label.className = "eyebrow";
-    label.textContent = group.label;
-    const topics = document.createElement("ol");
-    topics.className = "syllabus-set__topics";
-    group.topics.forEach(([chapterNumber, topic]) => {
-      const item = document.createElement("li");
-      item.className = "syllabus-topic";
-      const number = document.createElement("span");
-      number.className = "syllabus-topic__chapter";
-      number.textContent = `CAPÍTULO ${chapterNumber}`;
-      const title = document.createElement("h3");
-      title.textContent = topic;
-      item.append(number, title);
-      topics.append(item);
-    });
-    section.append(label, topics);
-    syllabus.append(section);
-  });
-
   const syllabusImages = [...document.querySelectorAll("[data-syllabus-image]")];
   const syllabusCaption = document.querySelector(".syllabus__caption-label");
   const syllabusCounter = document.querySelector(".syllabus__caption-index");
@@ -78,9 +53,9 @@
   const scene = document.querySelector(".dual-scene");
   const sceneCaption = document.querySelector(".scene-caption__text");
   const sceneCaptions = {
-    visible: "Lo que cualquiera puede ver",
-    invisible: "La lógica debajo de cada acción",
-    human: "La persona detrás de la decisión"
+    visible: "La ventaja dependía de esas condiciones",
+    invisible: "El resultado y la liquidación no son lo mismo",
+    human: "La oportunidad también depende de tu ejecución"
   };
   document.querySelectorAll("[data-scene-step]").forEach((button) => {
     button.addEventListener("click", () => {
@@ -163,7 +138,7 @@
       revealButton.innerHTML = 'Revelar el river <span aria-hidden="true">↗</span>';
       document.getElementById('river-card').setAttribute('aria-label', 'River oculto');
       document.getElementById('river-status').textContent = 'RIVER POR REVELAR';
-      document.getElementById('decision-outcome').innerHTML = '<span>ANTES DEL RIVER</span>La ventaja matemática no es una promesa de victoria.';
+      document.getElementById('decision-outcome').innerHTML = '<span>ANTES DEL RIVER</span>La equity está calculada. La reacción todavía no.';
       return;
     }
     handTable.dataset.revealed = "true";
@@ -171,7 +146,7 @@
     document.getElementById("river-card").setAttribute("aria-label", "Cinco de picas");
     document.getElementById("river-status").textContent = "RIVER · 5♠";
     const outcome = document.getElementById("decision-outcome");
-    outcome.innerHTML = "<span>DESPUÉS DEL RIVER</span>El 5♠ completa el color del rival. La mano con mayor equity pierde.";
+    outcome.innerHTML = "<span>DESPUÉS DEL RIVER</span>El 5♠ completa el color del rival. Perdiste el bote. La siguiente decisión no tiene que intentar recuperarlo.";
   });
 
   // Contact links use one confirmed destination and contextual messages.
@@ -221,7 +196,7 @@
     let active = 0;
     cards.forEach((card,index) => {if(card.getBoundingClientRect().top < innerHeight * .56) active = index;});
     journeyImages.forEach((image,index) => image.classList.toggle('is-active', index === active));
-    artCaption.textContent = active ? 'II / LA EJECUCIÓN' : 'I / LA REFERENCIA';
+    artCaption.textContent = active ? 'II / CORREGIR LA SESIÓN' : 'I / RECONSTRUIR LA MANO';
     scheduled = false;
   }
   function requestScroll() {if(!scheduled) {scheduled = true; requestAnimationFrame(updateScroll);}}

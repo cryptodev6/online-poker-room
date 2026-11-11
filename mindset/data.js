@@ -1,93 +1,113 @@
 window.mindsetContent = {
-  syllabusGroups: [
+  "syllabusGroups": [
     {
-      label: "PARTE I · CAPÍTULOS 02—03",
-      title: "Qué hace un solver",
-      image: "assets/theory.webp",
-      mobileImage: "assets/theory-mobile.webp",
-      alt: "Estructura geométrica de ramas y nodos, metáfora visual del análisis estratégico.",
-      topics: [
-        ["02", "Qué hace un solver"],
-        ["02", "Una teoría que se pueda ejecutar"],
-        ["03", "Tres calidades de información"],
-        ["03", "El costo de una lectura equivocada"]
-      ]
+      "label": "CAPÍTULO 10 · LAS PARTIDAS PRIVADAS",
+      "title": "Ganar fichas no es lo mismo que cobrar."
     },
     {
-      label: "PARTE II · CAPÍTULOS 06—07",
-      title: "La mano que se juega por patrón",
-      image: "assets/execution.webp",
-      mobileImage: "assets/execution-mobile.webp",
-      alt: "Un jugador revisa sus cartas antes de tomar una decisión.",
-      topics: [
-        ["06", "La mano que se juega por patrón"],
-        ["06", "Diagnosticar el problema de ejecución"],
-        ["07", "Lo que mide el all-in EV"],
-        ["07", "Cambiar sin perseguir la gráfica"]
-      ]
+      "label": "CAPÍTULO 03 · CUÁNDO APARTARSE DE LA TEORÍA",
+      "title": "Tu lectura puede ser cierta. Tu exploit, malo."
     },
     {
-      label: "PARTE III · CAPÍTULOS 08—09",
-      title: "Barreras que no dependan del impulso del momento",
-      image: "assets/risk.webp",
-      mobileImage: "assets/risk-mobile.webp",
-      alt: "Una silla vacía junto a una mesa en penumbra; pausa y límites fuera del juego.",
-      topics: [
-        ["08", "Barreras que no dependan del impulso del momento"],
-        ["08", "Pedir ayuda antes de tocar fondo"],
-        ["09", "La banca y el dinero de vida"],
-        ["09", "Exposición de una noche"]
-      ]
+      "label": "CAPÍTULO 06 · LAS FORMAS SILENCIOSAS DEL TILT",
+      "title": "Tu tilt puede hablar perfectamente de GTO."
     },
     {
-      label: "PARTE IV · CAPÍTULOS 11—12",
-      title: "Una revisión que termina en algo ejecutable",
-      image: "assets/visible.webp",
-      mobileImage: "assets/visible-mobile.webp",
-      alt: "Una mesa de póker observada desde arriba, sin jugadores ni apuestas.",
-      topics: [
-        ["11", "Qué puede observar el jugador"],
-        ["11", "Lo que requiere al operador"],
-        ["12", "La mano completa"],
-        ["12", "Una revisión que termina en algo ejecutable"]
-      ]
+      "label": "CAPÍTULO 07 · CUANDO LOS RESULTADOS DEJAN DE ORIENTAR",
+      "title": "Estar por debajo del EV no explica toda la caída."
+    },
+    {
+      "label": "CAPÍTULO 09 · EL DINERO QUE REALMENTE ESTÁ EN JUEGO",
+      "title": "Tu banca puede ser menor que la cifra que anotas."
+    },
+    {
+      "label": "CAPÍTULO 11 · LA INTEGRIDAD DEL JUEGO ONLINE",
+      "title": "Una línea de solver no prueba RTA. Tu duda sí merece un método."
     }
   ],
-  parts: [
+  "parts": [
     {
-      roman: "I",
-      title: "Cómo se construye una decisión",
-      chapters: [
-        ["01", "La realidad del póker", "Varianza, expectativa matemática, incertidumbre, rake, resultados y ventaja competitiva."],
-        ["02", "La línea teórica", "GTO, rangos, teoría de equilibrio, blockers, interpretación de soluciones y uso de herramientas técnicas."],
-        ["03", "Cuándo apartarse de la teoría", "Juego explotativo, lecturas, calidad de los datos, node locking y adaptación a los rivales."]
+      "roman": "I",
+      "title": "Cómo se construye una decisión",
+      "chapters": [
+        [
+          "01",
+          "La realidad del póker",
+          "Por qué ganar puede reforzar una mala decisión y perder puede desacreditar una buena. EV, varianza y costos para revisar sin pedirle al resultado más información de la que contiene."
+        ],
+        [
+          "02",
+          "La línea teórica",
+          "Qué condiciones debes conservar junto a una solución. Mezclas, EV, blockers y simplificaciones: distinguir una frecuencia memorizada de una referencia que puedes trasladar a la mesa."
+        ],
+        [
+          "03",
+          "Cuándo apartarse de la teoría",
+          "Cuánta evidencia sostiene una desviación. Tendencias del pool, observaciones individuales, node locking y sensibilidad de un exploit a una lectura equivocada."
+        ]
       ]
     },
     {
-      roman: "II",
-      title: "Cómo se sostiene el A-game",
-      chapters: [
-        ["04", "El estado en que se juega", "Concentración, sueño, fatiga, preparación física y condiciones necesarias para ejecutar una estrategia."],
-        ["05", "El bote que ya terminó", "Bad beats, resultados negativos de decisiones favorables, sesgos y deterioro posterior a una pérdida."],
-        ["06", "Las formas silenciosas del tilt", "Errores de ejecución que no siempre se manifiestan como ira: pasividad, automatismos y sofisticación injustificada."],
-        ["07", "Cuando los resultados dejan de orientar", "Rachas, win rate, all-in EV, muestras estadísticas e interpretación de resultados."]
+      "roman": "II",
+      "title": "Cómo se sostiene el A-game",
+      "chapters": [
+        [
+          "04",
+          "El estado en que se juega",
+          "Cómo reconocer que sigues produciendo acciones plausibles mientras pierdes el contexto. Fatiga, carga de mesas y señales observables para ajustar o terminar la sesión."
+        ],
+        [
+          "05",
+          "El bote que ya terminó",
+          "El bote que incorporaste a tu stack antes de ganarlo. Cómo una pérdida pasa a gobernar las defensas, los tamaños y la duración de una sesión posterior."
+        ],
+        [
+          "06",
+          "Las formas silenciosas del tilt",
+          "Valor omitido, automatismos y conceptos utilizados para justificar impulsos. Separar una laguna técnica de una falla de atención o una respuesta que no quisiste ejecutar."
+        ],
+        [
+          "07",
+          "Cuando los resultados dejan de orientar",
+          "Qué permite concluir una gráfica y qué queda sin explicar. Win rate, all-in EV, incertidumbre de muestra y revisión de rachas ganadoras y perdedoras."
+        ]
       ]
     },
     {
-      roman: "III",
-      title: "Cuándo el riesgo cambia de naturaleza",
-      chapters: [
-        ["08", "El enemigo interno", "Ludopatía, persecución de pérdidas, mecanismos de recompensa, pérdida de control y búsqueda de ayuda."],
-        ["09", "El dinero que realmente está en juego", "Bankroll, exposición financiera, costos, obligaciones y protección del dinero destinado a la vida cotidiana."]
+      "roman": "III",
+      "title": "Cuándo el riesgo cambia de naturaleza",
+      "chapters": [
+        [
+          "08",
+          "El enemigo interno",
+          "Cuando una oportunidad se convierte en una forma de aliviar malestar. Persecución de pérdidas, control, barreras externas y ayuda: ganar no invalida el daño."
+        ],
+        [
+          "09",
+          "El dinero que realmente está en juego",
+          "La diferencia entre dinero anotado, disponible y comprometido. Banca, crédito, retiros, profundidad y straddle bajo una ventaja que también es incierta."
+        ]
       ]
     },
     {
-      roman: "IV",
-      title: "Elegir dónde y cuándo jugar",
-      chapters: [
-        ["10", "Las partidas privadas", "Selección de juegos, transparencia, rake, reglas, crédito, seguridad y riesgos operativos."],
-        ["11", "La integridad del juego online", "Bots, RTA, colusión, seguridad, señales de alerta y límites de la evidencia."],
-        ["12", "La revisión y la siguiente sesión", "Análisis posterior, reconstrucción de decisiones y preparación de ajustes concretos."]
+      "roman": "IV",
+      "title": "Elegir dónde y cuándo jugar",
+      "chapters": [
+        [
+          "10",
+          "Las partidas privadas",
+          "La ventaja necesita condiciones de participación. Rake, reglas, custodia, liquidación, presión social e irregularidades: evaluar una privada más allá del nivel de sus jugadores."
+        ],
+        [
+          "11",
+          "La integridad del juego online",
+          "Bots, RTA y colusión sin convertir sospechas en certezas. Qué puedes documentar, qué necesita investigar el operador y cuándo reducir exposición."
+        ],
+        [
+          "12",
+          "La revisión y la siguiente sesión",
+          "Volver a la mano del prólogo sin información prestada por el showdown. Revisar lectura, ejecución y cambios de mesa para terminar con una corrección aplicable."
+        ]
       ]
     }
   ]

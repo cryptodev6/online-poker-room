@@ -1,12 +1,12 @@
-// Única configuración del contacto. Número confirmado por el autor.
+// Contacto oficial conservado del ZIP del autor.
 window.vossConfig = Object.freeze({
   whatsappNumber: "573007068986",
   messages: Object.freeze({
-    hero: "Hola, quiero consultar la disponibilidad y el formato de El juego detrás del juego. He visto el precio indicado de US$30.",
-    concept: "Hola, me interesa la propuesta de El juego detrás del juego.",
-    content: "Hola, quisiera conocer más del contenido del libro.",
-    excerpt: "Hola, quisiera recibir novedades de El juego detrás del juego.",
-    launch: "Hola, quiero consultar la disponibilidad y el formato de El juego detrás del juego. He visto el precio indicado de US$30.",
-    closing: "Hola, quiero consultar la disponibilidad y el formato de El juego detrás del juego. He visto el precio indicado de US$30."
+    hero: "Hola, quiero información sobre El juego detrás del juego, anunciado a US$30.",
+    concept: "Hola, me interesa el enfoque del libro sobre las decisiones fuera de la mano.",
+    content: "Hola, quisiera consultar el contenido de El juego detrás del juego.",
+    excerpt: "Hola, leí el fragmento sobre tilt y quisiera saber más del libro.",
+    launch: "Hola, quisiera confirmar disponibilidad y formato del libro de US$30.",
+    closing: "Hola, quiero consultar cómo adquirir El juego detrás del juego."
   })
 });

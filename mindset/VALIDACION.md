@@ -1,34 +1,28 @@
-# Validación de la entrega
+# Validación — revisión editorial para jugadores avanzados
 
-## Comprobado
+## Ejecutado en esta versión
 
-- Sintaxis de `app.js`, `data.js` y `config.js` con Node.
-- Parseo de ambas hojas CSS con PostCSS.
-- 229 aserciones en JSDOM con ejecución del JavaScript real, en configuraciones de movimiento normal y reducido.
-- Cuatro partes y doce capítulos; apertura y cierre de todos los paneles.
-- Menú: abrir, cerrar con Escape y cerrar al navegar.
-- Tres estados de la escena; un solo control marcado como activo.
-- River 5♠, actualización de etiquetas y vuelta al turn.
-- Seis URL con el número confirmado `573007068986`, mensajes distintos correctamente codificados, nueva pestaña y `noopener`.
-- Anclas internas, referencias `aria-controls`, identificadores únicos y presencia de los recursos de cada imagen y variante.
-- En esta iteración: sintaxis de `app.js`, `data.js` y `config.js`; IDs, anclas y recursos locales presentes.
-- Cuatro bloques y 16 encabezados del temario cotejados con el manuscrito; precio indicado de US$30 y ausencia de un desglose promocional ficticio.
-- `git diff --check` sin errores.
-- Enumeración independiente de los 44 rivers: 37 ganadores, 7 perdedores y ningún empate.
-- Fragmento literal cotejado con el manuscrito.
-- Inspección visual de las once imágenes generadas, reunidas en una hoja de contacto interna.
-- Ningún documento fuente del libro fue editado.
+- 231 comprobaciones con el JavaScript real en JSDOM, con movimiento normal y reducido.
+- Seis entradas al libro presentes en HTML y disponibles sin JavaScript.
+- Correspondencia entre los seis artículos, sus imágenes activas y las leyendas, mediante callbacks simulados de IntersectionObserver.
+- Cuatro partes y doce capítulos; títulos oficiales conservados respecto del ZIP recibido.
+- Apertura y cierre de los cuatro paneles del índice.
+- Menú y Escape; controles de las tres capas; revelación del 5♠ y regreso al turn.
+- Enlaces internos, identificadores únicos y recursos locales presentes.
+- Contacto conservado: 573007068986. Seis mensajes contextuales distintos, correctamente codificados, con apertura segura en nueva pestaña.
+- Sintaxis de los tres archivos JavaScript con Node y parseo de ambas hojas CSS con PostCSS.
+- Fragmento del capítulo 6 cotejado literalmente con el manuscrito suministrado.
+- Precio US$30 conservado del ZIP del autor, sin añadir fecha, formato, credenciales o testimonios.
+- Todos los recursos gráficos, la portada SVG y `styles.css` se conservaron sin cambios binarios.
 
-## Límites
+## Alcance
 
-Las pruebas de interacción anteriores se realizaron en un DOM simulado y no cubren la nueva interacción del temario. No equivalen a una revisión visual ni a pruebas de layout en navegador. En esta iteración PostCSS no está disponible, así que los cambios nuevos de CSS no se validaron con su parser.
+Son pruebas de estructura y comportamiento en DOM simulado, no de composición renderizada. En esta revisión no se ejecutó una prueba visual en navegador, Safari/iOS, un lector de pantalla o Lighthouse. Los callbacks simulados verifican la selección de imágenes, no el momento real en que el navegador dispara el observador al desplazarse.
 
-Chromium local no pudo iniciar por una restricción del entorno. El navegador remoto tampoco pudo acceder al servidor local ni al archivo. Por ello no se certifican ausencia de desbordamientos a todos los anchos, mediciones Lighthouse/Core Web Vitals, navegación con lector de pantalla real, ni revisión en Safari/iOS.
+Se verificaron las URL de WhatsApp construidas por la página. No se abrió ni envió una conversación.
 
-Se verificaron los destinos y mensajes construidos de WhatsApp; no se abrió una conversación ni se envió mensaje alguno. La disponibilidad de la cuenta en WhatsApp no fue comprobada externamente.
+Los documentos originales del libro no fueron modificados. El copy comercial desarrolla sus ideas con formulación propia; solo el bloque marcado como fragmento es una cita literal. Las seis entradas no son títulos nuevos del manuscrito: los títulos oficiales aparecen en sus etiquetas y en el índice completo.
 
-## Revisión visual recomendada antes de publicar
+## Antes de publicar
 
-Abrir en Chrome y Safari, a 390, 768 y 1440 px. Recorrer el nuevo temario para comprobar el cambio de imagen, desplegar las cuatro partes, revelar/reiniciar el river y abrir una pregunta frecuente. Comprobar foco por teclado y opción del sistema «reducir movimiento». Confirmar que cada CTA muestra en WhatsApp el número y mensaje esperados, sin necesidad de enviarlos.
-
-La portada sigue marcada como conceptual. El precio indicado por el autor es US$30; la fecha y los formatos comerciales siguen pendientes de confirmación. No se asignaron valores ficticios a capítulos o materiales para formar un total promocional de US$1.000.
+Revisar a 390, 768 y 1440 px: titulares, lectura con la imagen sticky, accesos directos a capítulos, índice, river y enlaces de contacto. Confirmar especialmente el espacio disponible en pantallas móviles bajas y con zoom de texto. Disponibilidad y formato siguen sujetos a confirmación.

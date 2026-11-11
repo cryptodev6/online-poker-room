@@ -55,8 +55,12 @@ La demo muestra el precio de **US$30** indicado por el autor y deriva las consul
 
 No necesitas React, Vite, npm ni un backend. Conserva la carpeta `assets` junto al HTML y los scripts. Para publicar, sube el contenido completo de `mindset` a cualquier alojamiento estático.
 
-El índice y los encabezados destacados del temario se generan desde `data.js`; modifica allí títulos y descripciones. Los textos de las demás secciones están en `index.html`. El precio indicado es US$30; la fecha y los formatos comerciales todavía no están confirmados. El concepto de libro físico no constituye una confirmación de formato.
+El índice y las leyendas del temario se configuran en `data.js`. Las seis entradas desarrolladas están en `index.html`; edita allí títulos, argumentos, distinciones y preguntas. Los textos de las demás secciones están en `index.html`. El precio indicado es US$30; la fecha y los formatos comerciales todavía no están confirmados. El concepto de libro físico no constituye una confirmación de formato.
 
 La demo no procesa pagos ni reserva ejemplares. Antes de una publicación pública conviene revisar visualmente la página a 390 px, 768 px y 1440 px, y configurar una imagen Open Graph con URL absoluta en el dominio definitivo. Consulta `VALIDACION.md` para los controles pendientes.
 
 Los documentos del libro no fueron modificados ni se incluyen en este ZIP.
+
+## Revisión de copy para jugadores avanzados
+
+Consulta `CAMBIOS_COPY.md` para el nuevo recorrido y `VALIDACION.md` para las comprobaciones de esta entrega. Esta versión se abre igual que la anterior: extraer el ZIP, abrir `mindset` en VS Code y abrir `index.html` en el navegador, sin instalar dependencias.
