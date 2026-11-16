@@ -1,28 +1,28 @@
 window.mindsetContent = {
   "syllabusGroups": [
     {
-      "label": "CAPÍTULO 10 · LAS PARTIDAS PRIVADAS",
-      "title": "Ganar fichas no es lo mismo que cobrar."
-    },
-    {
-      "label": "CAPÍTULO 03 · CUÁNDO APARTARSE DE LA TEORÍA",
-      "title": "Tu lectura puede ser cierta. Tu exploit, malo."
-    },
-    {
       "label": "CAPÍTULO 06 · LAS FORMAS SILENCIOSAS DEL TILT",
-      "title": "Tu tilt puede hablar perfectamente de GTO."
+      "title": "Puedes estar en tilt sin sentir que perdiste el control."
+    },
+    {
+      "label": "CAPÍTULO 04 · EL ESTADO EN QUE SE JUEGA",
+      "title": "El cansancio no te quita el conocimiento. Te quita acceso a él."
     },
     {
       "label": "CAPÍTULO 07 · CUANDO LOS RESULTADOS DEJAN DE ORIENTAR",
-      "title": "Estar por debajo del EV no explica toda la caída."
+      "title": "Una mala racha no siempre es mala suerte. Una buena tampoco demuestra nada."
     },
     {
       "label": "CAPÍTULO 09 · EL DINERO QUE REALMENTE ESTÁ EN JUEGO",
-      "title": "Tu banca puede ser menor que la cifra que anotas."
+      "title": "Una banca grande no sirve si el dinero no está realmente disponible."
+    },
+    {
+      "label": "CAPÍTULO 10 · LAS PARTIDAS PRIVADAS",
+      "title": "La mejor partida no siempre es la que tiene peores rivales."
     },
     {
       "label": "CAPÍTULO 11 · LA INTEGRIDAD DEL JUEGO ONLINE",
-      "title": "Una línea de solver no prueba RTA. Tu duda sí merece un método."
+      "title": "Protegerte no exige acusar. Acusar sí exige evidencia."
     }
   ],
   "parts": [
@@ -33,17 +33,17 @@ window.mindsetContent = {
         [
           "01",
           "La realidad del póker",
-          "Por qué ganar puede reforzar una mala decisión y perder puede desacreditar una buena. EV, varianza y costos para revisar sin pedirle al resultado más información de la que contiene."
+          "Por qué una mano ganadora puede reforzar un error, una pérdida puede desacreditar una buena elección y los costos importan tanto como las cartas. Aprender a interpretar resultados sin convertirlos en veredictos."
         ],
         [
           "02",
           "La línea teórica",
-          "Qué condiciones debes conservar junto a una solución. Mezclas, EV, blockers y simplificaciones: distinguir una frecuencia memorizada de una referencia que puedes trasladar a la mesa."
+          "La teoría como referencia, no como promesa. Qué significa una estrategia de equilibrio y qué límites tienen las soluciones cuando cambian los supuestos con los que fueron calculadas."
         ],
         [
           "03",
           "Cuándo apartarse de la teoría",
-          "Cuánta evidencia sostiene una desviación. Tendencias del pool, observaciones individuales, node locking y sensibilidad de un exploit a una lectura equivocada."
+          "Qué permite y qué no permite afirmar una observación sobre un rival. Distinguir datos, intuiciones y suposiciones antes de justificar un ajuste que puede costar dinero."
         ]
       ]
     },
@@ -54,22 +54,22 @@ window.mindsetContent = {
         [
           "04",
           "El estado en que se juega",
-          "Cómo reconocer que sigues produciendo acciones plausibles mientras pierdes el contexto. Fatiga, carga de mesas y señales observables para ajustar o terminar la sesión."
+          "La capacidad de ejecutar depende de cómo llegas a la mesa. Sueño, cansancio, atención, carga de decisiones y señales de que ya no estás jugando con la misma precisión."
         ],
         [
           "05",
           "El bote que ya terminó",
-          "El bote que incorporaste a tu stack antes de ganarlo. Cómo una pérdida pasa a gobernar las defensas, los tamaños y la duración de una sesión posterior."
+          "Un bote puede terminar en el river y continuar dentro del jugador. Cómo las pérdidas, la comparación con dinero imaginado y el miedo a repetirlas condicionan nuevas decisiones."
         ],
         [
           "06",
           "Las formas silenciosas del tilt",
-          "Valor omitido, automatismos y conceptos utilizados para justificar impulsos. Separar una laguna técnica de una falla de atención o una respuesta que no quisiste ejecutar."
+          "El tilt no siempre es ira. Puede aparecer como pasividad, exceso de agresión, juego mecánico o explicaciones técnicas que protegen una decisión impulsiva."
         ],
         [
           "07",
           "Cuando los resultados dejan de orientar",
-          "Qué permite concluir una gráfica y qué queda sin explicar. Win rate, all-in EV, incertidumbre de muestra y revisión de rachas ganadoras y perdedoras."
+          "Qué significan de verdad una racha positiva o negativa, el win rate y el all-in EV. Separar azar, cambios del entorno y deterioro de ejecución sin dejar que la gráfica decida tu identidad."
         ]
       ]
     },
@@ -80,12 +80,12 @@ window.mindsetContent = {
         [
           "08",
           "El enemigo interno",
-          "Cuando una oportunidad se convierte en una forma de aliviar malestar. Persecución de pérdidas, control, barreras externas y ayuda: ganar no invalida el daño."
+          "Cuando seguir jugando deja de responder a una oportunidad y empieza a servir para aliviar malestar. Persecución de pérdidas, límites incumplidos, juego problemático y vías de ayuda."
         ],
         [
           "09",
           "El dinero que realmente está en juego",
-          "La diferencia entre dinero anotado, disponible y comprometido. Banca, crédito, retiros, profundidad y straddle bajo una ventaja que también es incierta."
+          "Dinero disponible frente a dinero comprometido. Banca, obligaciones personales, crédito, recompras, exposición y por qué una cifra de buy-ins no describe todos los riesgos."
         ]
       ]
     },
@@ -96,17 +96,17 @@ window.mindsetContent = {
         [
           "10",
           "Las partidas privadas",
-          "La ventaja necesita condiciones de participación. Rake, reglas, custodia, liquidación, presión social e irregularidades: evaluar una privada más allá del nivel de sus jugadores."
+          "Antes de sentarte, importa saber cómo se cobra, cuánto cuesta jugar y quién responde por los acuerdos. Confianza, presión social, reglas, seguridad y decisión de abandonar una partida."
         ],
         [
           "11",
           "La integridad del juego online",
-          "Bots, RTA y colusión sin convertir sospechas en certezas. Qué puedes documentar, qué necesita investigar el operador y cuándo reducir exposición."
+          "Riesgos de integridad del póker online sin convertir sospechas en acusaciones: bots, asistencia indebida, colusión, evidencia y medidas de protección."
         ],
         [
           "12",
           "La revisión y la siguiente sesión",
-          "Volver a la mano del prólogo sin información prestada por el showdown. Revisar lectura, ejecución y cambios de mesa para terminar con una corrección aplicable."
+          "El verdadero aprendizaje termina en una corrección observable. Volver a una sesión, distinguir fallos técnicos, mentales y de entorno, y preparar condiciones más sólidas para la siguiente."
         ]
       ]
     }

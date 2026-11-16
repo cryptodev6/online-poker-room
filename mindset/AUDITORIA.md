@@ -1,7 +1,9 @@
-# Auditoría de la versión actual
+# Auditoría editorial / comercial
 
-La revisión vigente se documenta en `CAMBIOS_COPY.md` y `VALIDACION.md`.
+**Problema de partida:** exceso de protagonismo de GTO, solvers y exploits; historia de Daniel presentada sin suficiente contexto; demostración matemática situada antes de la propuesta de mentalidad. Riesgo principal: vender un producto distinto del que el autor quiere posicionar.
 
-El problema del ZIP recibido era editorial: cuatro grupos de encabezados anunciaban conceptos, pero no exponían suficientemente el razonamiento de la obra. Las partidas privadas quedaban relegadas al índice; la muestra de lectura se centraba en el cierre; la mano interactiva destacaba la varianza, ya conocida por el público.
+**Solución aplicada:** tesis clara desde el hero, historia contextualizada, módulo mental como tercera sección, seis ensayos reescritos y priorizados, laboratorio técnico desplazado más abajo, índice y FAQ que explican honestamente el alcance del manuscrito. Se mantiene el trabajo visual premium y la arquitectura técnica estática.
 
-La intervención prioriza seis casos de estudio, la relación entre decisiones técnicas y condiciones de sesión, y un fragmento del capítulo 6. Conserva imágenes, portada, arquitectura estática y sistema visual. Las nuevas formulaciones se apoyan en los capítulos 3 a 12 del manuscrito suministrado y mantienen los doce títulos oficiales. No se asigna una nota global sin validación visual renderizada.
+**Principio CRO:** relevancia para visitante frío → experiencia narrativa reconocible → evidencia de profundidad → muestra real → oferta sin fricciones indebidas. El CTA móvil persistente y el precio anunciado US$27 se conservan, sin fingir checkout.
+
+**Limitación:** integración de pago, formatos y políticas aún no confirmados. Ver `README.md` y `VALIDACION.md`.

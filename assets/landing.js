@@ -35,7 +35,7 @@
     Number(peruNow.month) - 1,
     Number(peruNow.day)
   ));
-  const nextSession = Array.from({ length: 8 }, (_, dayOffset) => {
+  const recurringNextSession = Array.from({ length: 8 }, (_, dayOffset) => {
     const date = new Date(Date.UTC(
       Number(peruNow.year),
       Number(peruNow.month) - 1,
@@ -62,6 +62,15 @@
   })
     .filter((session) => session && session.date > now)
     .sort((a, b) => a.date - b.date)[0];
+  const oneOffSession = {
+    date: new Date(Date.UTC(2026, 10, 20, 18)),
+    hour: 13,
+    games: "NL400 + PLO5 400",
+    minimumBuyIn: "US$50"
+  };
+  const nextSession = oneOffSession.date > now
+    ? oneOffSession
+    : recurringNextSession;
   const sessionDateParts = Object.fromEntries(
     new Intl.DateTimeFormat("es-PE", {
       timeZone: "America/Lima",

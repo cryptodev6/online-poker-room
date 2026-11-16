@@ -50,25 +50,6 @@
     document.querySelectorAll("[data-syllabus-index]").forEach((item) => syllabusObserver.observe(item));
   }
 
-  const scene = document.querySelector(".dual-scene");
-  const sceneCaption = document.querySelector(".scene-caption__text");
-  const sceneCaptions = {
-    visible: "La ventaja dependía de esas condiciones",
-    invisible: "El resultado y la liquidación no son lo mismo",
-    human: "La oportunidad también depende de tu ejecución"
-  };
-  document.querySelectorAll("[data-scene-step]").forEach((button) => {
-    button.addEventListener("click", () => {
-      const step = button.dataset.sceneStep;
-      scene.dataset.scene = step;
-      sceneCaption.textContent = sceneCaptions[step];
-      document.querySelector('.scene-caption b').textContent = ({visible:'01', invisible:'02', human:'03'})[step];
-      document.querySelectorAll("[data-scene-step]").forEach((control) => {
-        control.setAttribute("aria-pressed", String(control === button));
-      });
-    });
-  });
-
   content.parts.forEach((part, index) => {
     const article = document.createElement("article");
     article.className = "part";

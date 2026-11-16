@@ -1,66 +1,63 @@
-# EL JUEGO DETRÁS DEL JUEGO
+# EL JUEGO DETRÁS DEL JUEGO — Landing editorial y comercial
 
-By Alexander Voss · Versión editorial optimizada
+**By Alexander Voss** · Reposicionamiento y reescritura integrados · 16 de noviembre de 2026.
 
-## Abrir en Visual Studio Code
+## Qué se entregó
 
-1. Extrae el ZIP completo.
-2. En VS Code, elige **Archivo → Abrir carpeta** y selecciona `mindset`.
-3. Abre `index.html` en tu navegador desde el explorador de archivos. La página es estática: funciona sin instalar dependencias, sin compilación y sin servidor.
+La misma landing cinematográfica, sobre el stack original **HTML, CSS y JavaScript estáticos**, con una propuesta comercial corregida. Ahora la tesis se presenta desde el primer pantallazo: **conocer la estrategia no basta para sostener el rendimiento, la disciplina y las condiciones de juego**.
 
-### Desarrollo con recarga automática
+La página no se anuncia como un curso de GTO ni un libro de análisis de manos. El manuscrito real **sí contiene** fundamentos técnicos, GTO y ejemplos de No-Limit Hold’em en determinadas secciones; se explican cuando son pertinentes y los doce capítulos conservan sus nombres oficiales. Ningún texto del manuscrito se modificó para esta entrega.
 
-Si ya utilizas la extensión Live Server de VS Code, haz clic derecho en `index.html` → **Open with Live Server**. Usa la URL que abra la extensión.
+### Cambios principales
 
-### Servidor local opcional con Python
+- **Hero:** preserva el título en tres líneas, `By Alexander Voss` y `Saber qué hacer no significa poder ejecutarlo`; introduce tilt, fatiga, banca y criterio con claridad para un visitante frío.
+- **Prólogo cinematográfico:** conserva las doce escenas, cartas, importes y fotografías de Daniel. La introducción contextualiza quién es y por qué importa su historia. El cierre habla de una ventaja que no se sostuvo y existe una opción para saltar al contenido.
+- **Nuevo módulo de mentalidad:** tres situaciones interactivas, sin puntuaciones ni diagnósticos, sobre fatiga, persecución de pérdidas y exceso de confianza. Archivos `mindset-cases.js` y `reposition.css`.
+- **Seis ensayos:** ahora comienzan por tilt, A-game, varianza, banca, partidas privadas e integridad. Están escritos para que el visitante reconozca problemas reales, no para vender exploits.
+- **Simulación EV:** se conserva funcionando, ahora después del contenido central y con explicación explícita del modelo, de las pot odds, de lo que se supone sobre el adversario y de la diferencia entre observación y certeza.
+- **Capítulos:** las cuatro partes y los doce nombres originales se conservan; sus descripciones comerciales se reescribieron sin sustituir el contenido real.
+- **Muestra:** el panel de lectura contiene el comienzo literal del capítulo 6, más centrado en el tilt silencioso; se conserva el PDF del prólogo completo.
+- **Autor, oferta y FAQ:** todos centrados en psicología competitiva, conducta, riesgo, disciplina y límite de exposición, sin atribuir biografía, resultados o garantías no verificadas.
+- **Diseño:** se conservan todas las imágenes de origen y sus versiones responsive; solo se añadió estilo necesario para el nuevo contenido. No se generaron imágenes nuevas en esta revisión.
 
-En la terminal de VS Code, dentro de `mindset`:
+## Cómo ejecutarla
 
-Windows:
-```powershell
-py -m http.server 8000
-```
+Desde la carpeta `mindset/`:
 
-macOS / Linux:
 ```bash
+# Windows con Python
+py -m http.server 8000
+
+# Linux / macOS
 python3 -m http.server 8000
 ```
 
-Abre `http://localhost:8000`. Detén el servidor con `Ctrl+C`.
+Abre `http://localhost:8000`. Para publicar, copia **el contenido de `mindset/`** al directorio público de un hosting estático. No hay dependencias de npm ni paso de compilación.
 
-## Archivos principales
+## Pago y precio
 
-- `index.html`: narrativa, secciones, mano ilustrativa y fragmento.
-- `styles.css`: sistema visual original, conservado.
-- `editorial.css`: evolución cinematográfica, responsive y accesibilidad.
-- `app.js`: índice, menú, capas, river, animaciones y enlaces.
-- `data.js`: cuatro partes y doce capítulos del manuscrito.
-- `config.js`: número oficial y seis mensajes de WhatsApp.
-- `cover-concept.svg`: portada conceptual original, todavía provisional.
-- `assets/`: once imágenes originales, cada una en dos tamaños WebP.
-- `AUDITORIA.md`: diagnóstico y decisiones de diseño.
-- `VALIDACION.md`: pruebas ejecutadas y límites de verificación.
-- `DIRECCION_ARTISTICA.md`: mapa de imágenes, criterios y prompts.
+En `config.js`:
 
-## WhatsApp
+```javascript
+window.vossConfig = Object.freeze({
+  whatsappNumber: "573007068986",
+  checkoutUrl: "", // Completar únicamente cuando exista una URL real HTTPS
+  launchPriceUsd: 27,
+  // ... mensajes
+});
+```
 
-Número confirmado: **+57 300 7068986**. Configuración: `whatsappNumber` en `config.js`, sin espacios ni signo `+`.
+**La web NO procesa pagos.** Hasta que se configure un checkout real, `data-purchase` abre WhatsApp para consultar condiciones y disponibilidad. `US$27` se presenta únicamente como precio de lanzamiento anunciado, **sin inventar un descuento previo** ni prometer una edición física/digital no confirmada. El estado de compra no debe presentarse como venta completada por hacer clic en el botón.
 
-Cada CTA abre `https://wa.me/573007068986?text=...` con su mensaje codificado. Abrir el enlace no envía el mensaje: el visitante confirma el envío en WhatsApp. Los enlaces de exploración interna mantienen sus anclas.
+Antes de recibir pagos, confirmar: edición y formato, fechas y entrega, política de reembolsos y soporte, datos legales, medios de pago y privacidad. No se ofrecen coaching, clases personales ni comunidad privada como beneficios confirmados.
 
-No se guardan correos, no hay formularios de demostración ni analítica incorporada.
-La demo muestra el precio de **US$30** indicado por el autor y deriva las consultas de disponibilidad y formato a WhatsApp. No incluye checkout, reserva ni precios comparativos inventados.
+## Analítica, SEO y assets
 
-## Edición y publicación
+- Los eventos usan `window.dataLayer`. La nueva interacción emite `mindset_scenario_view`, y el nuevo enlace editorial `explore_book`. **No hay una plataforma de analítica conectada** y ningún evento representa una venta finalizada.
+- Metadatos SEO y sociales actualizados al nuevo posicionamiento. Sustituir las rutas relativas de imágenes Open Graph por URLs HTTPS absolutas cuando exista dominio de publicación.
+- `assets/cinematic/` conserva las doce escenas y sus versiones móvil; `assets/generated/` contiene imágenes de la versión anterior. `cover-concept.svg` es provisional.
+- `muestra-prologo.pdf` y `plantilla-revision.pdf` son recursos gratuitos. No se anuncian como bonos comerciales.
 
-No necesitas React, Vite, npm ni un backend. Conserva la carpeta `assets` junto al HTML y los scripts. Para publicar, sube el contenido completo de `mindset` a cualquier alojamiento estático.
+## Validación y decisiones editoriales
 
-El índice y las leyendas del temario se configuran en `data.js`. Las seis entradas desarrolladas están en `index.html`; edita allí títulos, argumentos, distinciones y preguntas. Los textos de las demás secciones están en `index.html`. El precio indicado es US$30; la fecha y los formatos comerciales todavía no están confirmados. El concepto de libro físico no constituye una confirmación de formato.
-
-La demo no procesa pagos ni reserva ejemplares. Antes de una publicación pública conviene revisar visualmente la página a 390 px, 768 px y 1440 px, y configurar una imagen Open Graph con URL absoluta en el dominio definitivo. Consulta `VALIDACION.md` para los controles pendientes.
-
-Los documentos del libro no fueron modificados ni se incluyen en este ZIP.
-
-## Revisión de copy para jugadores avanzados
-
-Consulta `CAMBIOS_COPY.md` para el nuevo recorrido y `VALIDACION.md` para las comprobaciones de esta entrega. Esta versión se abre igual que la anterior: extraer el ZIP, abrir `mindset` en VS Code y abrir `index.html` en el navegador, sin instalar dependencias.
+Consultar `VALIDACION.md` y `REPOSICIONAMIENTO.md`. Este ZIP elimina la carpeta duplicada `mindset/mindset/` que venía dentro del archivo de origen; **el código y los recursos útiles permanecen**.
