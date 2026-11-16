@@ -61,3 +61,15 @@ Antes de recibir pagos, confirmar: edición y formato, fechas y entrega, políti
 ## Validación y decisiones editoriales
 
 Consultar `VALIDACION.md` y `REPOSICIONAMIENTO.md`. Este ZIP elimina la carpeta duplicada `mindset/mindset/` que venía dentro del archivo de origen; **el código y los recursos útiles permanecen**.
+
+## Edición cinematográfica V3 (16 de noviembre de 2026)
+
+Esta revisión es **exclusivamente visual**. El copy aprobado de la versión «Mentalidad» fue conservado íntegramente: se comprobó que todo el texto visible del HTML original coincide carácter por carácter tras extraer el texto del documento. Las 12 escenas del prólogo, el explorador del índice, las interacciones, los modelos numéricos, CTA y condiciones comerciales se mantienen.
+
+**Archivos nuevos:** `cinema-v3.css`, `cinema-v3.js` y `assets/v3/*.webp`. Se incorporaron cuatro escenas fotográficas nuevas en versiones horizontal y vertical, combinadas con fotografías originales ya aprobadas. El sistema incorpora 11 fondos independientes para secciones editoriales; el hero, el prólogo cinematográfico y el cierre conservan fondos propios. Tres interludios visuales con fotografía se superponen por detrás de la siguiente sección en scroll. Los títulos aparecen con un reveal ligero y no obligatorio.
+
+**Móvil primero:** cada sección cambia su composición, degradado y fotografía mediante `@media (max-width:800px)`. No se utiliza `background-attachment: fixed` en móvil; los fondos pegados al viewport se implementan con `position: sticky`, manteniendo los textos en el flujo normal. Los cambios visuales se desactivan o simplifican con `prefers-reduced-motion`. El contenido y la navegación conservan una presentación funcional aunque no se ejecute `cinema-v3.js`.
+
+**Publicación:** abrir `index.html` desde un servidor estático (por ejemplo, `npx http-server .`). Todos los recursos son locales y no requieren un build. Antes de vender se debe configurar la pasarela o confirmar el procedimiento de solicitud/entrega que aún utiliza WhatsApp; no hay pasarela de pago simulada.
+
+**Validación:** ancho 390px sin overflow horizontal, comprobación de interacción de casos, laboratorio EV, apertura del índice y revelación del river, sin errores JavaScript en las pruebas. Se comprobó estructura y sintaxis de los scripts, referencias locales y literalidad del copy. Conviene repetir pruebas en dispositivos físicos y navegadores Safari móvil antes de publicar.

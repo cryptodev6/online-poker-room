@@ -1,0 +1,254 @@
+/* EL JUEGO DETRÁS DEL JUEGO — Cinematic Art Direction v3
+ * A purely visual layer: approved editorial wording, gameplay, commerce and the Daniel film stay untouched.
+ * Backgrounds are real responsive assets; sticky photographic planes are clipped by the section's own boundaries.
+ */
+:root {
+  --v3-night:#070c0a;
+  --v3-bronze:#ddbe8b;
+  --v3-easing:cubic-bezier(.21,.72,.23,1);
+}
+body {background:var(--v3-night);}
+main {position:relative;isolation:isolate;background:var(--v3-night);}
+
+/* Dedicated photographic world in EVERY editorial section. The sticky image stays visible as
+   the reader moves down tall chapters; text is laid on dark, opaque-enough gradients. */
+main > section.has-cinema-environment {
+  isolation:isolate;
+  position:relative;
+  background:var(--v3-night);
+  overflow:visible;
+}
+.has-cinema-environment .cinema-environment {
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  opacity:1;
+}
+.has-cinema-environment .cinema-environment__image {
+  position:sticky;
+  top:0;
+  height:100svh;
+  min-height:640px;
+  width:100%;
+  background-image:var(--cinema-tone),var(--cinema-image);
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-position:var(--cinema-position,center center);
+  box-shadow:inset 0 0 100px rgba(0,0,0,.14);
+}
+.has-cinema-environment .cinema-environment__image::before {
+  position:absolute;inset:0;content:"";background:
+    linear-gradient(180deg,rgba(7,12,10,.33),transparent 15%,transparent 77%,rgba(7,12,10,.62)),
+    radial-gradient(ellipse at 8% 48%, rgba(7,12,10,.30),transparent 68%);
+}
+.has-cinema-environment .cinema-environment__texture {
+  position:absolute;inset:0;
+  background:repeating-linear-gradient(90deg,transparent 0,transparent calc(25% - 1px),rgba(237,204,160,.027) 25%);
+  mix-blend-mode:screen;
+}
+.has-cinema-environment > :not(.cinema-environment):not(.limits__backdrop):not(.excerpt-image) {
+  position:relative;z-index:2;
+}
+/* Gallery-like section boundaries, instead of a stack of indistinguishable dark rectangles. */
+.has-cinema-environment::after {
+  position:absolute;inset:0 0 auto;height:1px;content:"";z-index:3;pointer-events:none;
+  background:linear-gradient(90deg,transparent 0%,rgba(213,184,135,.56) 32%,rgba(213,184,135,.18) 72%,transparent);
+}
+.has-cinema-environment .section-kicker {color:#c8c6b4;}
+.has-cinema-environment .section-kicker span:first-child {color:#dfbd85;}
+.has-cinema-environment .eyebrow{color:#d8b986;}
+
+/* 03 — The part of the game that cannot be solved by a starting-hand chart. */
+#pilares {--cinema-image:url('assets/v3/cinema-2-2.webp');--cinema-tone:linear-gradient(95deg,rgba(7,19,14,.97) 0%,rgba(9,22,17,.91) 38%,rgba(8,17,13,.67) 75%,rgba(8,14,11,.77));--cinema-position:63% center;}
+#pilares .mindset-core__intro h2 {text-shadow:0 9px 45px rgba(0,0,0,.5);}
+#pilares .mindset-core__intro-copy {padding:26px 0 28px 27px;border-left:1px solid rgba(227,197,145,.47);}
+#pilares .mindset-core__interact {box-shadow:0 48px 140px rgba(0,0,0,.65),0 0 0 1px rgba(199,159,100,.11);}
+#pilares .mindset-core__left {background:linear-gradient(135deg,#0d2019f7,#12251ef9);}
+#pilares .mindset-core__right{background:#e8e3d5;}
+
+/* 04 — Reading six cases: deep poker-room space, subtly distinct from the Daniel narrative. */
+#temario {--cinema-image:url('assets/visible.webp');--cinema-tone:linear-gradient(90deg,rgba(8,14,12,.94) 0%,rgba(8,15,12,.90) 38%,rgba(7,12,10,.91) 100%);--cinema-position:center;}
+#temario .syllabus__heading h2 {text-shadow:0 10px 44px #000a;}
+#temario .syllabus__art{border:1px solid rgba(203,177,132,.42);box-shadow:0 30px 85px #000a;top:12vh;}
+#temario .syllabus-set{border-top-color:rgba(220,213,187,.27);}
+#temario .syllabus-set .chapter-hook{color:#f5f0e2;}
+
+/* 05 — Mathematical interlude: glass, gold, geometry. The illustration inside remains untouched. */
+#laboratorio{--cinema-image:url('assets/theory.webp');--cinema-tone:linear-gradient(90deg,rgba(6,14,12,.96),rgba(8,15,13,.87) 60%,rgba(9,17,14,.76));--cinema-position:center;}
+#laboratorio .ev-lab__shell {box-shadow:0 44px 130px rgba(0,0,0,.7),0 0 0 1px rgba(224,197,137,.13);}
+#laboratorio .ev-lab__intro h2{text-shadow:0 10px 40px #0008;}
+
+/* 06 — The review: a distinctive oak-and-leather room. */
+#marco{--cinema-image:url('assets/v3/cinema-1-2.webp');--cinema-tone:linear-gradient(90deg,rgba(8,14,12,.94),rgba(8,14,12,.84) 51%,rgba(10,18,14,.78));--cinema-position:65%;}
+#marco .framework__heading h2 {text-shadow:0 8px 44px #000b;}
+#marco .journey-art {box-shadow:0 30px 100px #000a;border:1px solid rgba(204,173,125,.24);}
+#marco .framework-item{border-top-color:rgba(225,206,168,.30);}
+
+/* 07 — The emotional cost of a hand, shown as a dark room around the precise card interaction. */
+#decision{--cinema-image:url('assets/execution.webp');--cinema-tone:linear-gradient(90deg,rgba(7,13,11,.94),rgba(8,16,13,.83) 65%,rgba(8,14,11,.73));--cinema-position:60%;color:#f4eee2;}
+#decision .decision__heading h2{color:#f3efe4;text-shadow:0 8px 44px #0009;}
+#decision .decision__heading h2 em{color:#d8b88b;}
+#decision .decision__intro,#decision .decision__notes>div{color:#d3d6ca;}
+#decision .decision__outcome{color:#e9e8df;}
+#decision .decision__outcome>span,#decision .decision__heading .eyebrow{color:#dbbd8b;}
+#decision .fine-print{color:#b6bcb2;}
+#decision .hand-table{box-shadow:0 38px 120px #000a;border-color:rgba(216,187,137,.42);}
+#decision .decision__notes{border-top:1px solid rgba(217,189,143,.25);padding-top:30px;}
+#decision .hand-method{color:#e9e5d9;}
+
+/* 08 — The index is an editorial monument; preserve the outstanding accordion design. */
+#libro{--cinema-image:url('assets/index.webp');--cinema-tone:linear-gradient(90deg,rgba(7,12,11,.93),rgba(8,16,13,.84) 53%,rgba(7,13,12,.78));--cinema-position:67%;}
+#libro .parts-list{background:rgba(6,13,11,.33);border-top-color:rgba(231,208,158,.43);backdrop-filter:blur(3px);}
+#libro .part {border-bottom-color:rgba(217,207,185,.25);}
+#libro .part__trigger{padding-left:clamp(10px,1.6vw,26px);padding-right:clamp(10px,1.6vw,26px);}
+#libro .part__trigger:hover{background:rgba(202,181,135,.07);}
+#libro .chapter{border-top-color:rgba(217,207,185,.21);}
+
+/* 09 — Clear boundaries: a photograph behind a centered manifesto. */
+#riesgo{--cinema-image:url('assets/risk.webp');--cinema-tone:linear-gradient(90deg,rgba(6,12,9,.90),rgba(8,15,12,.76) 50%,rgba(6,12,9,.86));--cinema-position:62%;}
+#riesgo .limits__backdrop{opacity:.2;}
+#riesgo .limits__content{padding:50px 35px 56px;background:linear-gradient(180deg,#07100db9,#07100dce);border:1px solid rgba(218,190,142,.27);box-shadow:0 40px 140px rgba(0,0,0,.48);backdrop-filter:blur(4px);}
+#riesgo .limits__content>p:not(.eyebrow){color:#dfdfd2;}
+#riesgo .limits__content .limits__last{color:#c3caba!important;}
+#riesgo .limits__footnote{color:#bdac8b;}
+
+/* 10 — The reader's pause: a real ivory manuscript sitting inside a night-time library. */
+#fragmento{--cinema-image:url('assets/excerpt.webp');--cinema-tone:linear-gradient(90deg,rgba(7,13,11,.81),rgba(8,17,13,.75));--cinema-position:center;color:#edeadf;}
+#fragmento .excerpt__book{border:1px solid rgba(229,210,168,.65);box-shadow:0 45px 125px #000b;}
+#fragmento .section-kicker{color:#d0cdbf;}
+#fragmento .excerpt-image{opacity:.12;pointer-events:none;}
+
+/* 11 — Author: a still life, never an artificial portrait. */
+#autor{--cinema-image:url('assets/author.webp');--cinema-tone:linear-gradient(90deg,rgba(6,12,10,.89),rgba(6,13,10,.93) 40%,rgba(7,13,11,.83));--cinema-position:55%;}
+#autor .author__mark {box-shadow:0 30px 110px #000b;border:1px solid rgba(216,186,135,.38);}
+#autor .author__copy h2{color:#f2eee3;text-shadow:0 8px 35px #0009;}
+#autor .author__copy>p:not(.eyebrow){color:#d0d3c9;}
+
+/* 12 — Actual offer. An illuminated book and a clear CTA against the night. */
+#novedades{--cinema-image:url('assets/launch.webp');--cinema-tone:linear-gradient(90deg,rgba(8,16,12,.94),rgba(7,14,12,.82) 65%,rgba(10,15,12,.77));--cinema-position:66%;color:#f0eee3;}
+#novedades .signup__copy h2{color:#f3eee4;text-shadow:0 9px 42px #0009;}
+#novedades .signup__copy h2 em{color:#e4c18c;}
+#novedades .signup__copy>p:not(.eyebrow){color:#d0d5c8;}
+#novedades .offer__inclusions span{color:#e6e1d4;border-top-color:rgba(224,197,154,.39);}
+#novedades .signup__notice{color:#c6c9bb!important;}
+#novedades .offer__supplement{color:#eee8d8;border-top-color:rgba(224,197,154,.44);}
+#novedades .offer__supplement h3{color:#f6ebd9;}
+#novedades .offer__supplement p{color:#cdd3c5;}
+#novedades .offer__supplement .button{color:#f4ebda;border-color:rgba(222,190,144,.8);}
+#novedades .offer__supplement .button:hover{background:#e7d0a7;color:#172519;}
+#novedades .launch-art{box-shadow:0 45px 130px #000b;border:1px solid rgba(225,197,153,.4);}
+
+/* 13 — FAQ in a second, different poker-room interior. */
+.faq.has-cinema-environment {--cinema-image:url('assets/v3/cinema-2-1.webp');--cinema-tone:linear-gradient(90deg,rgba(8,14,12,.94),rgba(8,15,12,.87) 48%,rgba(8,14,12,.76));--cinema-position:center;color:#f5eee4;}
+.faq.has-cinema-environment .faq__layout h2{color:#f3eee1;text-shadow:0 8px 33px #000a;}
+.faq.has-cinema-environment .faq__layout h2 em{color:#d8bb91;}
+.faq.has-cinema-environment .faq-list{background:rgba(8,17,13,.50);padding:12px clamp(15px,2.5vw,34px);border:1px solid rgba(227,194,139,.3);backdrop-filter:blur(3px);}
+.faq.has-cinema-environment .faq details{border-bottom-color:rgba(230,224,197,.24);}
+.faq.has-cinema-environment .faq details summary,.faq.has-cinema-environment .faq details[open] summary{color:#f1eee4;}
+.faq.has-cinema-environment .faq details>p{color:#c8d0c2;}
+
+/* Hero + cinematic introduction are already the strongest scenes: enhance without moving copy. */
+.hero-photo{transform:scale(1.025);transform-origin:70% center;animation:v3-hero-drift 24s ease-in-out infinite alternate;}
+@keyframes v3-hero-drift{from{transform:scale(1.025) translateX(0)}to{transform:scale(1.1) translateX(-1.5%)}}
+.hero__art{filter:drop-shadow(0 10px 40px rgba(219,181,112,.08));}
+.hero__grain {background:linear-gradient(90deg,rgba(5,10,8,.96) 0%,rgba(6,11,9,.79) 42%,rgba(6,13,10,.21) 78%),linear-gradient(0deg,#060b08ed,transparent 28%);}
+.film__opening{background-image:linear-gradient(90deg,rgba(5,10,9,.93),rgba(6,12,10,.79) 53%,rgba(7,12,10,.50)),url('assets/v3/cinema-1-1.webp');background-size:cover;background-position:center;}
+.film__opening h2{text-shadow:0 10px 65px rgba(0,0,0,.55);}
+.film__epilogue{background-image:linear-gradient(90deg,rgba(6,12,10,.93),rgba(6,12,10,.84),rgba(6,12,10,.86)),url('assets/v3/cinema-1-2.webp');background-position:center;background-size:cover;}
+
+/* Page-over-page effect is handled by the short sticky photographic interludes.
+   Never pin a long reading section, which could cover later chapters or the FAQ. */
+/* Controlled reveal: headings gain physical depth, never suppressing copy without JS. */
+.has-cinema-v3 .v3-entrance {opacity:0;transform:translateY(23px);transition:opacity .8s var(--v3-easing),transform .9s var(--v3-easing);}
+.has-cinema-v3 .v3-entrance.is-visible{opacity:1;transform:translateY(0);}
+
+/* Separate mobile art direction: closer photography, asymmetrical highlights,
+   readable darkness beneath EVERY paragraph. No mobile background-attachment:fixed. */
+@media (max-width:800px){
+  .has-cinema-environment .cinema-environment__image{
+    min-height:0;height:100svh;background-position:var(--cinema-mobile-position,center center);
+  }
+  .has-cinema-environment .cinema-environment__image::before{
+    background:linear-gradient(180deg,rgba(5,11,9,.34),rgba(5,11,9,.08) 28%,rgba(5,11,9,.30) 55%,rgba(5,11,9,.56));
+  }
+  #pilares{--cinema-image:url('assets/v3/cinema-2-2-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,18,13,.95),rgba(8,19,14,.83) 48%,rgba(7,16,12,.92));--cinema-mobile-position:55% center;}
+  #temario{--cinema-image:url('assets/visible-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(5,10,9,.92),rgba(7,15,11,.88) 51%,rgba(7,13,11,.94));--cinema-mobile-position:62% center;}
+  #laboratorio{--cinema-image:url('assets/theory-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(6,13,12,.96),rgba(7,16,12,.83) 45%,rgba(7,15,11,.93));--cinema-mobile-position:60% center;}
+  #marco{--cinema-image:url('assets/v3/cinema-1-2-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,13,11,.94),rgba(6,13,10,.80) 45%,rgba(7,13,11,.94));--cinema-mobile-position:65% center;}
+  #decision{--cinema-image:url('assets/execution-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,13,11,.94),rgba(8,16,12,.78) 42%,rgba(7,13,11,.96));--cinema-mobile-position:55% center;}
+  #libro{--cinema-image:url('assets/index-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,13,11,.92),rgba(6,14,10,.79),rgba(7,14,11,.94));--cinema-mobile-position:55% center;}
+  #riesgo{--cinema-image:url('assets/risk-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,13,11,.89),rgba(7,14,10,.78),rgba(7,13,10,.94));--cinema-mobile-position:55% center;}
+  #fragmento{--cinema-image:url('assets/excerpt-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,13,11,.86),rgba(7,13,11,.78),rgba(7,13,11,.91));--cinema-mobile-position:60% center;}
+  #autor{--cinema-image:url('assets/author-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,13,11,.95),rgba(8,15,11,.81),rgba(7,14,11,.94));--cinema-mobile-position:60% center;}
+  #novedades{--cinema-image:url('assets/launch-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,14,11,.96),rgba(7,14,11,.86),rgba(7,14,11,.96));--cinema-mobile-position:55% center;}
+  .faq.has-cinema-environment{--cinema-image:url('assets/v3/cinema-2-1-mobile.webp');--cinema-tone:linear-gradient(180deg,rgba(7,14,11,.94),rgba(7,13,11,.82),rgba(7,13,11,.94));--cinema-mobile-position:60% center;}
+  .film__opening{background-image:linear-gradient(180deg,#07100ded 0%,#07100dbb 47%,#06100de8 100%),url('assets/v3/cinema-1-1-mobile.webp');background-position:48% center;}
+  .film__epilogue{background-image:linear-gradient(180deg,#07100df0,#07100dc7 45%,#07100df2),url('assets/v3/cinema-1-2-mobile.webp');background-position:55%;}
+  /* Most mobile sections are longer than one viewport, so each has its own sticky photo rather than a sticky full section. */
+  .has-cinema-environment .cinema-environment__texture {opacity:.55;}
+  #pilares .mindset-core__intro-copy{padding:16px 0 17px 18px;}
+  #pilares .mindset-core__interact{box-shadow:0 23px 70px #000b;}
+  #temario .syllabus__art{top:74px;box-shadow:0 15px 40px #000a;}
+  #decision .decision__notes{padding-top:20px;}
+  #riesgo .limits__content{padding:34px 17px 42px;backdrop-filter:none;}
+  #fragmento .excerpt__book{box-shadow:0 30px 65px #000b;}
+  #novedades .offer__inclusions span {color:#e3e4d6;}
+  .faq.has-cinema-environment .faq-list{padding:8px 16px;backdrop-filter:none;}
+  .hero-photo{animation:none;transform:scale(1.015);}
+  .hero__grain {background:linear-gradient(180deg,rgba(5,11,9,.76) 0%,rgba(6,11,10,.92) 37%,rgba(6,12,10,.92) 65%,rgba(5,10,9,.94)),linear-gradient(90deg,#07100d6b,transparent 85%);}
+}
+@media(max-width:380px){
+  #pilares .mindset-core__intro-copy {padding-left:12px;}
+  #riesgo .limits__content {padding:27px 12px 36px;}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-photo{animation:none!important;transform:none!important;}
+  .has-cinema-v3 .v3-entrance{opacity:1!important;transform:none!important;transition:none!important;}
+  #riesgo.cinema-veil,#autor.cinema-veil{position:relative!important;}
+  .has-cinema-environment .cinema-environment__image{position:absolute;inset:0;height:100%;min-height:0;}
+}
+
+/* Transitions as photography, not filler text: the next section physically rises over a
+   pinned strip of the previous world. Three short interludes give the eye a cinematic reset. */
+.cinema-interlude {
+  position:sticky;
+  top:0;
+  z-index:1;
+  height:clamp(260px,48svh,570px);
+  pointer-events:none;
+  overflow:hidden;
+  isolation:isolate;
+  border-top:1px solid rgba(214,183,134,.30);
+  border-bottom:1px solid rgba(214,183,134,.32);
+  background-color:#09110e;
+  background-size:cover;
+  background-position:center 50%;
+  box-shadow:0 20px 70px rgba(0,0,0,.55);
+}
+.cinema-interlude::before {
+  position:absolute;inset:0;content:"";z-index:1;
+  background:linear-gradient(180deg,rgba(7,13,10,.64),transparent 24%,transparent 62%,rgba(7,13,10,.55)),linear-gradient(90deg,rgba(5,11,9,.57),transparent 63%);
+}
+.cinema-interlude::after {
+  position:absolute;left:var(--gutter);right:var(--gutter);bottom:clamp(22px,3vw,42px);height:1px;content:"";z-index:2;
+  background:linear-gradient(90deg,rgba(230,203,154,.66),rgba(230,203,154,.13) 55%,transparent);
+}
+.cinema-interlude[data-cinema-scene="corridor"] {background-image:url('assets/v3/cinema-1-1.webp');background-position:center 48%;}
+.cinema-interlude[data-cinema-scene="study"] {background-image:url('assets/v3/cinema-2-2.webp');background-position:center 46%;}
+.cinema-interlude[data-cinema-scene="library"] {background-image:url('assets/v3/cinema-2-1.webp');background-position:center 52%;}
+main > section.has-cinema-environment {z-index:3;}
+@media(max-width:800px){
+  .cinema-interlude {height:clamp(210px,35svh,390px);}
+  .cinema-interlude[data-cinema-scene="corridor"] {background-image:url('assets/v3/cinema-1-1-mobile.webp');background-position:57% 45%;}
+  .cinema-interlude[data-cinema-scene="study"] {background-image:url('assets/v3/cinema-2-2-mobile.webp');background-position:60% 43%;}
+  .cinema-interlude[data-cinema-scene="library"] {background-image:url('assets/v3/cinema-2-1-mobile.webp');background-position:57% 48%;}
+  .cinema-interlude::before {background:linear-gradient(180deg,#080f0cb8,transparent 45%,#080f0ca6);}
+}
+@media(prefers-reduced-motion:reduce){.cinema-interlude{position:relative;}}
+
+/* First-screen mobile lighting: retain the strong black typography plate while revealing
+   the real poker room at the edge and the book lower in the composition. */
+@media(max-width:800px){
+  .hero-photo{opacity:.82;object-position:61% center;}
+  .hero__grain{background:
+    linear-gradient(180deg,rgba(5,11,9,.80) 0%,rgba(6,11,9,.85) 44%,rgba(6,12,10,.87) 63%,rgba(5,10,9,.34) 100%),
+    linear-gradient(90deg,rgba(5,10,8,.67) 0%,rgba(5,10,8,.36) 62%,rgba(5,10,8,.17) 100%);}
+}
