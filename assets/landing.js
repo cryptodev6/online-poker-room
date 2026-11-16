@@ -369,6 +369,60 @@
     });
 
   // ==================================================
+  // BOOK EDITORIAL MODAL — reuses the former #limaDialog.
+  // Shown after genuine reading/scroll interest, never on arrival.
+  // ==================================================
+  const mindsetDialog = document.getElementById("limaDialog");
+  if (mindsetDialog && typeof mindsetDialog.showModal === "function") {
+    const DISMISS_KEY = "voss_mindset_modal_dismissed_v1";
+    const DISMISS_DAYS = 7;
+    let mindsetShownThisVisit = false;
+    const dismissedRecently = () => {
+      try {
+        const lastDismissed = Number(localStorage.getItem(DISMISS_KEY));
+        return Number.isFinite(lastDismissed) && lastDismissed > 0 &&
+          Date.now() - lastDismissed < DISMISS_DAYS * 24 * 60 * 60 * 1000;
+      } catch (_) {
+        return false; // Storage can be unavailable in privacy-restricted browsers.
+      }
+    };
+    const recordDismissal = () => {
+      try { localStorage.setItem(DISMISS_KEY, String(Date.now())); } catch (_) {}
+    };
+    const closeMindset = () => {
+      if (mindsetDialog.open) mindsetDialog.close("dismissed");
+    };
+    mindsetDialog.querySelectorAll("[data-close-lima]").forEach((button) => {
+      button.addEventListener("click", closeMindset);
+    });
+    mindsetDialog.addEventListener("click", (event) => {
+      // A click on the backdrop targets <dialog> itself, not its children.
+      if (event.target === mindsetDialog) closeMindset();
+    });
+    mindsetDialog.addEventListener("cancel", () => {
+      mindsetDialog.returnValue = "dismissed";
+    });
+    mindsetDialog.addEventListener("close", () => {
+      recordDismissal();
+      track("mindset_modal_close", { reason: mindsetDialog.returnValue || "dismissed" });
+    });
+    mindsetDialog.querySelector('a[href="/mindset"]')?.addEventListener("click", () => {
+      recordDismissal();
+      mindsetDialog.returnValue = "engaged";
+    });
+
+    setTimeout(() => {
+      if (mindsetDialog.open || document.querySelector("dialog[open]")) return;
+
+      mindsetShownThisVisit = true;
+      mindsetDialog.returnValue = "";
+      mindsetDialog.showModal();
+      track("mindset_modal_view");
+    }, 800);
+
+  }
+
+  // ==================================================
   // POPUP DE BONO
   // ==================================================
 

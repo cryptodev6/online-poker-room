@@ -19,7 +19,8 @@
     <link rel="stylesheet" href="/assets/landing.css">
     <link rel="stylesheet" href="/assets/landing-v3.css">
     <link rel="stylesheet" href="/assets/landing-v4.css">
-    <script src="/assets/landing.js?v=20261114" defer></script>
+    <link rel="stylesheet" href="/assets/mindset-modal.css?v=20261116">
+    <script src="/assets/landing.js?v=20261116-mindset" defer></script>
 
     <style id="voss-room-targeted-tweaks">
       .hero-micro .hero-copy-id{display:inline-flex;align-items:center;gap:8px;padding:9px 11px;border:1px solid #c6a56866;border-radius:5px;background:#10150ecc;color:#e2cc9c;font:inherit;letter-spacing:inherit;cursor:pointer}
@@ -397,15 +398,24 @@
         </div>
       </div>
     </dialog>
-    <dialog class="lima-dialog" id="limaDialog" aria-labelledby="limaDialogTitle">
+    <!-- Reused historic Lima dialog: editorial teaser for /mindset. -->
+    <dialog class="lima-dialog mindset-dialog" id="limaDialog" aria-labelledby="limaDialogTitle" aria-describedby="mindsetDialogDescription">
       <div class="lima-modal-visual" aria-hidden="true">
-        <div class="lima-modal-photo lima-modal-photo--coast"></div>
-        <div class="lima-modal-photo lima-modal-photo--night"></div>
-        <div class="lima-modal-photo lima-modal-photo--table"></div><span class="lima-modal-visual-label">LIMA · PERÚ · OCTUBRE 2026</span><span class="lima-modal-visual-dots">● &nbsp; ● &nbsp; ●</span>
-      </div><button type="button" class="modal-close lima-close" data-close-lima aria-label="Cerrar promoción de Lima">×</button>
-      <div class="lima-modal-content"><span class="lima-modal-eyebrow">DEL ONLINE A LA CIUDAD / 7–21 OCT</span>
-        <h2 id="limaDialogTitle">LA PRÓXIMA<br>MESA ESTÁ<br><em>EN LIMA.</em></h2>
-        <p>Del club online a una mesa cara a cara. Explora dos semanas de póker y experiencias en la ciudad, incluido un torneo independiente anunciado con <strong>S/200.000 de pozo garantizado</strong> y <strong>S/100.000 para el primer puesto.</strong></p><a class="btn btn-light" href="/lima/" data-event="lima_modal_click">VER LA EXPERIENCIA EN LIMA <b aria-hidden="true">↗</b></a><button type="button" class="later-link" data-close-lima>Volver a las mesas online ↓</button><small>Imágenes ilustrativas de Lima. El torneo lo organiza Atlantic City; Voss Lima es una experiencia independiente. Confirma la información del evento con su organizador.</small>
+        <div class="lima-modal-photo lima-modal-photo--mindset"></div>
+        <div class="lima-modal-shade"></div>
+        <span class="lima-modal-visual-label">ALEXANDER VOSS <span aria-hidden="true">✦</span> UNA LECTURA DISTINTA DEL PÓKER</span>
+      </div>
+      <button type="button" class="modal-close lima-close" data-close-lima aria-label="Cerrar presentación del libro">×</button>
+      <div class="lima-modal-content">
+        <span class="lima-modal-eyebrow"><span class="mindset-eyebrow-line" aria-hidden="true"></span> ALEXANDER VOSS · NUEVO LIBRO</span>
+        <h2 id="limaDialogTitle">EL JUEGO <em>DETRÁS</em> DEL JUEGO</h2>
+        <p class="mindset-hook">LA MESA CAMBIÓ.<br><strong>ÉL NO.</strong></p>
+        <div class="mindset-copy" id="mindsetDialogDescription">
+          <p>Daniel llegó a una partida prometedora. Horas después, los jugadores habían cambiado, las apuestas habían crecido y su concentración ya no era la misma. Pero seguía jugando como si nada hubiera pasado.</p>
+          <p>Descubre cómo tomar <strong>mejores decisiones bajo presión</strong>, reconocer cuándo el <strong>ego y las emociones</strong> afectan tu juego, comprender la varianza, gestionar el riesgo y saber <strong>cuándo levantarte de la mesa</strong>.</p>
+        </div>
+        <a class="btn mindset-modal-cta" href="/mindset" data-event="mindset_modal_click">DESCUBRIR EL LIBRO <span aria-hidden="true">↗</span></a>
+        <button type="button" class="later-link mindset-dismiss" data-close-lima>Seguir explorando la web</button>
       </div>
     </dialog>
   </body>

@@ -1,0 +1,235 @@
+/* EL JUEGO DETRÁS DEL JUEGO — isolated editorial conversion modal.
+ * Reuses #limaDialog and all lima-* hooks; no global theme changes.
+ */
+.lima-dialog.mindset-dialog {
+  width:min(1120px,calc(100vw - 44px));
+  height:min(720px,calc(100dvh - 44px));
+  max-width:none; max-height:none;
+  position:relative; padding:0;
+  border:1px solid rgba(216,180,108,.68);
+  border-radius:12px;
+  background:#090f0c;
+  color:#f7f1e6;
+  overflow:hidden; isolation:isolate;
+  box-shadow:0 30px 110px rgba(0,0,0,.9),0 0 0 7px rgba(198,165,104,.07);
+}
+.lima-dialog.mindset-dialog[open]{display:block}
+.lima-dialog.mindset-dialog::backdrop{
+  background:rgba(1,8,5,.85);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+}
+.mindset-dialog .lima-modal-visual{position:absolute;inset:0;min-height:0;overflow:hidden;background:#0b130e;pointer-events:none}
+.mindset-dialog .lima-modal-visual::after{content:"";position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(5,13,10,.98) 0%,rgba(6,15,12,.96) 32%,rgba(6,16,13,.81) 47%,rgba(8,15,11,.28) 70%,rgba(4,7,5,.04) 100%),linear-gradient(0deg,rgba(4,9,7,.65),transparent 18%);pointer-events:none}
+.mindset-dialog .lima-modal-photo,
+.mindset-dialog[open] .lima-modal-photo{
+  position:absolute;inset:0;opacity:1;z-index:0;
+  background-image:url('/assets/mindset-editorial-desktop.webp');
+  background-position:center center;background-size:cover;
+  animation:none!important;transform:none!important;
+}
+.mindset-dialog .lima-modal-shade{display:none}
+.mindset-dialog .lima-modal-visual-label{position:absolute;left:auto;right:28px;bottom:24px;z-index:2;max-width:280px;text-align:right;color:#dbc798;font-size:.53rem;letter-spacing:.16em;text-shadow:0 2px 8px #000}
+.mindset-dialog .lima-modal-visual-label span{color:#d0aa61;margin-inline:7px}
+.mindset-dialog .lima-close{position:absolute;z-index:5;top:17px;right:18px;width:42px;height:42px;border-radius:50%;background:rgba(7,16,12,.87);border:1px solid rgba(238,211,158,.55);color:#fff5df;transition:background .2s,border-color .2s,transform .2s}
+.mindset-dialog .lima-close:hover{background:#c6a568;color:#1b170f;border-color:#f4d89c;transform:rotate(90deg)}
+.mindset-dialog .lima-modal-content{
+  position:relative;z-index:2;box-sizing:border-box;
+  width:min(61%,665px);max-width:none;height:100%;min-height:100%;
+  display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  padding:38px 25px 36px clamp(36px,5vw,62px);
+  overflow-y:auto;background:none;
+  scrollbar-width:thin; scrollbar-color:#c6a56855 transparent;
+}
+.mindset-dialog .lima-modal-eyebrow{display:flex;align-items:center;gap:10px;color:#ebcf97;font-size:.66rem;letter-spacing:.19em;font-weight:850;line-height:1.45}
+.mindset-dialog .mindset-eyebrow-line{display:inline-block;width:25px;height:1px;flex:none;background:#c6a568}
+.mindset-dialog .lima-modal-content h2{
+  max-width:580px;margin:17px 0 13px;
+  font:400 clamp(2.4rem,3.65vw,3.75rem)/.98 Georgia,'Times New Roman',serif;
+  letter-spacing:-.046em;text-wrap:balance;color:#f5eedf;text-shadow:0 3px 25px rgba(0,0,0,.55)
+}
+.mindset-dialog .lima-modal-content h2 em{font:italic 400 1em Georgia,'Times New Roman',serif;color:#dec58b}
+.mindset-dialog .mindset-hook{
+  margin:0 0 18px;padding-left:15px;border-left:2px solid #c6a568;
+  font:850 clamp(1.43rem,2vw,2.22rem)/1.06 var(--sans);
+  letter-spacing:-.043em;color:#f5eee2;text-transform:uppercase;
+}
+.mindset-dialog .mindset-hook strong{display:inline-block;margin-top:3px;color:#d9b66b;font:inherit}
+.mindset-dialog .mindset-copy{width:min(100%,535px)}
+.mindset-dialog .mindset-copy p{margin:0 0 13px;max-width:none;font:400 clamp(.82rem,1.17vw,.93rem)/1.55 var(--sans);color:#e3e3d7;letter-spacing:.002em}
+.mindset-dialog .mindset-copy p:first-child{color:#d2d9cc}
+.mindset-dialog .mindset-copy strong{color:#e9c780;font-weight:760}
+.mindset-dialog .mindset-modal-cta{
+  display:flex;justify-content:space-between;align-items:center;
+  width:min(100%,354px);min-height:58px;margin-top:12px;padding:15px 20px;
+  border:1px solid #f4d79b;border-radius:3px;
+  background:linear-gradient(114deg,#f1dba8 0%,#c6a568 55%,#af8447 100%);
+  box-shadow:0 12px 36px rgba(0,0,0,.4),inset 0 1px rgba(255,255,255,.36);
+  color:#171711;font:850 .77rem/1.15 var(--sans);letter-spacing:.105em;
+  text-decoration:none;transition:transform .22s,box-shadow .22s,filter .22s
+}
+.mindset-dialog .mindset-modal-cta:hover{transform:translateY(-2px);filter:brightness(1.08);box-shadow:0 16px 40px rgba(0,0,0,.45),0 0 32px rgba(198,165,104,.3)}
+.mindset-dialog .mindset-modal-cta span{font-size:1.4rem;font-weight:400}
+.mindset-dialog .mindset-dismiss{margin:10px 0 0;padding:5px 0;color:#b2b9ac;border:0;border-bottom:1px solid transparent;background:none;font-size:.71rem;font-weight:500;letter-spacing:.01em}
+.mindset-dialog .mindset-dismiss:hover{color:#f1dbab;border-color:#c6a568}
+.mindset-dialog :is(.lima-close,.mindset-modal-cta,.mindset-dismiss):focus-visible{outline:3px solid #f1d79c;outline-offset:4px}
+@media(max-width:860px) and (min-width:721px){
+  .lima-dialog.mindset-dialog{width:calc(100vw - 28px);height:min(730px,calc(100dvh - 28px))}
+  .mindset-dialog .lima-modal-content{width:68%;padding-left:32px}
+  .mindset-dialog .lima-modal-content h2{font-size:clamp(2.25rem,4.5vw,3.2rem)}
+  .mindset-dialog .mindset-hook{font-size:1.55rem}
+  .mindset-dialog .mindset-copy p{font-size:.83rem;line-height:1.48}
+  .mindset-dialog .lima-modal-visual::after{background:linear-gradient(90deg,rgba(4,13,10,.99) 0%,rgba(4,13,10,.95) 47%,rgba(4,13,10,.42) 78%,transparent 100%)}
+}
+@media(max-width:720px){
+  .lima-dialog.mindset-dialog{width:100vw;height:100dvh;max-height:none;margin:0;border:0;border-radius:0;overflow-y:auto;overscroll-behavior:contain}
+  .lima-dialog.mindset-dialog[open]{display:flex;flex-direction:column}
+  .mindset-dialog .lima-modal-visual{position:relative;inset:auto;flex:none;min-height:0;height:clamp(220px,30dvh,310px);background:#0a160f}
+  .mindset-dialog .lima-modal-visual::after{background:linear-gradient(0deg,#09170f 0%,rgba(9,23,15,.03) 44%,rgba(5,10,7,.05) 100%)}
+  .mindset-dialog .lima-modal-photo,
+  .mindset-dialog[open] .lima-modal-photo{background-image:url('/assets/mindset-editorial-mobile.webp');background-position:52% 50%;background-size:cover}
+  .mindset-dialog .lima-modal-visual-label{right:16px;bottom:10px;left:auto;font-size:.45rem;max-width:260px}
+  .mindset-dialog .lima-close{position:fixed;right:17px;top:14px;width:40px;height:40px}
+  .mindset-dialog .lima-modal-content{width:100%;height:auto;min-height:0;flex:1 0 auto;overflow:visible;padding:19px 24px max(29px,env(safe-area-inset-bottom));background:linear-gradient(180deg,#09170f,#08160f);justify-content:center}
+  .mindset-dialog .lima-modal-eyebrow{font-size:.58rem;letter-spacing:.11em;gap:8px}
+  .mindset-dialog .mindset-eyebrow-line{width:16px}
+  .mindset-dialog .lima-modal-content h2{font-size:clamp(2rem,7vw,2.9rem);line-height:1.01;margin:9px 0 9px;max-width:560px}
+  .mindset-dialog .mindset-hook{font-size:clamp(1.3rem,5.5vw,1.8rem);margin:0 0 13px;padding-left:11px}
+  .mindset-dialog .mindset-copy p{font-size:clamp(.82rem,3.35vw,.93rem);line-height:1.46;margin-bottom:10px}
+  .mindset-dialog .mindset-modal-cta{margin-top:5px;min-height:53px;width:100%;font-size:.74rem}
+  .mindset-dialog .mindset-dismiss{align-self:center;font-size:.7rem;margin-top:7px}
+}
+@media(max-width:400px){
+  .mindset-dialog .lima-modal-visual{height:clamp(210px,29dvh,270px)}
+  .mindset-dialog .lima-modal-content{padding:14px 20px max(24px,env(safe-area-inset-bottom))}
+  .mindset-dialog .lima-modal-content h2{font-size:clamp(1.9rem,7.1vw,2.3rem)}
+  .mindset-dialog .mindset-hook{font-size:1.28rem;margin-bottom:10px}
+  .mindset-dialog .mindset-copy p{font-size:.81rem;line-height:1.41;margin-bottom:9px}
+}
+@media(prefers-reduced-motion:reduce){.mindset-dialog .lima-close,.mindset-dialog .mindset-modal-cta{transition:none}}
+/* VOSS — mobile editorial modal refinement.
+   Pegar AL FINAL de assets/mindset-modal.css. Desktop permanece intacto. */
+@media (max-width: 720px) {
+  .lima-dialog.mindset-dialog {
+    width: min(420px, calc(100vw - 22px));
+    height: fit-content;
+    max-height: calc(100dvh - 22px);
+    margin: auto;
+    border: 1px solid rgba(205, 166, 103, .48);
+    border-radius: 13px;
+    background: #07120d;
+    box-shadow: 0 28px 110px #000e, 0 0 0 5px #e5b86b0e;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    scrollbar-width: none;
+  }
+  .lima-dialog.mindset-dialog::-webkit-scrollbar { display: none; }
+  .lima-dialog.mindset-dialog[open] {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+  }
+  /* Un solo fotograma editorial, no un banner recortado sin continuidad. */
+  .mindset-dialog .lima-modal-visual {
+    flex: 0 0 auto;
+    height: clamp(180px, 25svh, 225px);
+    min-height: 0;
+    overflow: hidden;
+    background: #11190f;
+  }
+  .mindset-dialog .lima-modal-photo,
+  .mindset-dialog[open] .lima-modal-photo {
+    background-image: url('/assets/mindset-editorial-mobile.webp');
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  .mindset-dialog .lima-modal-visual::after {
+    background: linear-gradient(to bottom,
+      rgba(3,10,7,.12) 0%,
+      rgba(3,10,7,0) 35%,
+      rgba(6,19,12,.25) 64%,
+      #091910 100%);
+  }
+  .mindset-dialog .lima-modal-visual-label { display: none; }
+  .mindset-dialog .lima-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    background: rgba(3,9,7,.84);
+    box-shadow: 0 3px 16px #0009;
+  }
+  /* Evitar el gran vacío que generaba flex:1 + justify-content:center. */
+  .mindset-dialog .lima-modal-content {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    justify-content: flex-start;
+    align-items: stretch;
+    margin-top: -1px;
+    padding: 10px 23px 24px;
+    background:
+      radial-gradient(ellipse 88% 60% at 92% 8%, rgba(181,138,72,.11), transparent 75%),
+      radial-gradient(ellipse 95% 65% at -15% 75%, rgba(38,77,52,.18), transparent 75%),
+      linear-gradient(180deg, #091910 0%, #09170f 58%, #07130d 100%);
+  }
+  .mindset-dialog .lima-modal-eyebrow {
+    justify-content: flex-start;
+    color: #d9b974;
+    font-size: .58rem;
+    line-height: 1.4;
+    letter-spacing: .14em;
+  }
+  .mindset-dialog .mindset-eyebrow-line { width: 23px; }
+  .mindset-dialog .lima-modal-content h2 {
+    max-width: 510px;
+    margin: 13px 0 12px;
+    font-size: clamp(2.15rem, 8vw, 3.05rem);
+    line-height: .99;
+    letter-spacing: -.044em;
+  }
+  .mindset-dialog .mindset-hook {
+    border-left: 2px solid #c6a568;
+    padding: 2px 0 2px 12px;
+    margin: 0 0 14px;
+    font-size: clamp(1.2rem, 5.1vw, 1.65rem);
+    line-height: 1.07;
+    letter-spacing: -.025em;
+  }
+  .mindset-dialog .mindset-copy p {
+    color: #e2e6dc;
+    font-size: .875rem;
+    line-height: 1.52;
+    letter-spacing: 0;
+    margin: 0 0 12px;
+  }
+  .mindset-dialog .mindset-copy p:first-child { color: #d2d9cf; }
+  .mindset-dialog .mindset-copy strong { color: #eac783; }
+  .mindset-dialog .mindset-modal-cta {
+    flex: none;
+    width: 100%;
+    min-width: 0;
+    min-height: 55px;
+    margin: 9px 0 0;
+    border-radius: 3px;
+    box-shadow: 0 12px 25px rgba(0,0,0,.25);
+  }
+  .mindset-dialog .mindset-dismiss {
+    align-self: center;
+    margin: 12px 0 0;
+    padding-bottom: 6px;
+  }
+}
+@media (max-width: 400px) {
+  .mindset-dialog .lima-modal-visual { height: clamp(160px, 24svh, 210px); }
+  .mindset-dialog .lima-modal-content { padding: 8px 20px 20px; }
+  .mindset-dialog .lima-modal-content h2 { font-size: clamp(2.03rem, 8vw, 2.4rem); }
+  .mindset-dialog .mindset-hook { font-size: 1.22rem; }
+  .mindset-dialog .mindset-copy p { font-size: .83rem; line-height: 1.46; }
+}
